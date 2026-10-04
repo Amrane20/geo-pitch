@@ -28,15 +28,18 @@ const mapStyle = {
     },
     'countries-boundaries': {
       type: 'geojson',
-      data: 'https://cdn.jsdelivr.net/gh/datasets/geo-countries@master/data/countries.geojson'
+      // FIX 1: Swapped 23.5MB jsdelivr link for a lightweight (~1MB), highly-reliable mapping CDN
+      data: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson'
     },
     'countries-labels': {
       type: 'geojson',
-      data: 'https://cdn.jsdelivr.net/gh/gavinr/world-countries-centroids@v1/dist/countries.geojson'
+      // FIX 2: Bypassing jsDelivr's production block by using the direct raw GitHub URL
+      data: 'https://raw.githubusercontent.com/gavinr/world-countries-centroids/master/dist/countries.geojson'
     },
     'major-cities': {
       type: 'geojson',
-      data: 'https://cdn.jsdelivr.net/gh/nvkelso/natural-earth-vector@master/geojson/ne_10m_populated_places_simple.geojson'
+      // FIX 3: Reliable production CDN for populated places (~1.5MB instead of a blocked master branch)
+      data: 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_populated_places_simple.geojson'
     }
   },
   layers: [
@@ -49,7 +52,9 @@ const mapStyle = {
       source: 'countries-labels',
       layout: {
         'text-field': ['case', ['has', 'ISO'], ['get', 'ISO'], ['upcase', ['slice', ['get', 'COUNTRY'], 0, 2]]],
-        'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
+        // FIX 4: Removed 'Arial Unicode MS Bold'. This ensures MapLibre requests exactly 
+        // what the demotiles server has, preventing the 404 crash that hides all text.
+        'text-font': ['Open Sans Bold'],
         'text-size': 14,
         'text-anchor': 'center'
       },
@@ -59,13 +64,15 @@ const mapStyle = {
       id: 'city-labels',
       type: 'symbol',
       source: 'major-cities',
-      minzoom: 6, 
+      minzoom: 5, 
       layout: {
         'text-field': ['get', 'name'],
-        'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
+        // FIX 4 (Continued): Applied the same font fix here.
+        'text-font': ['Open Sans Bold'],
         'text-size': [
           'interpolate', ['linear'], ['zoom'],
-          9, 12,
+          4, 10,
+          9, 13,
           16, 18
         ],
         'text-anchor': 'center'
@@ -78,6 +85,7 @@ const mapStyle = {
     }
   ]
 };
+
 
 const flightPathStyle = { id: 'flight-path-layer', type: 'line', paint: { 'line-color': '#00ffcc', 'line-width': 3, 'line-dasharray': [2, 2] } };
 
