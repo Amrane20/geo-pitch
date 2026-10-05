@@ -1,5 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Map, { Marker, Source, Layer } from 'react-map-gl/maplibre';
+
+import * as maplibregl from 'maplibre-gl'; 
+// 3. The official V6 Worker file path, using Vite's exact required flags
+import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
+
 import html2canvas from 'html2canvas'; 
 import 'maplibre-gl/dist/maplibre-gl.css';
 import './App.css'; 
@@ -8,6 +13,11 @@ import { DESTINATIONS } from './data/destinations';
 // MULTIPLAYER IMPORTS
 import { ref, set, get, onValue, update, query, orderByChild, endAt } from "firebase/database";
 import { db } from './firebase'; 
+
+if (maplibregl.setWorkerUrl) {
+  maplibregl.setWorkerUrl(workerUrl);
+}
+
 
 const GAME_MODES = {
   short: { id: 'short', matches: 5, budget: 10000 },
@@ -762,6 +772,7 @@ export default function App() {
           )}
           
           <Map 
+            mapLib={maplibregl}
             initialViewState={{ longitude: 0, latitude: 20, zoom: 1.5 }} 
             style={{ width: '100vw', height: '100vh' }} 
             mapStyle={mapStyle} 
