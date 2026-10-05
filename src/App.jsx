@@ -1,10 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Map, { Marker, Source, Layer } from 'react-map-gl/maplibre';
-
-import * as maplibregl from 'maplibre-gl'; 
-// 3. The official V6 Worker file path, using Vite's exact required flags
+import * as maplibregl from 'maplibre-gl';
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
-
 import html2canvas from 'html2canvas'; 
 import 'maplibre-gl/dist/maplibre-gl.css';
 import './App.css'; 
@@ -14,10 +11,10 @@ import { DESTINATIONS } from './data/destinations';
 import { ref, set, get, onValue, update, query, orderByChild, endAt } from "firebase/database";
 import { db } from './firebase'; 
 
+// Force MapLibre to use the correct worker for Vercel/Vite production
 if (maplibregl.setWorkerUrl) {
   maplibregl.setWorkerUrl(workerUrl);
 }
-
 
 const GAME_MODES = {
   short: { id: 'short', matches: 5, budget: 10000 },
@@ -25,6 +22,7 @@ const GAME_MODES = {
   endless: { id: 'endless', matches: Infinity, budget: 25000 }
 };
 
+// Optimized Production Map Style with lightweight CDNs & fixed Font Stack
 const mapStyle = {
   version: 8,
   projection: { type: 'globe' },
@@ -38,18 +36,15 @@ const mapStyle = {
     },
     'countries-boundaries': {
       type: 'geojson',
-      // FIX 1: Swapped 23.5MB jsdelivr link for a lightweight (~1MB), highly-reliable mapping CDN
       data: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson'
     },
     'countries-labels': {
       type: 'geojson',
-      // FIX 2: Bypassing jsDelivr's production block by using the direct raw GitHub URL
       data: 'https://raw.githubusercontent.com/gavinr/world-countries-centroids/master/dist/countries.geojson'
     },
     'major-cities': {
       type: 'geojson',
-      // FIX 3: Reliable production CDN for populated places (~1.5MB instead of a blocked master branch)
-      data: 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_populated_places_simple.geojson'
+      data: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_populated_places_simple.geojson'
     }
   },
   layers: [
@@ -62,8 +57,6 @@ const mapStyle = {
       source: 'countries-labels',
       layout: {
         'text-field': ['case', ['has', 'ISO'], ['get', 'ISO'], ['upcase', ['slice', ['get', 'COUNTRY'], 0, 2]]],
-        // FIX 4: Removed 'Arial Unicode MS Bold'. This ensures MapLibre requests exactly 
-        // what the demotiles server has, preventing the 404 crash that hides all text.
         'text-font': ['Open Sans Bold'],
         'text-size': 14,
         'text-anchor': 'center'
@@ -74,15 +67,13 @@ const mapStyle = {
       id: 'city-labels',
       type: 'symbol',
       source: 'major-cities',
-      minzoom: 5, 
+      minzoom: 6, 
       layout: {
         'text-field': ['get', 'name'],
-        // FIX 4 (Continued): Applied the same font fix here.
         'text-font': ['Open Sans Bold'],
         'text-size': [
           'interpolate', ['linear'], ['zoom'],
-          4, 10,
-          9, 13,
+          9, 12,
           16, 18
         ],
         'text-anchor': 'center'
@@ -96,14 +87,12 @@ const mapStyle = {
   ]
 };
 
-
 const flightPathStyle = { id: 'flight-path-layer', type: 'line', paint: { 'line-color': '#00ffcc', 'line-width': 3, 'line-dasharray': [2, 2] } };
 
 // --- AUDIO ---
 const playFlightSound = () => { try { const ctx = new (window.AudioContext || window.webkitAudioContext)(); const now = ctx.currentTime; const osc = ctx.createOscillator(); const filter = ctx.createBiquadFilter(); const gain = ctx.createGain(); osc.type = 'sawtooth'; osc.frequency.setValueAtTime(150, now); osc.frequency.exponentialRampToValueAtTime(1200, now + 1.2); filter.type = 'lowpass'; filter.frequency.setValueAtTime(400, now); filter.frequency.exponentialRampToValueAtTime(2500, now + 1.2); gain.gain.setValueAtTime(0.05, now); gain.gain.linearRampToValueAtTime(0.1, now + 0.6); gain.gain.linearRampToValueAtTime(0.001, now + 1.2); osc.connect(filter); filter.connect(gain); gain.connect(ctx.destination); osc.start(now); osc.stop(now + 1.2); } catch(e) {} };
 const playSuccessSound = () => { try { const ctx = new (window.AudioContext || window.webkitAudioContext)(); const now = ctx.currentTime; [659.25, 830.61, 987.77, 1318.51, 1661.22].forEach((freq, index) => { const osc = ctx.createOscillator(); const gain = ctx.createGain(); osc.type = 'sine'; osc.frequency.setValueAtTime(freq, now + index * 0.06); gain.gain.setValueAtTime(0.1, now + index * 0.06); gain.gain.exponentialRampToValueAtTime(0.0001, now + index * 0.06 + 0.4); osc.connect(gain); gain.connect(ctx.destination); osc.start(now + index * 0.06); osc.stop(now + index * 0.06 + 0.4); }); } catch(e) {} };
 const playErrorSound = () => { try { const ctx = new (window.AudioContext || window.webkitAudioContext)(); const now = ctx.currentTime; const osc = ctx.createOscillator(); const gain = ctx.createGain(); osc.type = 'square'; osc.frequency.setValueAtTime(110, now); osc.frequency.setValueAtTime(80, now + 0.1); gain.gain.setValueAtTime(0.1, now); gain.gain.exponentialRampToValueAtTime(0.001, now + 0.25); osc.connect(gain); gain.connect(ctx.destination); osc.start(now); osc.stop(now + 0.25); } catch(e) {} };
-
 
 // ==========================================
 // SEPARATED COMPONENT: Quit Confirmation Modal
@@ -112,28 +101,21 @@ const QuitConfirmModal = ({ lang, onConfirm, onCancel }) => {
   return (
     <div className="ad-modal-overlay" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
       <div className="glass-panel ad-modal" style={{ padding: '30px 25px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        
-        {/* Soft Glowing Warning Icon - Properly Centered */}
         <div className="warning-icon-wrapper">
           <span style={{ fontSize: '32px', display: 'block', lineHeight: 1 }}>⚠️</span>
         </div>
-        
         <h2 style={{ color: 'white', margin: '0 0 10px 0', fontSize: '24px' }}>
           {lang === 'en' ? 'Quit Game?' : 'الخروج من اللعبة؟'}
         </h2>
-        
         <p style={{ color: '#cbd5e1', fontSize: '14px', margin: '0 0 25px 0', textAlign: 'center', lineHeight: '1.5' }}>
           {lang === 'en' 
             ? 'Are you sure you want to quit the current game? Your progress will be lost.' 
             : 'هل أنت متأكد أنك تريد إنهاء اللعبة الحالية؟ سيتم فقدان تقدمك.'}
         </p>
-        
         <div style={{ display: 'flex', gap: '15px', width: '100%' }}>
           <button className="btn-secondary" style={{ flex: 1, margin: 0 }} onClick={onCancel}>
             {lang === 'en' ? 'Cancel' : 'إلغاء'}
           </button>
-          
-          {/* Changed 'Delete' to 'Quit' */}
           <button className="btn-danger" style={{ flex: 1, margin: 0 }} onClick={onConfirm}>
             {lang === 'en' ? 'Quit' : 'خروج'}
           </button>
@@ -142,7 +124,6 @@ const QuitConfirmModal = ({ lang, onConfirm, onCancel }) => {
     </div>
   );
 };
-
 
 // ==========================================
 // MAIN APP COMPONENT
@@ -515,7 +496,6 @@ export default function App() {
     setRoomCode('');
   };
 
-  // --- Handlers for Custom Quit Modal ---
   const confirmQuit = () => {
     if (roomCode) {
       update(ref(db, `rooms/${roomCode}/players/${playerId}`), { finished: true });
@@ -586,13 +566,12 @@ export default function App() {
             <button className="lang-toggle-btn" style={{ background: lang === 'ar' ? '#00ffcc' : 'rgba(255,255,255,0.1)', color: lang === 'ar' ? 'black' : 'white' }} onClick={() => setLang('ar')}>عربي</button>
           </div>
           
-          <div className="glass-panel start-modal" style={{ width: '450px', margin: '40px 0', direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
+          <div className="glass-panel start-modal" style={{ margin: '40px 0', direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
             <h1 className="neon-text" style={{ fontSize: '46px', letterSpacing: '-1px', marginBottom: '5px', textAlign: 'center' }}>GeoPitch</h1>
             <p style={{ color: '#94a3b8', marginBottom: '15px', fontSize: '15px', textAlign: 'center' }}>
               {lang === 'en' ? 'The Ultimate Football Geography Challenge.' : 'التحدي الجغرافي الأكبر لكرة القدم.'}
             </p>
             
-            {/* 🆕 NEW FAKE MONEY DISCLAIMER BADGE */}
             <div className="fun-disclaimer">
               {lang === 'en' ? '💸 Virtual budget, 100% real fun!' : '💸 ميزانية افتراضية، متعة حقيقية 100%!'}
             </div>
@@ -733,43 +712,40 @@ export default function App() {
       {/* ACTIVE GAME MAP & HUD */}
       {['playing', 'animating', 'locked'].includes(gameState) && (
         <>
-          <div className="hud-container" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
-            <div className="glass-panel hud-box">
-              <div style={{ fontSize: '11px', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '2px' }}>{playerName}'s Budget</div>
-              <h2 style={{ color: budget > 0 ? '#00ffcc' : '#ef4444', margin: 0, fontSize: '24px' }}>${budget.toLocaleString()}</h2>
-            </div>
+          {/* BRAND NEW GEOSPORTS-INSPIRED DASHBOARD */}
+          <div className="geosports-dashboard" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
             
-            <div style={{ display: 'flex', gap: '10px' }}>
-              <div className="glass-panel hud-box" style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ color: '#fff', fontWeight: 'bold', fontSize: '15px' }}>
-                  {lang === 'en' ? `Match ${currentIndex + 1}` : `المباراة ${currentIndex + 1}`}
-                  {gameMode.matches !== Infinity && ` / ${gameMode.matches}`}
-                </span>
-              </div>
-              
-              <button 
-                className="glass-panel hud-box" 
-                onClick={() => setShowQuitModal(true)}
-                style={{ 
-                  background: 'rgba(239, 68, 68, 0.15)', 
-                  border: '1px solid rgba(239, 68, 68, 0.3)', 
-                  color: '#fca5a5', 
-                  cursor: 'pointer', 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  transition: 'all 0.2s' 
-                }}
-              >
-                <span style={{ fontWeight: 'bold', fontSize: '14px' }}>{lang === 'en' ? 'QUIT' : 'خروج'}</span>
+            {/* Top Status Bar */}
+            <div className="dash-top-bar">
+              <span className="dash-brand">GeoPitch</span>
+              <span className="dash-match">
+                {lang === 'en' ? `Match ${currentIndex + 1}` : `المباراة ${currentIndex + 1}`}
+                {gameMode.matches !== Infinity && ` / ${gameMode.matches}`}
+              </span>
+              <button className="dash-quit" onClick={() => setShowQuitModal(true)}>
+                {lang === 'en' ? 'QUIT' : 'خروج'}
               </button>
             </div>
+            
+            {/* Info Board (Budget & Clue Side-by-Side) */}
+            {currentDestination && (
+              <div className="dash-info-board">
+                <div className="dash-budget">
+                  <span className="dash-label">{lang === 'en' ? 'BUDGET' : 'الميزانية'}</span>
+                  <span className="dash-value" style={{ color: budget > 0 ? '#00ffcc' : '#ef4444' }}>
+                    ${budget.toLocaleString()}
+                  </span>
+                </div>
+                
+                <div className="dash-clue">
+                  <div className="dash-clue-header">
+                    {lang === 'en' ? 'Target Clue' : 'معلومات الهدف'}
+                  </div>
+                  <p className="dash-clue-text">"{currentDestination.clue[lang]}"</p>
+                </div>
+              </div>
+            )}
           </div>
-          
-          {currentDestination && (
-            <div className="glass-panel clue-container" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
-              <p className="clue-text">"{currentDestination.clue[lang]}"</p>
-            </div>
-          )}
           
           <Map 
             mapLib={maplibregl}
