@@ -44,7 +44,7 @@ const mapStyle = {
     },
     'major-cities': {
       type: 'geojson',
-      data: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_populated_places_simple.geojson'
+      data: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_10m_populated_places_simple.geojson'
     }
   },
   layers: [
@@ -67,16 +67,18 @@ const mapStyle = {
       id: 'city-labels',
       type: 'symbol',
       source: 'major-cities',
-      minzoom: 6, 
+      minzoom: 5, 
       layout: {
         'text-field': ['get', 'name'],
         'text-font': ['Open Sans Bold'],
         'text-size': [
           'interpolate', ['linear'], ['zoom'],
+          5, 10,
           9, 12,
-          16, 18
+          16, 16
         ],
-        'text-anchor': 'center'
+        'text-anchor': 'center',
+        'text-padding': 1 
       },
       paint: {
         'text-color': '#cbd5e1', 
@@ -162,6 +164,7 @@ export default function App() {
   
   const [showAdModal, setShowAdModal] = useState(false);
   const [showQuitModal, setShowQuitModal] = useState(false);
+  const [isClueExpanded, setIsClueExpanded] = useState(true);
 
   // Helper for Input Name
   const handleNameChange = (e) => {
@@ -712,37 +715,46 @@ export default function App() {
       {/* ACTIVE GAME MAP & HUD */}
       {['playing', 'animating', 'locked'].includes(gameState) && (
         <>
-          {/* BRAND NEW GEOSPORTS-INSPIRED DASHBOARD */}
+{/* BRAND NEW GEOSPORTS-INSPIRED DASHBOARD */}
           <div className="geosports-dashboard" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
             
-            {/* Top Status Bar */}
+            {/* 1. Top Status Bar (Logo, Budget, Quit) */}
             <div className="dash-top-bar">
               <span className="dash-brand">GeoPitch</span>
-              <span className="dash-match">
-                {lang === 'en' ? `Match ${currentIndex + 1}` : `المباراة ${currentIndex + 1}`}
-                {gameMode.matches !== Infinity && ` / ${gameMode.matches}`}
-              </span>
+              
+              <div className="dash-budget-inline">
+                <span className="dash-label-inline">{lang === 'en' ? 'BUDGET:' : 'الميزانية:'}</span>
+                <span className="dash-value-inline" style={{ color: budget > 0 ? '#00ffcc' : '#ef4444' }}>
+                  ${budget.toLocaleString()}
+                </span>
+              </div>
+
               <button className="dash-quit" onClick={() => setShowQuitModal(true)}>
                 {lang === 'en' ? 'QUIT' : 'خروج'}
               </button>
             </div>
             
-            {/* Info Board (Budget & Clue Side-by-Side) */}
+            {/* 2. Clue Dropdown Container */}
             {currentDestination && (
-              <div className="dash-info-board">
-                <div className="dash-budget">
-                  <span className="dash-label">{lang === 'en' ? 'BUDGET' : 'الميزانية'}</span>
-                  <span className="dash-value" style={{ color: budget > 0 ? '#00ffcc' : '#ef4444' }}>
-                    ${budget.toLocaleString()}
+              <div className="dash-clue-wrapper">
+                <div 
+                  className="dash-clue-header" 
+                  onClick={() => setIsClueExpanded(!isClueExpanded)}
+                >
+                  <span>
+                    {lang === 'en' ? 'Clue' : 'دليل'} {currentIndex + 1}
+                    {gameMode.matches !== Infinity ? ` / ${gameMode.matches}` : ''}
+                  </span>
+                  <span className={`dropdown-icon ${isClueExpanded ? 'open' : ''}`}>
+                    ▼
                   </span>
                 </div>
                 
-                <div className="dash-clue">
-                  <div className="dash-clue-header">
-                    {lang === 'en' ? 'Target Clue' : 'معلومات الهدف'}
+                {isClueExpanded && (
+                  <div className="dash-clue-content fade-in">
+                    <p className="dash-clue-text">"{currentDestination.clue[lang]}"</p>
                   </div>
-                  <p className="dash-clue-text">"{currentDestination.clue[lang]}"</p>
-                </div>
+                )}
               </div>
             )}
           </div>
