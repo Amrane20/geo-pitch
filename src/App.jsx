@@ -512,6 +512,11 @@ export default function App() {
     setShowQuitModal(false);
   };
 
+  const handleCashOut = () => {
+    // Instantly end the game and send them to the Share screen
+    setGameState('gameover');
+  };
+
   const paddedHistory = [...matchHistory];
   if (gameMode && gameMode.matches !== Infinity) {
     while (paddedHistory.length < gameMode.matches) {
@@ -729,9 +734,20 @@ export default function App() {
                 </span>
               </div>
 
-              <button className="dash-quit" onClick={() => setShowQuitModal(true)}>
+              {/* DYNAMIC BUTTON: If playing Endless and have at least 1 answer, show Cash Out. Otherwise show Quit. */}
+              {gameMode.id === 'endless' && matchHistory.length > 0 ? (
+                <button className="dash-cashout" onClick={handleCashOut}>
+                  {lang === 'en' ? '💰 CASH OUT' : '💰 إنهاء'}
+                </button>
+              ) : (
+                <button className="dash-quit" onClick={() => setShowQuitModal(true)}>
+                  {lang === 'en' ? 'QUIT' : 'خروج'}
+                </button>
+              )}
+
+              {/* <button className="dash-quit" onClick={() => setShowQuitModal(true)}>
                 {lang === 'en' ? 'QUIT' : 'خروج'}
-              </button>
+              </button> */}
             </div>
             
             {/* 2. Clue Dropdown Container */}

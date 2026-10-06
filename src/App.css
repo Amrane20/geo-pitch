@@ -248,6 +248,30 @@ body {
   padding: 20px;
 }
 
+/* Glassmorphism Cash Out Button - Elegant & Soft */
+.dash-cashout {
+  background: rgba(245, 158, 11, 0.15); /* Semi-transparent gold background */
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fbbf24; /* Beautiful soft gold text */
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  animation: pulse-soft-gold 2.5s infinite alternate; /* Slower, softer breathing */
+}
+
+.dash-cashout:hover {
+  background: rgba(245, 158, 11, 0.3);
+  border-color: rgba(245, 158, 11, 0.6);
+}
+
+@keyframes pulse-soft-gold {
+  0% { box-shadow: 0 0 4px rgba(245, 158, 11, 0.1); }
+  100% { box-shadow: 0 0 12px rgba(245, 158, 11, 0.3); }
+}
+
 /* --- Sharing Card --- */
 .share-card-container {
   display: flex;
