@@ -159,6 +159,7 @@ body {
 .game-container {
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   position: relative;
   overflow: hidden;
 }
@@ -224,6 +225,14 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 12px;
   margin-bottom: 12px;
+}
+
+/* Fix text rendering bug on older Androids for the Location Answer */
+.results-modal h3.neon-text {
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: #00ffcc;
+  text-shadow: 0 0 12px rgba(0, 255, 204, 0.4);
 }
 
 .game-over-screen {
@@ -677,4 +686,35 @@ body {
   .results-modal { padding: 15px; }
   .results-header span { font-size: 15px !important; }
   .results-modal h3 { font-size: 18px !important; }
+   /* NEW: Safely lift the bottom container above the Android/iOS navigation bar */
+  .bottom-container { 
+    bottom: max(45px, env(safe-area-inset-bottom)); 
+    width: 95%; 
+  }
+  
+  /* Make the button a better tap target */
+  .bottom-container .btn-primary { 
+    padding: 16px; 
+    font-size: 15px; 
+    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
+  }
+
+  /* Shrink the results modal slightly so it doesn't take up the whole screen */
+  .results-modal { 
+    padding: 18px 15px; 
+  }
+  
+  .results-header { 
+    margin-bottom: 12px; 
+    padding-bottom: 10px; 
+  }
+  
+  .results-header span { 
+    font-size: 14px !important; /* Prevents text from wrapping to the next line */
+  }
+  
+  .results-modal h3.neon-text { 
+    font-size: 19px !important; 
+    margin-bottom: 15px !important; 
+  }
 }
