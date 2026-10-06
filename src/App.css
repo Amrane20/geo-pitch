@@ -264,6 +264,11 @@ body {
   margin-bottom: 20px;
 }
 
+/* Visibility Utilities for Share Card */
+.hide-on-desktop {
+  display: none !important;
+}
+
 @media (max-width: 600px) {
   .share-card-container {
     flex-direction: column;
@@ -293,6 +298,21 @@ body {
     margin-bottom: 10px;
     padding: 8px;
     font-size: 16px; 
+  }
+    .hide-on-mobile {
+    display: none !important;
+  }
+  
+  /* Shows the Final Balance top-right ONLY on phones */
+  .hide-on-desktop {
+    display: inline-block !important;
+  }
+
+  /* Make the left side much more compact now that the circle is gone */
+  .share-card-left {
+    padding: 20px 15px 15px 15px;
+    /* Optional sleek touch: changes the solid line to a dashed "ticket/receipt" look between the top and bottom on phones */
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2) !important;
   }
 }
 

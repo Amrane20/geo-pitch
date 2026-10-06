@@ -827,6 +827,42 @@ export default function App() {
             <>
               <div ref={shareCardRef} className="share-card-container">
                 <div className="share-card-left">
+                  {/* Top Row */}
+                  <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', marginBottom: '15px', alignItems: 'center' }}>
+                    <span className="badge-glass">🗓️ <bdi>{getFormattedDate()}</bdi></span>
+                    
+                    {/* Desktop Streak (Hidden on Mobile) */}
+                    <span className="streak-text-only hide-on-mobile">🔥 {lang === 'en' ? '1 Day Streak' : 'يوم واحد'}</span>
+                    
+                    {/* Mobile Final Balance (Hidden on Desktop) */}
+                    <span className="hide-on-desktop" style={{ color: budget > 0 ? '#00ffcc' : '#ef4444', fontWeight: 'bold', fontSize: '15px', letterSpacing: '1px' }}>
+                      💰 <bdi>${Math.max(0, budget).toLocaleString()}</bdi>
+                    </span>
+                  </div>
+
+                  {/* Desktop Label (Hidden on Mobile) */}
+                  <h3 className="hide-on-mobile" style={{ margin: '0 0 10px 0', fontWeight: 400, color: '#e2e8f0', fontSize: '15px' }}>
+                    {lang === 'en' ? 'Final Balance' : 'الرصيد النهائي'}
+                  </h3>
+                  
+                  {/* Desktop Large Circle (Hidden on Mobile) */}
+                  <div className="hero-circle hide-on-mobile">
+                    <h2 style={{ fontSize: '38px', margin: 0, color: '#00ffcc', textShadow: '0 0 15px rgba(0,255,204,0.4)' }}>
+                      <bdi>${Math.max(0, budget).toLocaleString()}</bdi>
+                    </h2>
+                  </div>
+
+                  <h2 style={{ margin: '10px 0 5px 0', fontSize: '22px', color: budget > 0 ? '#00ffcc' : '#ef4444' }}>
+                    {budget > 0 ? (lang === 'en' ? 'Season Survived!' : 'موسم ناجح!') : (lang === 'en' ? 'Bankrupt!' : 'إفلاس!')}
+                  </h2>
+                  
+                  <p style={{ margin: 0, fontSize: '13px', color: '#cbd5e1', lineHeight: '1.5' }}>
+                    {lang === 'en' 
+                      ? <><bdi>{playerName}</bdi>, what a journey across the globe.</> 
+                      : <><bdi>{playerName}</bdi>، يا لها من رحلة عبر العالم.</>}
+                  </p>
+                </div>
+                {/* <div className="share-card-left">
                   <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', marginBottom: '15px', alignItems: 'center' }}>
                     <span className="badge-glass">🗓️ <bdi>{getFormattedDate()}</bdi></span>
                     <span className="streak-text-only">🔥 {lang === 'en' ? '1 Day Streak' : 'يوم واحد'}</span>
@@ -851,7 +887,7 @@ export default function App() {
                       ? <><bdi>{playerName}</bdi>, what a journey across the globe.</> 
                       : <><bdi>{playerName}</bdi>، يا لها من رحلة عبر العالم.</>}
                   </p>
-                </div>
+                </div> */}
 
                 <div className="share-card-right">
                   <h3 style={{ margin: '0 0 15px 0', color: 'white', fontSize: '16px', textAlign: 'center' }}>
