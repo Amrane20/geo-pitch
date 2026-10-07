@@ -341,6 +341,7 @@ export default function App() {
 
   // --- SOLO CORE FUNCTIONS ---
   const startGame = (modeKey) => {
+    setIsClueExpanded(true);
     const selectedMode = GAME_MODES[modeKey];
     setGameMode(selectedMode);
     
@@ -445,9 +446,28 @@ export default function App() {
       setGuessCoords(null);
       setDistanceError(null);
       setMoneyCost(null);
+      
+      // 👇 ADD THIS LINE: Automatically expands the clue for the new question
+      setIsClueExpanded(true); 
+      
       setGameState('playing');
     }
   };
+
+  // const handleNextDestination = () => {
+  //   if (budget <= 0 || currentIndex + 1 >= sessionData.length) {
+  //     if (roomCode) {
+  //       update(ref(db, `rooms/${roomCode}/players/${playerId}`), { finished: true });
+  //     }
+  //     setGameState('gameover');
+  //   } else {
+  //     setCurrentIndex(curr => curr + 1);
+  //     setGuessCoords(null);
+  //     setDistanceError(null);
+  //     setMoneyCost(null);
+  //     setGameState('playing');
+  //   }
+  // };
 
   const getFormattedDate = () => {
     const date = new Date();
@@ -462,46 +482,63 @@ export default function App() {
     return `${month} ${day}${suffix}, ${year}`;
   };
 
-  const shareAsImage = async () => {
+const shareAsImage = async () => {
     if (!shareCardRef.current) return;
     setIsSharing(true);
 
     try {
-      // 1. Generate the image from the screen
-      const canvas = await html2canvas(shareCardRef.current, { backgroundColor: '#03050c', scale: 2, useCORS: true });
-      
-      // 2. Convert it to a file blob securely
-      const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
-      if (!blob) {
-        setIsSharing(false);
-        return;
-      }
+      // 1. Generate the image
+      const canvas = await html2canvas(shareCardRef.current, { 
+        backgroundColor: '#03050c', 
+        scale: window.devicePixelRatio || 2, // Better quality on mobile screens
+        useCORS: true 
+      });
 
-      // 3. Create the image file
-      const file = new File([blob], `GeoPitch-Score-${playerName}.png`, { type: 'image/png' });
+      canvas.toBlob(async (blob) => {
+        if (!blob) {
+          setIsSharing(false);
+          return;
+        }
 
-      // 4. Try to open the Mobile Share Sheet
-      if (navigator.canShare && navigator.canShare({ files: [file] })) {
-        await navigator.share({
-          title: 'My GeoPitch Score',
-          files: [file]
-          // ⚠️ IMPORTANT: We DO NOT put 'text' here! 
-          // Including text causes Android (WhatsApp/Instagram) to ignore the image.
-        });
-      } else {
-        // 5. Fallback for Laptops / Unsupported browsers (Downloads the image)
+        const file = new File([blob], `GeoPitch-Score.png`, { type: 'image/png' });
+
+        // 2. Try Mobile Native Share First
+        if (navigator.share) {
+          try {
+            await navigator.share({
+              files: [file]
+            });
+            setIsSharing(false);
+            return; // Success! Stop here.
+          } catch (err) {
+            console.log("Native share blocked or canceled:", err);
+            // If user just closed the share menu, stop.
+            if (err.name === 'AbortError') {
+              setIsSharing(false);
+              return;
+            }
+            // If it failed for technical reasons, fall through to the download code below!
+          }
+        }
+
+        // 3. Fallback: Direct Download (For Laptops & Strict Mobile Browsers)
         const link = document.createElement('a');
         link.download = `GeoPitch-Score-${playerName}.png`;
         link.href = URL.createObjectURL(blob);
+        document.body.appendChild(link);
         link.click();
-        alert(lang === 'en' ? "Image downloaded! Share it with your friends." : "تم تحميل الصورة! شاركها مع أصدقائك.");
-      }
+        document.body.removeChild(link);
+        
+        setTimeout(() => URL.revokeObjectURL(link.href), 100);
+        
+        // Let the user know it saved to their phone/computer
+        alert(lang === 'en' ? "Image saved to your device! Share it with your friends." : "تم حفظ الصورة في جهازك! شاركها مع أصدقائك.");
+        
+        setIsSharing(false);
+      }, 'image/png');
+      
     } catch (error) {
-      // Ignore the error if the user simply closed the share menu without sharing
-      if (error.name !== 'AbortError') {
-        console.error("Error generating/sharing image:", error);
-      }
-    } finally {
+      console.error("Error generating image:", error);
       setIsSharing(false);
     }
   };
@@ -834,7 +871,7 @@ export default function App() {
           </Map>
           
           <div className="bottom-container">
-            {guessCoords && gameState === 'playing' && <button className="btn-primary" onClick={handleLockIn}>{lang === 'en' ? 'CONFIRM TRAVEL' : 'تأكيد السفر'}</button>}
+            {guessCoords && gameState === 'playing' && <button className="btn-primary" onClick={handleLockIn}>{lang === 'en' ? 'CONFIRM' : 'تأكيد'}</button>}
             {gameState === 'locked' && distanceError !== null && (
               <div className="glass-panel results-modal" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
                 <div className="results-header">
