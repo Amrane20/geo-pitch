@@ -467,31 +467,74 @@ export default function App() {
     setIsSharing(true);
 
     try {
+      // 1. Generate the image from the screen
       const canvas = await html2canvas(shareCardRef.current, { backgroundColor: '#03050c', scale: 2, useCORS: true });
-      canvas.toBlob(async (blob) => {
-        if (!blob) return setIsSharing(false);
-        const file = new File([blob], `GeoPitch-Result-${playerName}.png`, { type: 'image/png' });
-
-        if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
-          await navigator.share({
-            title: 'My GeoPitch Season',
-            text: lang === 'en' ? 'Think you know football geography? Prove it: geopitch.gg' : 'هل أنت خبير في جغرافيا كرة القدم؟ أثبت ذلك: geopitch.gg',
-            files: [file],
-          });
-        } else {
-          const link = document.createElement('a');
-          link.download = `GeoPitch-Result-${playerName}.png`;
-          link.href = URL.createObjectURL(blob);
-          link.click();
-          alert(lang === 'en' ? "Image downloaded! Share it with your friends." : "تم تحميل الصورة! شاركها مع أصدقائك.");
-        }
+      
+      // 2. Convert it to a file blob securely
+      const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+      if (!blob) {
         setIsSharing(false);
-      }, 'image/png');
+        return;
+      }
+
+      // 3. Create the image file
+      const file = new File([blob], `GeoPitch-Score-${playerName}.png`, { type: 'image/png' });
+
+      // 4. Try to open the Mobile Share Sheet
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        await navigator.share({
+          title: 'My GeoPitch Score',
+          files: [file]
+          // ⚠️ IMPORTANT: We DO NOT put 'text' here! 
+          // Including text causes Android (WhatsApp/Instagram) to ignore the image.
+        });
+      } else {
+        // 5. Fallback for Laptops / Unsupported browsers (Downloads the image)
+        const link = document.createElement('a');
+        link.download = `GeoPitch-Score-${playerName}.png`;
+        link.href = URL.createObjectURL(blob);
+        link.click();
+        alert(lang === 'en' ? "Image downloaded! Share it with your friends." : "تم تحميل الصورة! شاركها مع أصدقائك.");
+      }
     } catch (error) {
-      console.error("Error generating image:", error);
+      // Ignore the error if the user simply closed the share menu without sharing
+      if (error.name !== 'AbortError') {
+        console.error("Error generating/sharing image:", error);
+      }
+    } finally {
       setIsSharing(false);
     }
   };
+  // const shareAsImage = async () => {
+  //   if (!shareCardRef.current) return;
+  //   setIsSharing(true);
+
+  //   try {
+  //     const canvas = await html2canvas(shareCardRef.current, { backgroundColor: '#03050c', scale: 2, useCORS: true });
+  //     canvas.toBlob(async (blob) => {
+  //       if (!blob) return setIsSharing(false);
+  //       const file = new File([blob], `GeoPitch-Result-${playerName}.png`, { type: 'image/png' });
+
+  //       if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+  //         await navigator.share({
+  //           title: 'My GeoPitch Season',
+  //           text: lang === 'en' ? 'Think you know football geography? Prove it: geopitch.gg' : 'هل أنت خبير في جغرافيا كرة القدم؟ أثبت ذلك: geopitch.gg',
+  //           files: [file],
+  //         });
+  //       } else {
+  //         const link = document.createElement('a');
+  //         link.download = `GeoPitch-Result-${playerName}.png`;
+  //         link.href = URL.createObjectURL(blob);
+  //         link.click();
+  //         alert(lang === 'en' ? "Image downloaded! Share it with your friends." : "تم تحميل الصورة! شاركها مع أصدقائك.");
+  //       }
+  //       setIsSharing(false);
+  //     }, 'image/png');
+  //   } catch (error) {
+  //     console.error("Error generating image:", error);
+  //     setIsSharing(false);
+  //   }
+  // };
 
   const resetToHome = () => {
     setGameState('start');
@@ -927,7 +970,7 @@ export default function App() {
                     {paddedHistory.map((emoji, i) => <span key={i}>{emoji}</span>)}
                   </div>
 
-                  <div className="watermark">🌍 Play at <strong>geopitch.gg</strong></div>
+                  <div className="watermark">🌍 Play at <strong>geopitch.vercel.app</strong></div>
                 </div>
               </div>
 
