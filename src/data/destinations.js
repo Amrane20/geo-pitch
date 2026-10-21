@@ -2909,21 +2909,7 @@ export const DESTINATIONS = [
       "ar": "تتميز هذه المدينة الساحلية في شرق إفريقيا بديربي 'كاريوكو' الشرس الذي يجذب أكثر من 60 ألف مشجع، ويحتكر نادياها العملاقان، اللذان يرتديان الأحمر والأخضر على التوالي، الدوري المحلي بالكامل."
     }
   },
-  {
-    "id": 196,
-    "type": "city",
-    "latitude": 34.0209,
-    "longitude": -6.8416,
-    "difficulty": "easy",
-    "answer": {
-      "en": "Rabat",
-      "ar": "الرباط"
-    },
-    "clue": {
-      "en": "This historic imperial capital is home to an army-backed club that won the 1985 CAF Champions League, and hosted the 2022 Club World Cup final where a Spanish giant triumphed over a Saudi team.",
-      "ar": "هذه العاصمة الإمبراطورية التاريخية هي موطن لنادٍ مدعوم من الجيش فاز بدوري أبطال إفريقيا 1985، واستضافت نهائي كأس العالم للأندية 2022 حيث انتصر عملاق إسباني على فريق سعودي."
-    }
-  },
+// deleted
   {
     "id": 197,
     "type": "city",
@@ -4634,5 +4620,4505 @@ export const DESTINATIONS = [
       "ar": "تقع هذه المدينة الضخمة مباشرة عبر النيل من عاصمة بلادها، وتستهلكها بالكامل واحدة من أكثر ديربيات إفريقيا تاريخية وشراسة بين المريخ والهلال، واستضافت المباراة الفاصلة الدرامية في تصفيات كأس العالم 2009 بين مصر والجزائر."
     }
   },
+  {
+    "id": 311,
+    "type": "stadium",
+    "latitude": 41.1621,
+    "longitude": -8.6405,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Estádio do Bessa, Porto",
+      "ar": "ملعب دو بيسا، بورتو"
+    },
+    "clue": {
+      "en": "This stadium was completely rebuilt with a tight, British-style rectangular layout for Euro 2004, and witnessed a shocking domestic league title win in 2001.",
+      "ar": "أُعيد بناء هذا الملعب بالكامل بتصميم مستطيل ضيق على الطراز البريطاني ليورو 2004، وشهد فوزاً صادماً بلقب الدوري المحلي في عام 2001."
+    }
+  },
+  {
+    "id": 312,
+    "type": "stadium",
+    "latitude": 38.7093,
+    "longitude": -9.2615,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estádio Nacional (Jamor), Lisbon",
+      "ar": "الملعب الوطني (جامور)، لشبونة"
+    },
+    "clue": {
+      "en": "This stadium sits beautifully within a forested valley with an open end, is the traditional annual host of its country's domestic cup final, and famously hosted the 1967 European Cup final where the 'Lisbon Lions' triumphed.",
+      "ar": "يقع هذا الملعب بشكل جميل داخل وادٍ حرجي بنهاية مفتوحة، وهو المضيف السنوي التقليدي لنهائي الكأس المحلية في بلاده، واستضاف بشكل شهير نهائي كأس أوروبا 1967 حيث انتصرت 'أسود لشبونة'."
+    }
+  },
+  {
+    "id": 313,
+    "type": "stadium",
+    "latitude": -34.6703,
+    "longitude": -58.3710,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estadio Libertadores de América, Avellaneda",
+      "ar": "ملعب ليبرتادوريس دي أمريكا، أفيلانيدا"
+    },
+    "clue": {
+      "en": "This stadium is affectionately nicknamed 'The Hell' by its passionate fans, has its four main stands named after legendary players including Ricardo Bochini, and is the proud fortress of the 'King of Cups'.",
+      "ar": "يُلقب هذا الملعب بحب بـ 'الجحيم' من قبل جماهيره الشغوفة، وسُميت مدرجاته الأربعة الرئيسية بأسماء لاعبين أساطير بينهم ريكاردو بوتشيني، وهو الحصن الفخور لـ 'ملك الكؤوس'."
+    }
+  },
+  {
+    "id": 314,
+    "type": "stadium",
+    "latitude": -34.7972,
+    "longitude": -56.0686,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Estadio Campeón del Siglo, Montevideo",
+      "ar": "ملعب بطل القرن، مونتيفيديو"
+    },
+    "clue": {
+      "en": "This stadium was inaugurated in 2016 to give a historic yellow-and-black giant its own modern home, pays homage in its name to being named South America's greatest club of the 20th century, and features a vintage locomotive outside.",
+      "ar": "تم افتتاح هذا الملعب في عام 2016 ليمنح عملاقاً تاريخياً يرتدي الأصفر والأسود موطنه الحديث الخاص، ويكرم في اسمه اختياره كأعظم نادٍ في أمريكا الجنوبية بالقرن العشرين، ويضم قاطرة قطار عتيقة في الخارج."
+    }
+  },
+  {
+    "id": 315,
+    "type": "stadium",
+    "latitude": -25.4484,
+    "longitude": -49.2770,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Arena da Baixada (Ligga Arena), Curitiba",
+      "ar": "أرينا دي بايشادا (ليجا أرينا)، كوريتيبا"
+    },
+    "clue": {
+      "en": "This stadium was notably the first in South America to feature a fully retractable roof, hosted four matches during the 2014 World Cup, and is the fortress for a red-and-black team nicknamed 'The Hurricane'.",
+      "ar": "كان هذا الملعب أول ملعب في أمريكا الجنوبية يتميز بسقف قابل للطي بالكامل، واستضاف 4 مباريات خلال كأس العالم 2014، وهو الحصن لفريق أحمر وأسود يُلقب بـ 'الإعصار'."
+    }
+  },
+  {
+    "id": 316,
+    "type": "stadium",
+    "latitude": -3.8067,
+    "longitude": -38.5217,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Arena Castelão, Fortaleza",
+      "ar": "أرينا كاستيلاو، فورتاليزا"
+    },
+    "clue": {
+      "en": "This stadium is a colossal 60,000-seater located in Brazil's hot northeast, was the very first 2014 World Cup venue to be completed, and regularly hosts the intense 'Clássico-Rei' derby.",
+      "ar": "هذا الملعب هو صرح ضخم يتسع لـ 60 ألف متفرج يقع في شمال شرق البرازيل الحار، وكان أول ملعب يكتمل بناؤه لكأس العالم 2014، ويستضيف بانتظام ديربي 'كلاسيكو-ري' الشديد."
+    }
+  },
+  {
+    "id": 317,
+    "type": "stadium",
+    "latitude": -15.7836,
+    "longitude": -47.8990,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Estádio Nacional Mané Garrincha, Brasília",
+      "ar": "ملعب ماني غارينشا الوطني، برازيليا"
+    },
+    "clue": {
+      "en": "This stadium is named after a legendary double World Cup-winning dribbler, was the most expensive venue built for the 2014 World Cup, and controversially lacks a traditional top-flight domestic club to fill its 70,000 seats.",
+      "ar": "سُمي هذا الملعب على اسم مراوغ أسطوري فاز بكأس العالم مرتين، وكان أغلى ملعب تم بناؤه لكأس العالم 2014، ويفتقر بشكل مثير للجدل إلى نادٍ محلي تقليدي في الدرجة الأولى لملء مقاعده الـ 70 ألفاً."
+    }
+  },
+  {
+    "id": 318,
+    "type": "stadium",
+    "latitude": 25.2638,
+    "longitude": 51.4483,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Khalifa International Stadium, Doha",
+      "ar": "استاد خليفة الدولي، الدوحة"
+    },
+    "clue": {
+      "en": "This stadium is the oldest standing national venue in its country, is instantly recognized by its dual sweeping arches, and hosted both the 2019 World Athletics Championships and 2022 World Cup matches.",
+      "ar": "هذا الملعب هو أقدم ملعب وطني قائم في بلاده، ويُعرف فوراً بقوسيه الممتدين المزدوجين، واستضاف كلاً من بطولة العالم لألعاب القوى 2019 ومباريات كأس العالم 2022."
+    }
+  },
+  {
+    "id": 319,
+    "type": "stadium",
+    "latitude": 25.2348,
+    "longitude": 51.5323,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Al Thumama Stadium, Doha",
+      "ar": "استاد الثمامة، الدوحة"
+    },
+    "clue": {
+      "en": "This stadium is beautifully designed to represent the 'Gahfiya', a traditional woven cap worn by men across the Arab world, and hosted the historic 2022 World Cup quarter-final where Morocco eliminated Portugal.",
+      "ar": "صُمم هذا الملعب بشكل جميل ليمثل 'القحفية'، وهي القبعة المنسوجة التقليدية التي يرتديها الرجال في جميع أنحاء العالم العربي، واستضاف ربع نهائي كأس العالم 2022 التاريخي حيث أقصى المغرب البرتغال."
+    }
+  },
+  {
+    "id": 320,
+    "type": "stadium",
+    "latitude": 25.3300,
+    "longitude": 51.3400,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Ahmad bin Ali Stadium, Al Rayyan",
+      "ar": "استاد أحمد بن علي، الريان"
+    },
+    "clue": {
+      "en": "This stadium features a glowing intricate facade that reflects the undulating sand dunes of the nearby desert, hosted 2022 World Cup matches, and is the home of a fiercely supported red-and-black Qatari giant.",
+      "ar": "يتميز هذا الملعب بواجهة متوهجة ومعقدة تعكس الكثبان الرملية المتموجة للصحراء القريبة، واستضاف مباريات كأس العالم 2022، وهو معقل عملاق قطري مدعوم بشراسة يرتدي الأحمر والأسود."
+    }
+  },
+  {
+    "id": 321,
+    "type": "stadium",
+    "latitude": 42.0909,
+    "longitude": -71.2643,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Gillette Stadium, Foxborough",
+      "ar": "ملعب جيليت، فوكسبورو (بوسطن)"
+    },
+    "clue": {
+      "en": "This stadium is shared by an NFL dynasty and one of the founding MLS franchises, features a signature lighthouse and bridge above one goalboard, and is a designated host for the 2026 World Cup.",
+      "ar": "يتشارك في هذا الملعب سلالة حاكمة في دوري كرة القدم الأمريكية (NFL) وأحد الأندية المؤسسة للدوري الأمريكي لكرة القدم، ويتميز بمنارة وجسر مميزين فوق لوحة أحد المرميين، وهو مضيف معتمد لكأس العالم 2026."
+    }
+  },
+  {
+    "id": 322,
+    "type": "stadium",
+    "latitude": 34.0131,
+    "longitude": -118.2850,
+    "difficulty": "medium",
+    "answer": {
+      "en": "BMO Stadium, Los Angeles",
+      "ar": "ملعب بي إم أو (BMO)، لوس أنجلوس"
+    },
+    "clue": {
+      "en": "This stadium was built in 2018 for a glamorous expansion team wearing black and gold, features an incredibly steep 34-degree safe-standing supporter section, and famously witnessed Gareth Bale score a 128th-minute MLS Cup equalizer.",
+      "ar": "بُني هذا الملعب عام 2018 لفريق توسع ساحر يرتدي الأسود والذهبي، ويتميز بقسم وقوف آمن للجماهير شديد الانحدار بزاوية 34 درجة، وشهد بشكل شهير تسجيل غاريث بيل لهدف تعادل في الدقيقة 128 بنهائي الدوري."
+    }
+  },
+  {
+    "id": 323,
+    "type": "stadium",
+    "latitude": 30.3880,
+    "longitude": -97.7196,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Q2 Stadium, Austin",
+      "ar": "ملعب كيو 2 (Q2 Stadium)، أوستن"
+    },
+    "clue": {
+      "en": "This stadium was the first major league sports venue in its music-loving Texan city, features a roof that glows bright green at night, and has become a frequent and vibrant host for the US Men's National Team.",
+      "ar": "كان هذا الملعب أول صرح رياضي لبطولة كبرى في مدينته التكساسية المحبة للموسيقى، ويتميز بسقف يتوهج باللون الأخضر الساطع ليلاً، وأصبح مضيفاً متكرراً ونابضاً بالحياة للمنتخب الأمريكي للرجال."
+    }
+  },
+  {
+    "id": 324,
+    "type": "stadium",
+    "latitude": 46.0816,
+    "longitude": 13.2001,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Stadio Friuli (Bluenergy Stadium), Udine",
+      "ar": "ملعب فريولي (بلونيرجي ستاديوم)، أوديني"
+    },
+    "clue": {
+      "en": "This stadium was completely modernized in 2015 by removing its running track, features a striking diamond-patterned metallic exterior, and is home to a black-and-white team world-famous for its incredible global scouting network.",
+      "ar": "تم تحديث هذا الملعب بالكامل في عام 2015 بإزالة مضمار الركض، ويتميز بواجهة معدنية مذهلة بنمط ماسي، وهو معقل لفريق أبيض وأسود مشهور عالمياً بشبكة الكشافة العالمية المذهلة."
+    }
+  },
+  {
+    "id": 325,
+    "type": "stadium",
+    "latitude": 45.4353,
+    "longitude": 10.9686,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Stadio Marcantonio Bentegodi, Verona",
+      "ar": "ملعب ماركانتونيو بينتيجودي، فيرونا"
+    },
+    "clue": {
+      "en": "This stadium hosted matches during the 1990 World Cup, retains a classic Italian running track, and is shared by a historic Scudetto winner and a 'flying donkey' club that famously rose from the lower leagues.",
+      "ar": "استضاف هذا الملعب مباريات خلال كأس العالم 1990، ويحتفظ بمضمار ركض إيطالي كلاسيكي، ويتشاركه بطل تاريخي للدوري الإيطالي ونادٍ ملقب بـ 'الحمير الطائرة' صعد بشكل شهير من الدوريات السفلى."
+    }
+  },
+  {
+    "id": 326,
+    "type": "stadium",
+    "latitude": 45.0416,
+    "longitude": 7.6508,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Stadio Olimpico Grande Torino, Turin",
+      "ar": "ملعب أوليمبيكو غراندي تورينو، تورينو"
+    },
+    "clue": {
+      "en": "This stadium was heavily rebuilt to host the opening ceremony of the 2006 Winter Olympics, bears the name of a legendary 1940s football dynasty that perished in a plane crash, and is the claret-colored home of its city's oldest club.",
+      "ar": "أُعيد بناء هذا الملعب بشكل كبير لاستضافة حفل افتتاح دورة الألعاب الأولمبية الشتوية 2006، ويحمل اسم سلالة كروية أسطورية في الأربعينيات هلكت في حادث تحطم طائرة، وهو المعقل العنابي لأقدم نادٍ في مدينته."
+    }
+  },
+  {
+    "id": 327,
+    "type": "stadium",
+    "latitude": 36.7340,
+    "longitude": -4.4265,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Estadio La Rosaleda, Málaga",
+      "ar": "ملعب لا روزاليدا، ملقا"
+    },
+    "clue": {
+      "en": "This stadium's beautiful name translates to 'The Rose Garden', hosted matches on the sunny southern coast during the 1982 World Cup, and witnessed a magical, Qatari-funded run to the 2013 Champions League quarter-finals.",
+      "ar": "يُترجم الاسم الجميل لهذا الملعب إلى 'حديقة الورود'، واستضاف مباريات على الساحل الجنوبي المشمس خلال كأس العالم 1982، وشهد مسيرة ساحرة ممولة قطرياً لربع نهائي دوري الأبطال عام 2013."
+    }
+  },
+  {
+    "id": 328,
+    "type": "stadium",
+    "latitude": 43.5361,
+    "longitude": -5.6372,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Estadio El Molinón, Gijón",
+      "ar": "ملعب إل مولينون، خيخون"
+    },
+    "clue": {
+      "en": "This stadium is the oldest professional football ground in its country having opened in 1908, was the site of the infamous 1982 'Disgrace' match where West Germany and Austria colluded, and is the red-and-white fortress of an Asturian team.",
+      "ar": "هذا الملعب هو أقدم ملعب احترافي لكرة القدم في بلاده حيث افتُتح عام 1908، وكان موقع مباراة 'الفضيحة' الشهيرة في عام 1982 حيث تواطأت ألمانيا الغربية والنمسا، وهو الحصن الأحمر والأبيض لفريق أستوري."
+    }
+  },
+  {
+    "id": 329,
+    "type": "stadium",
+    "latitude": 41.6444,
+    "longitude": -4.7611,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estadio José Zorrilla, Valladolid",
+      "ar": "ملعب خوسيه زوريلا، بلد الوليد"
+    },
+    "clue": {
+      "en": "This stadium features a distinctive violet-and-white seating pattern, hosted 1982 World Cup matches, and is currently the home of a club famously owned by the legendary Brazilian striker R9.",
+      "ar": "يتميز هذا الملعب بنمط مقاعد فريد باللونين البنفسجي والأبيض، واستضاف مباريات في كأس العالم 1982، وهو حالياً معقل نادٍ مملوك بشكل شهير للمهاجم البرازيلي الأسطوري (R9)."
+    }
+  },
+  {
+    "id": 330,
+    "type": "stadium",
+    "latitude": 53.7890,
+    "longitude": -2.2302,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Turf Moor, Burnley",
+      "ar": "تيرف مور، بيرنلي"
+    },
+    "clue": {
+      "en": "This stadium is one of the oldest continuously used grounds in English football (1883), sits tightly surrounded by traditional terraced houses, and is the historic home of a claret-and-blue team famous for gritty, physical football.",
+      "ar": "يُعد هذا الملعب من أقدم الملاعب المستخدمة باستمرار في كرة القدم الإنجليزية (1883)، ويقع محاطاً بإحكام بالمنازل المتراصة التقليدية، وهو المعقل التاريخي لفريق عنابي وأزرق يشتهر بكرة القدم البدنية الشرسة."
+    }
+  },
+  {
+    "id": 331,
+    "type": "stadium",
+    "latitude": 53.7286,
+    "longitude": -2.4892,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Ewood Park, Blackburn",
+      "ar": "إيوود بارك، بلاكبيرن"
+    },
+    "clue": {
+      "en": "This stadium is located in a working-class Lancashire mill town, witnessed a shocking 1995 Premier League title funded by a local steel magnate, and is home to a team wearing distinct blue-and-white halved shirts.",
+      "ar": "يقع هذا الملعب في بلدة طواحين عمالية في لانكشاير، وشهد لقباً صادماً للدوري الإنجليزي الممتاز عام 1995 بتمويل من قطب صلب محلي، وهو موطن لفريق يرتدي قمصاناً مميزة مقسمة لنصفين بالأزرق والأبيض."
+    }
+  },
+  {
+    "id": 332,
+    "type": "stadium",
+    "latitude": 52.5090,
+    "longitude": -1.9639,
+    "difficulty": "hard",
+    "answer": {
+      "en": "The Hawthorns, West Bromwich",
+      "ar": "ذا هاوثورنس (The Hawthorns)، وست بروميتش"
+    },
+    "clue": {
+      "en": "This stadium sits at the highest altitude of any professional football ground in England, features a thrush bird sitting on a berry branch in the corner of the stands, and is home to a navy-and-white striped team.",
+      "ar": "يقع هذا الملعب على أعلى ارتفاع بين جميع الملاعب الاحترافية في إنجلترا، ويتميز بطائر سمنة يجلس على غصن توت في زاوية المدرجات، وهو موطن لفريق يرتدي خطوطاً باللونين الكحلي والأبيض."
+    }
+  },
+  {
+    "id": 333,
+    "type": "stadium",
+    "latitude": 52.6221,
+    "longitude": 1.3091,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Carrow Road, Norwich",
+      "ar": "كارو رود، نورويتش"
+    },
+    "clue": {
+      "en": "This stadium is located deep in East Anglia, famously saw its celebrity TV chef owner grab a microphone to drunkenly rally fans in 2005, and is a sea of yellow and green supporting 'The Canaries'.",
+      "ar": "يقع هذا الملعب في عمق إيست أنجليا، وشهد بشكل شهير التقاط مالكته الطاهية التلفزيونية الشهيرة لميكروفون لحشد الجماهير في عام 2005، وهو بحر من الأصفر والأخضر لدعم 'طيور الكناري'."
+    }
+  },
+  {
+    "id": 334,
+    "type": "stadium",
+    "latitude": 52.2366,
+    "longitude": 6.8375,
+    "difficulty": "hard",
+    "answer": {
+      "en": "De Grolsch Veste, Enschede",
+      "ar": "دي غرولش فيست، أنسخيده"
+    },
+    "clue": {
+      "en": "This stadium translates to 'The Fortress' named after a famous local beer brand, suffered a tragic roof collapse during expansion works in 2011, and is home to the unexpected 2010 Dutch league champions.",
+      "ar": "يُترجم اسم هذا الملعب إلى 'الحصن' وسُمي على اسم علامة جعة محلية شهيرة، وعانى من انهيار سقف مأساوي أثناء أعمال التوسعة في 2011، وهو معقل أبطال الدوري الهولندي المفاجئين لعام 2010."
+    }
+  },
+  {
+    "id": 335,
+    "type": "stadium",
+    "latitude": 53.0664,
+    "longitude": 8.8376,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Weserstadion, Bremen",
+      "ar": "فيسر شتاديون، بريمن"
+    },
+    "clue": {
+      "en": "This stadium is situated directly on the north bank of a major German river, is entirely covered in solar panels to generate its own power, and is the historic fortress of a green-and-white team.",
+      "ar": "يقع هذا الملعب مباشرة على الضفة الشمالية لنهر ألماني كبير، ومغطى بالكامل بألواح شمسية لتوليد طاقته الخاصة، وهو الحصن التاريخي لفريق أخضر وأبيض."
+    }
+  },
+  {
+    "id": 336,
+    "type": "city",
+    "latitude": 49.4401,
+    "longitude": 7.7491,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Kaiserslautern",
+      "ar": "كايزرسلاوترن"
+    },
+    "clue": {
+      "en": "This small German city is the proud hometown of the captain who lifted the 1954 World Cup, famously saw its 'Red Devils' win the 1998 Bundesliga title immediately after being promoted, and hosted matches during the 2006 World Cup.",
+      "ar": "هذه المدينة الألمانية الصغيرة هي المسقط الفخور لرأس القائد الذي رفع كأس العالم 1954، وشهدت فوز 'شياطينها الحمر' بلقب البوندسليغا 1998 فور صعودهم للدرجة الأولى، واستضافت مباريات خلال كأس العالم 2006."
+    }
+  },
+  {
+    "id": 337,
+    "type": "city",
+    "latitude": 51.3397,
+    "longitude": 12.3731,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Leipzig",
+      "ar": "لايبزيغ"
+    },
+    "clue": {
+      "en": "This eastern German city was the site of the 2006 World Cup match where Zinedine Zidane famously kicked a dressing room door, features the historic Zentralstadion, and is home to a highly controversial modern club funded by an energy drink.",
+      "ar": "كانت هذه المدينة الألمانية الشرقية موقعاً لمباراة بكأس العالم 2006 حيث ركل زيدان باب غرفة الملابس بشكل شهير، وتضم ملعب زينترال شتاديون التاريخي، وهي موطن لنادٍ حديث مثير للجدل بشدة ممول من مشروب طاقة."
+    }
+  },
+  {
+    "id": 338,
+    "type": "city",
+    "latitude": 48.7758,
+    "longitude": 9.1829,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Stuttgart",
+      "ar": "شتوتغارت"
+    },
+    "clue": {
+      "en": "This global automobile hub is the headquarters for Mercedes and Porsche, won a shock 2007 domestic league title driven by a young Mario Gómez, and is fiercely represented by a white shirt with a continuous red chest ring.",
+      "ar": "هذا المركز العالمي للسيارات هو المقر الرئيسي لمرسيدس وبورش، فاز بلقب دوري محلي صادم في 2007 بقيادة الشاب ماريو غوميز، ويُمثله بشراسة قميص أبيض بحلقة حمراء متصلة على الصدر."
+    }
+  },
+  {
+    "id": 339,
+    "type": "city",
+    "latitude": 49.4521,
+    "longitude": 11.0767,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Nuremberg",
+      "ar": "نورنبرغ"
+    },
+    "clue": {
+      "en": "This historic Bavarian city hosted the notoriously violent 'Battle of...' match between Portugal and the Netherlands in the 2006 World Cup, and its traditional club holds 9 historic league titles despite constantly yo-yoing between divisions.",
+      "ar": "استضافت هذه المدينة البافارية التاريخية مباراة 'معركة...' العنيفة سيئة السمعة بين البرتغال وهولندا في كأس العالم 2006، ويحمل ناديها التقليدي 9 ألقاب دوري تاريخية رغم تذبذبه المستمر بين الدرجات."
+    }
+  },
+  {
+    "id": 340,
+    "type": "city",
+    "latitude": 50.6326,
+    "longitude": 5.5797,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Liège",
+      "ar": "لياج"
+    },
+    "clue": {
+      "en": "This French-speaking industrial Belgian hub is deeply rooted in steelworking culture, passionately supports a red-clad team, and is home to a famously intimidating stadium nicknamed 'The Hell of Sclessin'.",
+      "ar": "يتجذر هذا المركز البلجيكي الصناعي الناطق بالفرنسية بعمق في ثقافة صناعة الصلب، ويدعم بشغف فريقاً يرتدي الأحمر، وهو موطن لملعب مخيف شهير يُلقب بـ 'جحيم سكلِيسان'."
+    }
+  },
+  {
+    "id": 341,
+    "type": "city",
+    "latitude": 50.8503,
+    "longitude": 4.3517,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Brussels",
+      "ar": "بروكسل"
+    },
+    "clue": {
+      "en": "This European capital is home to a purple-and-white club that holds the record for the most domestic titles, and was the dark site of the tragic 1985 Heysel Stadium disaster during a European Cup final.",
+      "ar": "هذه العاصمة الأوروبية هي موطن لنادٍ بنفسجي وأبيض يحمل الرقم القياسي لأكبر عدد من الألقاب المحلية، وكانت الموقع المظلم لكارثة ملعب هيسل المأساوية عام 1985 خلال نهائي كأس أوروبا."
+    }
+  },
+  {
+    "id": 342,
+    "type": "city",
+    "latitude": 46.2044,
+    "longitude": 6.1432,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Geneva",
+      "ar": "جنيف"
+    },
+    "clue": {
+      "en": "This global diplomatic hub borders a massive alpine lake, hosted matches at Euro 2008, and is represented by a historic garnet-colored club that narrowly survived bankruptcy in the 2000s.",
+      "ar": "يقع هذا المركز الدبلوماسي العالمي على حدود بحيرة ألبية ضخمة، واستضاف مباريات في يورو 2008، ويُمثله نادٍ تاريخي بلون العقيق الأحمر نجا بصعوبة من الإفلاس في العقد الأول من الألفية."
+    }
+  },
+  {
+    "id": 343,
+    "type": "city",
+    "latitude": 47.0707,
+    "longitude": 15.4395,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Graz",
+      "ar": "غراتس"
+    },
+    "clue": {
+      "en": "This second-largest Austrian city is famously the birthplace region of Arnold Schwarzenegger, hosts a fierce derby between a black-and-white 'Storm' and a red team, and briefly had its stadium named after the Terminator.",
+      "ar": "تُعد ثاني أكبر مدينة نمساوية منطقة مسقط رأس أرنولد شوارزنيجر، وتستضيف ديربياً شرساً بين فريق 'العاصفة' الأسود والأبيض وفريق أحمر، وحمل ملعبها لفترة وجيزة اسم 'المدمر' (الترميناتور)."
+    }
+  },
+  {
+    "id": 344,
+    "type": "city",
+    "latitude": 42.6977,
+    "longitude": 23.3219,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Sofia",
+      "ar": "صوفيا"
+    },
+    "clue": {
+      "en": "This Balkan capital is paralyzed by an intense 'Eternal Derby' between a former army club and a rival named after a national hero, and proudly produced the fiery forward who won the 1994 Ballon d'Or.",
+      "ar": "تُشل هذه العاصمة البلقانية بسبب 'ديربي أبدي' شرس بين نادٍ عسكري سابق وغريم سُمي على اسم بطل وطني، وأنتجت بفخر المهاجم الناري الذي فاز بالكرة الذهبية 1994."
+    }
+  },
+  {
+    "id": 345,
+    "type": "city",
+    "latitude": 41.3275,
+    "longitude": 19.8187,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Tirana",
+      "ar": "تيرانا"
+    },
+    "clue": {
+      "en": "This colorful capital hosted the inaugural 2022 UEFA Conference League final won by Roma, is dominated by a blue-and-white club that shares the city's name, and features a modern national stadium with a distinctive tall red tower.",
+      "ar": "استضافت هذه العاصمة الملونة النسخة الأولى من نهائي دوري المؤتمر الأوروبي 2022 الذي فازت به روما، ويهيمن عليها نادٍ أزرق وأبيض يحمل اسم المدينة، وتضم ملعباً وطنياً حديثاً ببرج أحمر طويل مميز."
+    }
+  },
+  {
+    "id": 346,
+    "type": "city",
+    "latitude": 46.8364,
+    "longitude": 29.6231,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Tiraspol",
+      "ar": "تيراسبول"
+    },
+    "clue": {
+      "en": "This capital of an unrecognized breakaway state features a massive sports complex funded by a security monopoly, and famously saw its club achieve one of the biggest shocks in Champions League history by beating Real Madrid in 2021.",
+      "ar": "تضم عاصمة هذه الدولة الانفصالية غير المعترف بها مجمعاً رياضياً ضخماً ممولاً من احتكار أمني، وشهدت نيل ناديها لإحدى أكبر الصدمات في تاريخ دوري الأبطال بفوزه على ريال مدريد في 2021."
+    }
+  },
+  {
+    "id": 347,
+    "type": "city",
+    "latitude": 43.8563,
+    "longitude": 18.4131,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Sarajevo",
+      "ar": "سراييفو"
+    },
+    "clue": {
+      "en": "This city hosted the 1984 Winter Olympics before enduring a devastating 1990s siege, and is fiercely divided by a footballing rivalry between a railwaymen's club and a maroon-clad club sharing the city's name.",
+      "ar": "استضافت هذه المدينة دورة الألعاب الأولمبية الشتوية 1984 قبل أن تتحمل حصاراً مدمراً في التسعينيات، وتنقسم بشراسة بسبب تنافس كروي بين نادي عمال السكك الحديدية ونادٍ يرتدي العنابي يحمل اسم المدينة."
+    }
+  },
+  {
+    "id": 348,
+    "type": "city",
+    "latitude": -16.4897,
+    "longitude": -68.1193,
+    "difficulty": "easy",
+    "answer": {
+      "en": "La Paz",
+      "ar": "لاباز"
+    },
+    "clue": {
+      "en": "This dizzyingly high capital requires visiting teams to play at over 3,600 meters above sea level, famously saw Argentina suffer a 6-1 humiliation in 2009, and hosts a fierce derby between a sky-blue team and a yellow-and-black team.",
+      "ar": "تتطلب هذه العاصمة المرتفعة بشكل يسبب الدوار من الفرق الزائرة اللعب على ارتفاع يتجاوز 3600 متر فوق مستوى سطح البحر، وشهدت إذلال الأرجنتين 6-1 في 2009، وتستضيف ديربي شرس بين فريق أزرق سماوي وفريق أصفر وأسود."
+    }
+  },
+  {
+    "id": 349,
+    "type": "city",
+    "latitude": -8.0476,
+    "longitude": -34.8770,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Recife",
+      "ar": "ريسيفي"
+    },
+    "clue": {
+      "en": "Known as the 'Venice of Brazil' due to its bridges, this hot coastal city hosted rain-soaked 2014 World Cup matches, and is home to three fiercely competitive clubs including one named after a nautical theme.",
+      "ar": "تُعرف بـ 'بندقية البرازيل' بسبب جسورها، استضافت هذه المدينة الساحلية الحارة مباريات غارقة بالأمطار في كأس العالم 2014، وهي موطن لثلاثة أندية شديدة التنافسية بينها نادٍ يحمل اسماً بحرياً."
+    }
+  },
+  {
+    "id": 350,
+    "type": "city",
+    "latitude": -15.8267,
+    "longitude": -47.9218,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Brasília",
+      "ar": "برازيليا"
+    },
+    "clue": {
+      "en": "This architecturally unique planned capital is shaped like an airplane from above, features the most expensive stadium from the 2014 World Cup, yet completely lacks any traditional top-flight football clubs of its own.",
+      "ar": "تتخذ هذه العاصمة المخططة المعمارية الفريدة شكل طائرة من الأعلى، وتضم أغلى ملعب في كأس العالم 2014، ومع ذلك فهي تفتقر تماماً لأي أندية تقليدية خاصة بها في دوري الدرجة الأولى."
+    }
+  },
+  {
+    "id": 351,
+    "type": "city",
+    "latitude": -13.5226,
+    "longitude": -71.9673,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Cusco",
+      "ar": "كوسكو"
+    },
+    "clue": {
+      "en": "This ancient Incan capital sits at a massive altitude, and its local red-clad team achieved a historic miracle by defeating River Plate to win the 2003 Copa Sudamericana, the only continental title for its country.",
+      "ar": "تقع هذه العاصمة القديمة للإنكا على ارتفاع شاهق، وحقق فريقها المحلي ذو الرداء الأحمر معجزة تاريخية بهزيمة ريفر بليت للفوز بكوبا سودامريكانا 2003، وهو اللقب القاري الوحيد لبلاده."
+    }
+  },
+  {
+    "id": 352,
+    "type": "city",
+    "latitude": 9.9281,
+    "longitude": -84.0907,
+    "difficulty": "medium",
+    "answer": {
+      "en": "San José",
+      "ar": "سان خوسيه"
+    },
+    "clue": {
+      "en": "This Central American capital is home to a fiercely dominant team nicknamed the 'Purple Monster', holds an intense national rivalry with nearby Alajuelense, and is the historic fortress of 'Los Ticos'.",
+      "ar": "هذه العاصمة في أمريكا الوسطى هي موطن لفريق مسيطر بشراسة يُلقب بـ 'الوحش البنفسجي'، وتمتلك منافسة وطنية شديدة مع ألاخولينسي القريبة، وهي الحصن التاريخي لمنتخب 'لوس تيكوس'."
+    }
+  },
+  {
+    "id": 353,
+    "type": "city",
+    "latitude": 14.0818,
+    "longitude": -87.2068,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Tegucigalpa",
+      "ar": "تيغوسيغالبا"
+    },
+    "clue": {
+      "en": "This Central American capital is intensely split by a ferocious local derby between a white-clad club and a blue-clad club, frequently suffers from chaotic stadium overcrowding, and is the undisputed powerhouse of Honduran football.",
+      "ar": "تنقسم هذه العاصمة في أمريكا الوسطى بشدة بسبب ديربي محلي عنيف بين نادٍ يرتدي الأبيض ونادٍ يرتدي الأزرق، وتعاني غالباً من ازدحام فوضوي في الملاعب، وهي القوة المهيمنة بلا منازع في كرة القدم الهندوراسية."
+    }
+  },
+  {
+    "id": 354,
+    "type": "city",
+    "latitude": 38.9072,
+    "longitude": -77.0369,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Washington D.C.",
+      "ar": "واشنطن العاصمة"
+    },
+    "clue": {
+      "en": "This capital city saw its black-and-red MLS franchise win four championships in the league's early years, played for decades in a bouncing, aging NFL stadium, and now plays its soccer at Audi Field.",
+      "ar": "شهدت هذه العاصمة فوز فريقها الأسود والأحمر بأربع بطولات في السنوات الأولى للدوري الأمريكي، ولعبت لعقود في ملعب قديم ومهتز لكرة القدم الأمريكية، وتلعب الآن في ملعب أودي فيلد."
+    }
+  },
+  {
+    "id": 355,
+    "type": "city",
+    "latitude": 41.8781,
+    "longitude": -87.6298,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Chicago",
+      "ar": "شيكاغو"
+    },
+    "clue": {
+      "en": "This 'Windy City' won the MLS Cup in its 1998 inaugural season, famously signed a German World Cup-winning midfielder in 2017, and plays its major matches at the iconic, column-flanked Soldier Field.",
+      "ar": "فازت هذه 'المدينة العاصفة' بكأس الدوري الأمريكي في موسمها الافتتاحي عام 1998، ووقعت بشكل شهير مع لاعب وسط ألماني فائز بكأس العالم في 2017، وتلعب مبارياتها الكبرى في ملعب سولجر فيلد الأيقوني المحاط بالأعمدة."
+    }
+  },
+  {
+    "id": 356,
+    "type": "city",
+    "latitude": 28.5383,
+    "longitude": -81.3792,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Orlando",
+      "ar": "أورلاندو"
+    },
+    "clue": {
+      "en": "This global theme park capital was a 1994 World Cup host city, boasts a massively supported purple-clad MLS team, and was the final career destination for Brazilian Ballon d'Or winner Kaká.",
+      "ar": "كانت هذه العاصمة العالمية لمدن الملاهي مدينة مضيفة لكأس العالم 1994، وتفتخر بفريق يرتدي البنفسجي يحظى بدعم جماهيري هائل، وكانت الوجهة المهنية الأخيرة للبرازيلي الفائز بالكرة الذهبية كاكا."
+    }
+  },
+  {
+    "id": 357,
+    "type": "city",
+    "latitude": 5.6037,
+    "longitude": -0.1870,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Accra",
+      "ar": "أكرا"
+    },
+    "clue": {
+      "en": "This West African capital is home to a club known as the 'Phobians', suffered a horrific stadium stampede in 2001 taking 127 lives, and holds a deeply bitter rivalry with the Ashanti region's biggest club.",
+      "ar": "هذه العاصمة في غرب إفريقيا هي موطن لنادٍ يُعرف بـ 'الفوبيين' (Phobians)، وعانت من تدافع مروع في الملعب عام 2001 أودى بحياة 127 شخصاً، وتحمل عداوة مريرة مع أكبر أندية منطقة أشانتي."
+    }
+  },
+  {
+    "id": 358,
+    "type": "city",
+    "latitude": -1.9441,
+    "longitude": 30.0619,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Kigali",
+      "ar": "كيغالي"
+    },
+    "clue": {
+      "en": "This fast-growing African capital hosted the 2023 FIFA Congress where the expanded 2026 World Cup format was finalized, and its national tourism board controversially sponsors the sleeves of massive European clubs like Arsenal and PSG.",
+      "ar": "استضافت هذه العاصمة الإفريقية سريعة النمو مؤتمر الفيفا 2023 حيث تم الانتهاء من الشكل الموسع لكأس العالم 2026، ويرعى مجلس السياحة الوطني الخاص بها بشكل مثير للجدل أكمام قمصان أندية أوروبية ضخمة مثل أرسنال وباريس سان جيرمان."
+    }
+  },
+  {
+    "id": 359,
+    "type": "city",
+    "latitude": 41.2995,
+    "longitude": 69.2401,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Tashkent",
+      "ar": "طشقند"
+    },
+    "clue": {
+      "en": "This Central Asian capital is home to a club that suffered a tragic mid-air collision in 1979, and briefly shocked the footballing world by signing Brazilian star Rivaldo to a massively funded local team in 2008.",
+      "ar": "هذه العاصمة في آسيا الوسطى هي موطن لنادٍ عانى من تصادم جوي مأساوي في عام 1979، وصدمت عالم كرة القدم لفترة وجيزة بتوقيعها مع النجم البرازيلي ريفالدو لفريق محلي ممول بضخامة في 2008."
+    }
+  },
+  {
+    "id": 360,
+    "type": "city",
+    "latitude": 31.2304,
+    "longitude": 121.4737,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Shanghai",
+      "ar": "شانغهاي"
+    },
+    "clue": {
+      "en": "This massive financial hub saw its football clubs spend astronomical fees on stars like Drogba and Oscar in the 2010s, and is split by a fierce derby between a blue-clad club and a red-clad club backed by a port authority.",
+      "ar": "شهد هذا المركز المالي الضخم إنفاق أنديته الكروية لرسوم فلكية على نجوم مثل دروغبا وأوسكار في العقد الأول من الألفية، وينقسم بديربي شرس بين نادٍ يرتدي الأزرق ونادٍ يرتدي الأحمر مدعوم من هيئة الموانئ."
+    }
+  },
+  {
+    "id": 361,
+    "type": "stadium",
+    "latitude": 48.1730,
+    "longitude": 11.5466,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Olympiastadion, Munich",
+      "ar": "الملعب الأولمبي، ميونخ"
+    },
+    "clue": {
+      "en": "This stadium features an iconic sweeping transparent tent roof, hosted the 1974 World Cup final where the host nation won, and witnessed Marco van Basten's legendary volley in 1988.",
+      "ar": "يتميز هذا الملعب بسقف خيمة شفاف وممتد أيقوني، واستضاف نهائي كأس العالم 1974 حيث فاز البلد المضيف، وشهد التسديدة الطائرة (على الطاير) الأسطورية لماركو فان باستن عام 1988."
+    }
+  },
+  {
+    "id": 362,
+    "type": "stadium",
+    "latitude": 41.0846,
+    "longitude": 16.8400,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Stadio San Nicola, Bari",
+      "ar": "ملعب سان نيكولا، باري"
+    },
+    "clue": {
+      "en": "This stadium features a futuristic 'spaceship' design with separated upper tiers, hosted the 1991 European Cup final won by a Yugoslavian underdog, and sits in a southern Italian port city.",
+      "ar": "يتميز هذا الملعب بتصميم 'سفينة فضاء' مستقبلي مع طبقات علوية منفصلة، واستضاف نهائي كأس أوروبا 1991 الذي فاز به فريق يوغوسلافي غير مرشح، ويقع في مدينة ساحلية بجنوب إيطاليا."
+    }
+  },
+  {
+    "id": 363,
+    "type": "stadium",
+    "latitude": 53.3703,
+    "longitude": -1.4708,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Bramall Lane, Sheffield",
+      "ar": "برامول لين، شيفيلد"
+    },
+    "clue": {
+      "en": "This stadium is the oldest major stadium in the world still hosting professional matches, historically shared its pitch with cricket, and is the fortress of a red-and-white team nicknamed 'The Blades'.",
+      "ar": "يُعد هذا الملعب أقدم ملعب رئيسي في العالم لا يزال يستضيف مباريات احترافية، وشارك تاريخياً أرضيته مع لعبة الكريكيت، وهو حصن فريق أحمر وأبيض يُلقب بـ 'الشفرات'."
+    }
+  },
+  {
+    "id": 364,
+    "type": "stadium",
+    "latitude": -36.8750,
+    "longitude": 174.7400,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Eden Park, Auckland",
+      "ar": "إيدن بارك، أوكلاند"
+    },
+    "clue": {
+      "en": "This stadium is globally revered as a rugby fortress but hosted the opening match of the 2023 Women's World Cup, is the largest sports venue in its country, and witnessed a historic opening-day upset by the host nation.",
+      "ar": "يُبجل هذا الملعب عالمياً كحصن للرجبي ولكنه استضاف المباراة الافتتاحية لكأس العالم للسيدات 2023، وهو أكبر صرح رياضي في بلده، وشهد مفاجأة تاريخية في يوم الافتتاح من قبل البلد المضيف."
+    }
+  },
+  {
+    "id": 365,
+    "type": "stadium",
+    "latitude": 35.6778,
+    "longitude": 139.7145,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Japan National Stadium, Tokyo",
+      "ar": "الملعب الوطني الياباني، طوكيو"
+    },
+    "clue": {
+      "en": "This stadium was completely rebuilt with a beautiful wooden lattice design for the 2020 Olympics, traditionally hosts the Emperor's Cup final on New Year's Day, and replaced a historic 1964 venue.",
+      "ar": "أُعيد بناء هذا الملعب بالكامل بتصميم شبكي خشبي جميل لأولمبياد 2020، ويستضيف تقليدياً نهائي كأس الإمبراطور في يوم رأس السنة، وحل محل ملعب تاريخي بُني عام 1964."
+    }
+  },
+  {
+    "id": 366,
+    "type": "stadium",
+    "latitude": -23.5275,
+    "longitude": -46.6786,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Allianz Parque, São Paulo",
+      "ar": "أليانز باركي، ساو باولو"
+    },
+    "clue": {
+      "en": "This stadium is a highly modern arena built in 2014 on historic grounds, features an artificial turf pitch that gives the home team a distinct advantage, and is the roaring fortress of a green-clad team nicknamed 'The Pigs'.",
+      "ar": "هذا الملعب هو ساحة حديثة للغاية بُنيت في 2014 على أراضٍ تاريخية، ويتميز بأرضية من العشب الصناعي تمنح أصحاب الأرض ميزة واضحة، وهو الحصن الهادر لفريق يرتدي الأخضر ويُلقب بـ 'الخنازير'."
+    }
+  },
+  {
+    "id": 367,
+    "type": "stadium",
+    "latitude": -34.8833,
+    "longitude": -56.1583,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Gran Parque Central, Montevideo",
+      "ar": "غران بارك سنترال، مونتيفيديو"
+    },
+    "clue": {
+      "en": "This stadium hosted one of the first two matches in World Cup history in 1930, is the historic fortress of a tricolor club, and features a deeply historic legacy including the suicide of its legendary captain on the center circle in 1918.",
+      "ar": "استضاف هذا الملعب إحدى أول مباراتين في تاريخ كأس العالم 1930، وهو الحصن التاريخي لنادٍ ثلاثي الألوان، ويحمل إرثاً تاريخياً عميقاً يشمل انتحار قائده الأسطوري في دائرة المنتصف عام 1918."
+    }
+  },
+  {
+    "id": 368,
+    "type": "stadium",
+    "latitude": -34.6354,
+    "longitude": -58.5207,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estadio José Amalfitani, Buenos Aires",
+      "ar": "ملعب خوسيه آمالفيتاني، بوينس آيرس"
+    },
+    "clue": {
+      "en": "This stadium is nicknamed 'The Fort' (El Fortín), hosted matches during the 1978 World Cup, and is the proud home of a team featuring a distinctive blue 'V' on their white shirts.",
+      "ar": "يُلقب هذا الملعب بـ 'الحصن' (إل فورتين)، واستضاف مباريات خلال كأس العالم 1978، وهو الموطن الفخور لفريق يتميز بحرف 'V' أزرق واضح على قمصانه البيضاء."
+    }
+  },
+  {
+    "id": 369,
+    "type": "stadium",
+    "latitude": 4.6459,
+    "longitude": -74.0775,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estadio El Campín, Bogotá",
+      "ar": "ملعب إل كامبين، بوغوتا"
+    },
+    "clue": {
+      "en": "This stadium sits at a challenging altitude of over 2,600 meters, hosted the 2001 Copa America final where the home nation won their first title, and is fiercely shared by a blue team and a red team.",
+      "ar": "يقع هذا الملعب على ارتفاع صعب يتجاوز 2600 متر، واستضاف نهائي كوبا أمريكا 2001 حيث فاز البلد المضيف بلقبه الأول، ويتشاركه بشراسة فريق أزرق وفريق أحمر."
+    }
+  },
+  {
+    "id": 370,
+    "type": "stadium",
+    "latitude": 6.2569,
+    "longitude": -75.5901,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Estadio Atanasio Girardot, Medellín",
+      "ar": "ملعب أتاناسيو خيراردوت، ميديلين"
+    },
+    "clue": {
+      "en": "This stadium hosted the 2016 Copa Libertadores final second leg, witnessed a deeply emotional stadium-wide vigil for the Chapecoense tragedy, and is shared by a green team and a red-and-blue team.",
+      "ar": "استضاف هذا الملعب إياب نهائي كوبا ليبرتادوريس 2016، وشهد وقفة احتجاجية عاطفية عميقة ملأت الملعب حداداً على مأساة شابيكوينسي، ويتشاركه فريق أخضر وفريق أحمر وأزرق."
+    }
+  },
+  {
+    "id": 371,
+    "type": "stadium",
+    "latitude": 41.6364,
+    "longitude": -0.9018,
+    "difficulty": "hard",
+    "answer": {
+      "en": "La Romareda, Zaragoza",
+      "ar": "لا روماريدا، سرقسطة"
+    },
+    "clue": {
+      "en": "This stadium traditionally featured a deep ditch separating fans from the pitch, hosted matches during the 1982 World Cup, and is the historic home of a white-and-blue team that won the 1995 UEFA Cup Winners' Cup.",
+      "ar": "تميز هذا الملعب تقليدياً بخندق عميق يفصل الجماهير عن أرضية الملعب، واستضاف مباريات خلال كأس العالم 1982، وهو المعقل التاريخي لفريق أبيض وأزرق فاز بكأس الكؤوس الأوروبية 1995."
+    }
+  },
+  {
+    "id": 372,
+    "type": "stadium",
+    "latitude": 42.2118,
+    "longitude": -8.7402,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Balaídos, Vigo",
+      "ar": "بالايدوس، فيغو"
+    },
+    "clue": {
+      "en": "This stadium is notorious for its heavy Atlantic rain and strong winds, recently underwent major renovations to enclose its stands, and is the fortress of a sky-blue team in Galicia.",
+      "ar": "يشتهر هذا الملعب بأمطاره الأطلسية الغزيرة ورياحه القوية، وخضع مؤخراً لتجديدات كبرى لإغلاق مدرجاته، وهو حصن لفريق أزرق سماوي في إقليم غاليسيا."
+    }
+  },
+  {
+    "id": 373,
+    "type": "stadium",
+    "latitude": 39.5899,
+    "longitude": 2.6298,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Estadi Mallorca Son Moix, Palma de Mallorca",
+      "ar": "ملعب مايوركا سون مويكس، بالما دي مايوركا"
+    },
+    "clue": {
+      "en": "This stadium is located on a sunny Mediterranean island, recently removed its running track to bring red-and-black fans closer to the pitch, and is the home of a club famously partly owned by Rafael Nadal.",
+      "ar": "يقع هذا الملعب في جزيرة مشمسة بالبحر الأبيض المتوسط، وأزال مؤخراً مضمار الركض لتقريب جماهيره ذات اللونين الأحمر والأسود من الملعب، وهو موطن لنادٍ يمتلك رافاييل نادال جزءاً منه بشكل شهير."
+    }
+  },
+  {
+    "id": 374,
+    "type": "stadium",
+    "latitude": 50.8955,
+    "longitude": 4.3339,
+    "difficulty": "easy",
+    "answer": {
+      "en": "King Baudouin Stadium, Brussels",
+      "ar": "ملعب الملك بودوان، بروكسل"
+    },
+    "clue": {
+      "en": "This stadium was completely renamed and rebuilt following a tragic disaster in 1985, features a running track, and serves as the primary home venue for a national team known as the 'Red Devils'.",
+      "ar": "تم تغيير اسم هذا الملعب وإعادة بنائه بالكامل بعد كارثة مأساوية عام 1985، ويتميز بمضمار ركض، ويعمل كالملعب الرئيسي لمنتخب وطني يُعرف بـ 'الشياطين الحمر'."
+    }
+  },
+  {
+    "id": 375,
+    "type": "stadium",
+    "latitude": 47.7924,
+    "longitude": 3.5878,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Stade de l'Abbé-Deschamps, Auxerre",
+      "ar": "ملعب دي لابي ديشان، أوكسير"
+    },
+    "clue": {
+      "en": "This stadium is uniquely owned entirely by its club rather than the local municipality, sits along the banks of the Yonne river, and was the fortress of a manager who remarkably coached the team for over 40 years.",
+      "ar": "يتميز هذا الملعب بكونه مملوكاً بالكامل لناديه بدلاً من البلدية المحلية، ويقع على ضفاف نهر يون، وكان حصناً لمدرب درب الفريق بشكل مذهل لأكثر من 40 عاماً."
+    }
+  },
+  {
+    "id": 376,
+    "type": "stadium",
+    "latitude": 48.5603,
+    "longitude": 7.7533,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Stade de la Meinau, Strasbourg",
+      "ar": "ملعب دي لا مينو، ستراسبورغ"
+    },
+    "clue": {
+      "en": "This stadium sits near the German border, is famous for having one of the most vocally passionate fan bases in its country, and is the home of a blue-and-white team that shocked everyone to win the 1979 league title.",
+      "ar": "يقع هذا الملعب بالقرب من الحدود الألمانية، ويشتهر بامتلاكه واحدة من أكثر القواعد الجماهيرية صخباً وشغفاً في بلاده، وهو موطن لفريق أزرق وأبيض صدم الجميع بفوزه بلقب الدوري عام 1979."
+    }
+  },
+  {
+    "id": 377,
+    "type": "stadium",
+    "latitude": 55.9390,
+    "longitude": -3.2140,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Tynecastle Park, Edinburgh",
+      "ar": "تاينكاسل بارك، إدنبرة"
+    },
+    "clue": {
+      "en": "This stadium is renowned for its incredibly tight and steep stands creating a claustrophobic atmosphere, is the fierce home of a maroon-clad club, and sits just across town from a bitter green-clad rival.",
+      "ar": "يشتهر هذا الملعب بمدرجاته الضيقة والمنحدرة للغاية التي تخلق جواً خانقاً للخصوم، وهو المعقل الشرس لنادٍ يرتدي العنابي، ويقع في الجانب الآخر من المدينة لغريم لدود يرتدي الأخضر."
+    }
+  },
+  {
+    "id": 378,
+    "type": "stadium",
+    "latitude": 50.7964,
+    "longitude": -1.0638,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Fratton Park, Portsmouth",
+      "ar": "فراتون بارك، بورتسموث"
+    },
+    "clue": {
+      "en": "This stadium features a charming mock-Tudor entrance designed by Archibald Leitch, is famous for a single fan constantly ringing a loud bell during matches, and is the fortress of a blue-clad south coast team.",
+      "ar": "يتميز هذا الملعب بمدخل ساحر على طراز تيودور الزائف صممه أرشيبالد ليتش، ويشتهر بمشجع واحد يقرع جرساً صاخباً باستمرار أثناء المباريات، وهو الحصن لفريق يرتدي الأزرق في الساحل الجنوبي."
+    }
+  },
+  {
+    "id": 379,
+    "type": "stadium",
+    "latitude": 52.9883,
+    "longitude": -2.1756,
+    "difficulty": "easy",
+    "answer": {
+      "en": "bet365 Stadium, Stoke-on-Trent",
+      "ar": "ملعب بيت 365 (bet365)، ستوك أون ترينت"
+    },
+    "clue": {
+      "en": "This stadium is notorious for its freezing, swirling winds thanks to open corners in its design, famously tested whether elite foreign players could 'do it on a cold rainy night', and is home to a red-and-white striped team.",
+      "ar": "يشتهر هذا الملعب برياحه المتجمدة والدوامية بفضل الزوايا المفتوحة في تصميمه، واختبر بشكل شهير قدرة النخبة الأجنبية على 'اللعب في ليلة باردة وممطرة'، وهو موطن لفريق مخطط بالأحمر والأبيض."
+    }
+  },
+  {
+    "id": 380,
+    "type": "stadium",
+    "latitude": 41.4485,
+    "longitude": -8.3013,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estádio D. Afonso Henriques, Guimarães",
+      "ar": "ملعب د. أفونسو هنريكيس، غيماريش"
+    },
+    "clue": {
+      "en": "This stadium is named after its nation's very first king, hosted matches during Euro 2004, and tragically witnessed the on-pitch death of Hungarian striker Miklós Fehér in 2004.",
+      "ar": "سُمي هذا الملعب على اسم أول ملك لبلاده، واستضاف مباريات خلال يورو 2004، وشهد بشكل مأساوي وفاة المهاجم المجري ميكلوش فيهر على أرضية الملعب في 2004."
+    }
+  },
+  {
+    "id": 381,
+    "type": "stadium",
+    "latitude": -26.1975,
+    "longitude": 28.0608,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Ellis Park Stadium, Johannesburg",
+      "ar": "ملعب إليس بارك، جوهانسبرغ"
+    },
+    "clue": {
+      "en": "This stadium famously hosted the 1995 Rugby World Cup final, witnessed a dramatic 2010 Football World Cup quarter-final where Spain survived a penalty against Paraguay, and sits at a high altitude.",
+      "ar": "استضاف هذا الملعب بشكل شهير نهائي كأس العالم للرجبي 1995، وشهد ربع نهائي درامي في مونديال 2010 لكرة القدم حيث نجت إسبانيا من ركلة جزاء ضد باراغواي، ويقع على ارتفاع شاهق."
+    }
+  },
+  {
+    "id": 382,
+    "type": "stadium",
+    "latitude": 13.6822,
+    "longitude": -89.2158,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Estadio Cuscatlán, San Salvador",
+      "ar": "ملعب كوسكاتلان، سان سلفادور"
+    },
+    "clue": {
+      "en": "This stadium is the largest venue in Central America, is affectionately nicknamed 'The Monumental', and creates a deafening, highly hostile environment for visiting teams during World Cup qualifiers.",
+      "ar": "يُعد هذا الملعب الأكبر في أمريكا الوسطى، ويُلقب بحب بـ 'إل مونومنتال'، ويخلق بيئة صاخبة وشديدة العدائية للفرق الزائرة خلال تصفيات كأس العالم."
+    }
+  },
+  {
+    "id": 383,
+    "type": "stadium",
+    "latitude": 9.0416,
+    "longitude": -79.4677,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Estadio Rommel Fernández, Panama City",
+      "ar": "ملعب روميل فيرنانديز، مدينة بنما"
+    },
+    "clue": {
+      "en": "This stadium is named after a tragic local striker who died in a car crash, hosted a chaotic 2017 qualifier where a 'ghost goal' helped its national team reach their first World Cup, and is the epicenter of its country's football.",
+      "ar": "سُمي هذا الملعب على اسم مهاجم محلي توفي في حادث سيارة، واستضاف مباراة تصفيات فوضوية في 2017 حيث ساعد 'هدف شبح' منتخبه الوطني للوصول إلى أول كأس عالم له، وهو مركز كرة القدم في بلاده."
+    }
+  },
+  {
+    "id": 384,
+    "type": "stadium",
+    "latitude": 25.2393,
+    "longitude": 55.3090,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Al Maktoum Stadium, Dubai",
+      "ar": "ملعب آل مكتوم، دبي"
+    },
+    "clue": {
+      "en": "This stadium features a modern, glowing square exterior upgraded for the 2019 Asian Cup, is located in the heart of a bustling luxury metropolis, and is the home of a blue-clad club known as 'The Wave'.",
+      "ar": "يتميز هذا الملعب بواجهة مربعة حديثة ومتوهجة تم تحديثها لكأس آسيا 2019، ويقع في قلب عاصمة فاخرة وصاخبة، وهو موطن لنادٍ يرتدي الأزرق يُعرف بـ 'الموج الأزرق'."
+    }
+  },
+  {
+    "id": 385,
+    "type": "stadium",
+    "latitude": 29.2745,
+    "longitude": 47.9150,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Jaber Al-Ahmad International Stadium, Kuwait City",
+      "ar": "استاد جابر الأحمد الدولي، مدينة الكويت"
+    },
+    "clue": {
+      "en": "This stadium features a sweeping saddle-shaped roof, is the 60,000-seater national venue for a Gulf state, and hosted the final of the 2017 Arabian Gulf Cup.",
+      "ar": "يتميز هذا الملعب بسقف ممتد على شكل سرج، وهو الملعب الوطني لِدولة خليجية ويتسع لـ 60 ألف متفرج، واستضاف نهائي كأس الخليج العربي 2017."
+    }
+  },
+  {
+    "id": 386,
+    "type": "city",
+    "latitude": 31.6295,
+    "longitude": -7.9811,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Marrakesh",
+      "ar": "مراكش"
+    },
+    "clue": {
+      "en": "This vibrant 'Red City' hosted two consecutive Club World Cup finals (2013 and 2014), features a major stadium named after it, and is home to a historic club called Kawkab.",
+      "ar": "استضافت هذه 'المدينة الحمراء' النابضة بالحياة نهائيين متتاليين لكأس العالم للأندية (2013 و2014)، وتضم ملعباً رئيسياً يحمل اسمها، وهي موطن لنادٍ تاريخي يُدعى الكوكب."
+    }
+  },
+  {
+    "id": 387,
+    "type": "city",
+    "latitude": 30.4278,
+    "longitude": -9.5981,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Agadir",
+      "ar": "أكادير"
+    },
+    "clue": {
+      "en": "This sunny coastal city hosted matches during the 2013 Club World Cup, boasts a modern stadium nestled near the Atlas Mountains, and is the proud home of a club named Hassania.",
+      "ar": "استضافت هذه المدينة الساحلية المشمسة مباريات خلال كأس العالم للأندية 2013، وتفتخر بملعب حديث يقع بالقرب من جبال الأطلس، وهي الموطن الفخور لنادٍ يُدعى حسنية."
+    }
+  },
+  {
+    "id": 388,
+    "type": "city",
+    "latitude": 4.0511,
+    "longitude": 9.7679,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Douala",
+      "ar": "دوالا"
+    },
+    "clue": {
+      "en": "This economic capital and major port city hosted key matches in the 2021 Africa Cup of Nations at its Japoma Stadium, and is home to a historic club known as 'Union'.",
+      "ar": "استضافت هذه العاصمة الاقتصادية والمدينة الساحلية الكبرى مباريات مهمة في أمم إفريقيا 2021 في ملعب جابوما، وهي موطن لنادٍ تاريخي يُعرف بـ 'يونيون'."
+    }
+  },
+  {
+    "id": 389,
+    "type": "city",
+    "latitude": 3.8480,
+    "longitude": 11.5021,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Yaoundé",
+      "ar": "ياوندي"
+    },
+    "clue": {
+      "en": "This national capital hosted the 2021 Africa Cup of Nations final, tragically suffered a deadly stadium crush during the same tournament, and features a massive venue named after a long-serving president.",
+      "ar": "استضافت هذه العاصمة الوطنية نهائي كأس أمم إفريقيا 2021، وعانت بشكل مأساوي من تدافع مميت في الملعب خلال نفس البطولة، وتضم ملعباً ضخماً سُمي على اسم رئيس حكم لفترة طويلة."
+    }
+  },
+  {
+    "id": 390,
+    "type": "city",
+    "latitude": 34.7398,
+    "longitude": 10.7600,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Sfax",
+      "ar": "صفاقس"
+    },
+    "clue": {
+      "en": "This industrial port city is home to a wildly successful team nicknamed the 'Juventus of the Arabs', which wears black-and-white stripes and has dominated the CAF Confederation Cup.",
+      "ar": "هذه المدينة الساحلية الصناعية هي موطن لفريق ناجح للغاية يُلقب بـ 'يوفنتوس العرب'، يرتدي خطوطاً سوداء وبيضاء وهيمن على كأس الكونفدرالية الإفريقية."
+    }
+  },
+  {
+    "id": 391,
+    "type": "city",
+    "latitude": 35.6987,
+    "longitude": -0.6308,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Oran",
+      "ar": "وهران"
+    },
+    "clue": {
+      "en": "This coastal Mediterranean city successfully hosted the 2022 Mediterranean Games, is famous for its vibrant Rai music culture, and is home to a passionate red-and-white football club called 'Mouloudia'.",
+      "ar": "استضافت هذه المدينة الساحلية على البحر المتوسط بنجاح دورة ألعاب البحر المتوسط 2022، وتشتهر بثقافة موسيقى الراي النابضة بالحياة، وهي موطن لنادٍ كروي أحمر وأبيض شغوف يُدعى 'المولودية'."
+    }
+  },
+  {
+    "id": 392,
+    "type": "city",
+    "latitude": 26.4207,
+    "longitude": 50.0888,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Dammam",
+      "ar": "الدمام"
+    },
+    "clue": {
+      "en": "This eastern coastal city is home to a club that famously won the national league undefeated in the 1980s, recently attracted Liverpool legend Steven Gerrard as a manager, and plays in green and red.",
+      "ar": "هذه المدينة الساحلية الشرقية هي موطن لنادٍ اشتهر بالفوز بالدوري الوطني بلا هزيمة في الثمانينيات، واجتذب مؤخراً أسطورة ليفربول ستيفن جيرارد كمدرب، ويلعب باللونين الأخضر والأحمر."
+    }
+  },
+  {
+    "id": 393,
+    "type": "city",
+    "latitude": 26.3259,
+    "longitude": 43.9749,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Buraidah",
+      "ar": "بريدة"
+    },
+    "clue": {
+      "en": "This agricultural city in the Qassim region is split by a fierce local derby between yellow-clad Al Taawoun and red-clad Al Raed, and regularly shakes up the traditional big clubs in its country.",
+      "ar": "تنقسم هذه المدينة الزراعية في منطقة القصيم بديربي محلي شرس بين التعاون الذي يرتدي الأصفر والرائد الذي يرتدي الأحمر، وتهز بانتظام كبار الأندية التقليدية في بلادها."
+    }
+  },
+  {
+    "id": 394,
+    "type": "city",
+    "latitude": 37.2692,
+    "longitude": 127.0286,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Suwon",
+      "ar": "سوون"
+    },
+    "clue": {
+      "en": "This city is often considered the 'Football Capital' of its Asian nation, hosted 2002 World Cup matches, and is completely devoted to a blue-winged club backed by a massive electronics corporation.",
+      "ar": "تُعتبر هذه المدينة غالباً 'عاصمة كرة القدم' في بلادها الآسيوية، واستضافت مباريات بكأس العالم 2002، وتكرس نفسها بالكامل لنادٍ 'أزرق الأجنحة' تدعمه شركة إلكترونيات ضخمة."
+    }
+  },
+  {
+    "id": 395,
+    "type": "city",
+    "latitude": 35.5383,
+    "longitude": 129.3113,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Ulsan",
+      "ar": "أولسان"
+    },
+    "clue": {
+      "en": "This industrial powerhouse city is deeply tied to a massive automotive and shipbuilding corporation, and its blue-clad team known as the 'Tigers' won the 2020 Asian Champions League.",
+      "ar": "ترتبط هذه القوة الصناعية بشدة بشركة سيارات وبناء سفن ضخمة، وفاز فريقها الذي يرتدي الأزرق ويُعرف بـ 'النمور' بدوري أبطال آسيا 2020."
+    }
+  },
+  {
+    "id": 396,
+    "type": "city",
+    "latitude": 35.9649,
+    "longitude": 140.6433,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Kashima",
+      "ar": "كاشيما"
+    },
+    "clue": {
+      "en": "This remarkably small coastal city is historically the most successful in its nation's top flight, has its footballing culture completely shaped by the legendary Brazilian Zico, and is home to the 'Antlers'.",
+      "ar": "هذه المدينة الساحلية الصغيرة بشكل ملحوظ هي الأنجح تاريخياً في الدرجة الأولى ببلادها، وتشكلت ثقافتها الكروية بالكامل على يد الأسطورة البرازيلي زيكو، وهي موطن فريق 'أنتلرز' (القرون)."
+    }
+  },
+  {
+    "id": 397,
+    "type": "city",
+    "latitude": 34.3853,
+    "longitude": 132.4553,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Hiroshima",
+      "ar": "هيروشيما"
+    },
+    "clue": {
+      "en": "This city bears a tragic World War II history, is represented by a team whose name translates to 'Three Arrows', and is recognized by its beautiful purple kits.",
+      "ar": "تحمل هذه المدينة تاريخاً مأساوياً من الحرب العالمية الثانية، ويُمثلها فريق يُترجم اسمه إلى 'السهام الثلاثة'، وتُعرف بأطقمها البنفسجية الجميلة."
+    }
+  },
+  {
+    "id": 398,
+    "type": "city",
+    "latitude": -3.7172,
+    "longitude": -38.5434,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Fortaleza",
+      "ar": "فورتاليزا"
+    },
+    "clue": {
+      "en": "This hot northeastern coastal city is home to a massive local derby that frequently fills the Castelão stadium with over 60,000 fans, and is divided between a 'Tricolor' team and a black-and-white team.",
+      "ar": "هذه المدينة الساحلية الحارة في الشمال الشرقي هي موطن لديربي محلي ضخم يملأ ملعب كاستيلاو غالباً بأكثر من 60 ألف مشجع، وتنقسم بين فريق 'ثلاثي الألوان' وفريق أسود وأبيض."
+    }
+  },
+  {
+    "id": 399,
+    "type": "city",
+    "latitude": -3.1190,
+    "longitude": -60.0217,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Manaus",
+      "ar": "ماناوس"
+    },
+    "clue": {
+      "en": "This remote city is located deep within the Amazon rainforest, controversially hosted 2014 World Cup matches despite extreme heat and humidity, and features a stadium shaped like an indigenous woven basket.",
+      "ar": "تقع هذه المدينة النائية في عمق غابات الأمازون، واستضافت بشكل مثير للجدل مباريات في كأس العالم 2014 رغم الحرارة والرطوبة الشديدتين، وتضم ملعباً على شكل سلة منسوجة من السكان الأصليين."
+    }
+  },
+  {
+    "id": 400,
+    "type": "city",
+    "latitude": -32.8908,
+    "longitude": -68.8272,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Mendoza",
+      "ar": "ميندوزا"
+    },
+    "clue": {
+      "en": "This city is globally famous as its country's premier wine-producing region, hosted matches during the 1978 World Cup at the Malvinas Argentinas stadium, and is home to the 'Tomba' club.",
+      "ar": "تشتهر هذه المدينة عالمياً كأبرز منطقة لإنتاج النبيذ في بلادها، واستضافت مباريات خلال كأس العالم 1978 في ملعب مالفيناس أرخينتيناس، وهي موطن لنادي 'تومبا'."
+    }
+  },
+  {
+    "id": 401,
+    "type": "city",
+    "latitude": -38.0004,
+    "longitude": -57.5562,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Mar del Plata",
+      "ar": "مار ديل بلاتا"
+    },
+    "clue": {
+      "en": "This massive Atlantic beach resort city hosted matches in the 1978 World Cup, and is historically famous for hosting passionate summer football tournaments between its country's biggest clubs.",
+      "ar": "استضافت هذه المدينة السياحية الضخمة على شاطئ الأطلسي مباريات في كأس العالم 1978، وتشتهر تاريخياً باستضافة بطولات كرة قدم صيفية شغوفة بين كبار الأندية في بلادها."
+    }
+  },
+  {
+    "id": 402,
+    "type": "city",
+    "latitude": -33.0472,
+    "longitude": -71.6127,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Valparaíso",
+      "ar": "فالبارايسو"
+    },
+    "clue": {
+      "en": "This historic Pacific port city is famous for its steep, colorful hills and funiculars, and is home to its country's absolute oldest football club, founded by British immigrants in 1892.",
+      "ar": "تشتهر هذه المدينة الساحلية التاريخية على المحيط الهادئ بتلالها شديدة الانحدار والملونة وعربات التلفريك، وهي موطن لأقدم نادٍ لكرة القدم في بلادها على الإطلاق، أسسه مهاجرون بريطانيون عام 1892."
+    }
+  },
+  {
+    "id": 403,
+    "type": "city",
+    "latitude": -17.7833,
+    "longitude": -63.1821,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Santa Cruz de la Sierra",
+      "ar": "سانتا كروز دي لا سييرا"
+    },
+    "clue": {
+      "en": "This booming tropical lowland city sits near sea level contrasting with its country's high-altitude capital, and is fiercely divided by a green vs light-blue derby.",
+      "ar": "تقع هذه المدينة الاستوائية المزدهرة في الأراضي المنخفضة بالقرب من مستوى سطح البحر على عكس عاصمة بلادها المرتفعة، وتنقسم بشراسة بديربي بين اللون الأخضر والأزرق الفاتح."
+    }
+  },
+  {
+    "id": 404,
+    "type": "city",
+    "latitude": 21.1221,
+    "longitude": -101.6826,
+    "difficulty": "medium",
+    "answer": {
+      "en": "León",
+      "ar": "ليون"
+    },
+    "clue": {
+      "en": "This city is known as its country's leather and footwear capital, witnessed a legendary Mexican defender return to win back-to-back titles here, and is deeply devoted to an emerald-green team.",
+      "ar": "تُعرف هذه المدينة بأنها عاصمة الجلود والأحذية في بلادها، وشهدت عودة مدافع مكسيكي أسطوري للفوز بلقبين متتاليين هنا، وتكرس نفسها بشدة لفريق يرتدي اللون الأخضر الزمردي."
+    }
+  },
+  {
+    "id": 405,
+    "type": "city",
+    "latitude": 25.5428,
+    "longitude": -103.4068,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Torreón",
+      "ar": "توريون"
+    },
+    "clue": {
+      "en": "This desert city is the proud home of a team nicknamed the 'Warriors' (Guerreros), plays in a modern stadium called the TSM Corona, and has won multiple league titles despite being a relatively young club.",
+      "ar": "هذه المدينة الصحراوية هي الموطن الفخور لفريق يُلقب بـ 'المحاربين' (غيريروس)، ويلعب في ملعب حديث يُدعى TSM كورونا، وفاز بعدة ألقاب دوري رغم كونه نادياً حديث العهد نسبياً."
+    }
+  },
+  {
+    "id": 406,
+    "type": "city",
+    "latitude": 40.3083,
+    "longitude": -3.7327,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Getafe",
+      "ar": "خيتافي"
+    },
+    "clue": {
+      "en": "This working-class suburb sits just south of its nation's capital, is completely devoted to a blue-clad team, and famously reached the 2008 UEFA Cup quarter-finals where they nearly eliminated Bayern Munich.",
+      "ar": "تقع هذه الضاحية العمالية جنوب عاصمة بلادها مباشرة، وتكرس نفسها بالكامل لفريق يرتدي الأزرق، ووصلت بشكل شهير إلى ربع نهائي كأس الاتحاد الأوروبي 2008 حيث كادت أن تقصي بايرن ميونخ."
+    }
+  },
+  {
+    "id": 407,
+    "type": "city",
+    "latitude": 36.5298,
+    "longitude": -6.2924,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Cádiz",
+      "ar": "قادش (كاديز)"
+    },
+    "clue": {
+      "en": "This ancient Andalusian port city is renowned for having arguably the most humorous, singing, and loyal fanbase in its country, and is represented by a team that shares the 'Yellow Submarine' nickname.",
+      "ar": "تشتهر هذه المدينة الساحلية الأندلسية القديمة بامتلاكها ربما القاعدة الجماهيرية الأكثر مرحاً وغناءً وولاءً في بلادها، ويُمثلها فريق يشارك لقب 'الغواصة الصفراء'."
+    }
+  },
+  {
+    "id": 408,
+    "type": "city",
+    "latitude": 45.5416,
+    "longitude": 10.2118,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Brescia",
+      "ar": "بريشيا"
+    },
+    "clue": {
+      "en": "This Lombardy city was the final career stop for a magical ponytailed number 10, saw a young Pep Guardiola play in its midfield, and is recognized by a white 'V' on blue shirts.",
+      "ar": "كانت هذه المدينة اللومباردية المحطة الأخيرة في مسيرة لاعب رقم 10 ساحر بضفيرة شهيرة، وشهدت لعب الشاب بيب غوارديولا في خط وسطها، وتُعرف بحرف 'V' الأبيض على القمصان الزرقاء."
+    }
+  },
+  {
+    "id": 409,
+    "type": "city",
+    "latitude": 43.7176,
+    "longitude": 10.9453,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Empoli",
+      "ar": "إمبولي"
+    },
+    "clue": {
+      "en": "This tiny Tuscan town constantly punches above its weight in the top division, is famous for a prolific youth academy that produced Antonio Di Natale, and plays its football at the Stadio Carlo Castellani.",
+      "ar": "تتفوق هذه البلدة التوسكانية الصغيرة باستمرار على حجمها في دوري الدرجة الأولى، وتشتهر بأكاديمية شباب غزيرة الإنتاج أنتجت أنطونيو دي ناتالي، وتلعب مبارياتها في ملعب كارلو كاستيلاني."
+    }
+  },
+  {
+    "id": 410,
+    "type": "city",
+    "latitude": 47.7984,
+    "longitude": 3.5736,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Auxerre",
+      "ar": "أوكسير"
+    },
+    "clue": {
+      "en": "This small Burgundy town achieved a footballing miracle by winning a domestic double in 1996, is globally famous for having the same legendary manager in charge for over 40 years, and proudly owns its own stadium.",
+      "ar": "حققت هذه البلدة الصغيرة في بورغوندي معجزة كروية بفوزها بثنائية محلية في عام 1996، وتشتهر عالمياً بامتلاكها نفس المدرب الأسطوري المسؤول لأكثر من 40 عاماً، وتمتلك ملعبها الخاص بفخر."
+    }
+  },
+  {
+    "id": 411,
+    "type": "stadium",
+    "latitude": 19.0805,
+    "longitude": -98.1585,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estadio Cuauhtémoc, Puebla",
+      "ar": "ملعب كواتيموك، بويبلا"
+    },
+    "clue": {
+      "en": "This stadium is named after an Aztec emperor, is famous for being sponsored by a major German car manufacturer with a local factory, and is home to a team that wears a distinctive diagonal blue sash.",
+      "ar": "سُمي هذا الملعب على اسم إمبراطور أزتيكي، ويشتهر برعاية شركة سيارات ألمانية كبرى تمتلك مصنعاً محلياً، وهو معقل لفريق يرتدي وشاحاً أزرق قطرياً مميزاً."
+    }
+  },
+  {
+    "id": 412,
+    "type": "stadium",
+    "latitude": 34.1613,
+    "longitude": -118.1676,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Rose Bowl, Pasadena",
+      "ar": "روز بول، باسادينا"
+    },
+    "clue": {
+      "en": "This stadium hosted the 1994 World Cup final, is famous for an Italian legend missing the decisive penalty over the crossbar, and traditionally hosts a massive annual American College football game.",
+      "ar": "استضاف هذا الملعب نهائي كأس العالم 1994، ويشتهر بإضاعة أسطورة إيطالية لركلة الجزاء الحاسمة فوق العارضة، ويستضيف تقليدياً مباراة جامعية سنوية ضخمة لكرة القدم الأمريكية."
+    }
+  },
+  {
+    "id": 413,
+    "type": "stadium",
+    "latitude": -22.8931,
+    "longitude": -43.2923,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estádio Olímpico Nilton Santos, Rio de Janeiro",
+      "ar": "ملعب نيلتون سانتوس الأولمبي، ريو دي جانيرو"
+    },
+    "clue": {
+      "en": "This stadium is named after a legendary Brazilian left-back, served as the main athletics stadium for the 2016 Olympics, and is the modern home of a black-and-white team known as 'The Lone Star'.",
+      "ar": "سُمي هذا الملعب على اسم ظهير أيسر برازيلي أسطوري، وكان الملعب الرئيسي لألعاب القوى في أولمبياد 2016، وهو المعقل الحديث لفريق أبيض وأسود يُعرف بـ 'النجمة الوحيدة'."
+    }
+  },
+  {
+    "id": 414,
+    "type": "stadium",
+    "latitude": -23.5451,
+    "longitude": -46.6669,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estádio do Pacaembu, São Paulo",
+      "ar": "ملعب باكايمبو، ساو باولو"
+    },
+    "clue": {
+      "en": "This stadium is a classic Art Deco masterpiece inaugurated in 1940, houses the incredible Brazilian Football Museum under its stands, and was the traditional home of a working-class team before they moved to a new arena in 2014.",
+      "ar": "يُعد هذا الملعب تحفة فنية كلاسيكية على طراز الآرت ديكو اُفتتح عام 1940، ويحتضن متحف كرة القدم البرازيلي المذهل تحت مدرجاته، وكان المعقل التقليدي لفريق عمالي قبل انتقالهم إلى ملعب جديد في 2014."
+    }
+  },
+  {
+    "id": 415,
+    "type": "stadium",
+    "latitude": -12.0673,
+    "longitude": -77.0337,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estadio Nacional, Lima",
+      "ar": "الملعب الوطني، ليما"
+    },
+    "clue": {
+      "en": "This stadium is the primary home for its national team featuring a prominent wooden tower, was the site of the deadliest stadium disaster in football history in 1964, and was heavily renovated to feature an illuminated exterior that glows in red and white.",
+      "ar": "يُعد هذا الملعب المعقل الرئيسي لمنتخبه الوطني ويتميز ببرج خشبي بارز، وكان موقعاً لأكثر كوارث الملاعب دموية في تاريخ كرة القدم عام 1964، وتم تجديده بشدة ليتميز بواجهة مضيئة تتوهج باللونين الأحمر والأبيض."
+    }
+  },
+  {
+    "id": 416,
+    "type": "stadium",
+    "latitude": -2.1856,
+    "longitude": -79.9248,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estadio Monumental Banco Pichincha, Guayaquil",
+      "ar": "ملعب مونومنتال بانكو بيتشينتشا، غواياكيل"
+    },
+    "clue": {
+      "en": "This stadium is a massive venue with a capacity over 57,000 in its country's largest city, hosted the 2022 Copa Libertadores final between two Brazilian teams, and is the fortress of a hugely popular team that shares its name with a Spanish city.",
+      "ar": "هذا الملعب هو صرح ضخم يتسع لأكثر من 57 ألف متفرج في أكبر مدن بلاده، واستضاف نهائي كوبا ليبرتادوريس 2022 بين فريقين برازيليين، وهو الحصن لفريق ذي شعبية جارفة يحمل اسم مدينة إسبانية."
+    }
+  },
+  {
+    "id": 417,
+    "type": "stadium",
+    "latitude": 5.4057,
+    "longitude": -4.0157,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Alassane Ouattara Stadium, Abidjan",
+      "ar": "ملعب الحسن واتارا، أبيدجان"
+    },
+    "clue": {
+      "en": "This stadium is nicknamed the 'Olympic Stadium of Ebimpé', hosted the 2023 Africa Cup of Nations final where the host nation won, and witnessed a striker returning from cancer treatment score the winning goal.",
+      "ar": "يُلقب هذا الملعب بـ 'ملعب إبيمبي الأولمبي'، واستضاف نهائي كأس أمم إفريقيا 2023 حيث فاز البلد المضيف، وشهد تسجيل مهاجم عائد من علاج السرطان لهدف الفوز."
+    }
+  },
+  {
+    "id": 418,
+    "type": "stadium",
+    "latitude": 36.7601,
+    "longitude": 2.9995,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Stade du 5 Juillet 1962, Algiers",
+      "ar": "ملعب 5 جويلية 1962، الجزائر العاصمة"
+    },
+    "clue": {
+      "en": "This stadium is named after the exact date of its nation's independence, is a massive concrete bowl that regularly hosts over 60,000 roaring fans, and is the traditional venue for a passionate local derby between a red-and-green team and a red-and-black team.",
+      "ar": "سُمي هذا الملعب على تاريخ استقلال بلاده الدقيق، وهو وعاء خرساني ضخم يستضيف بانتظام أكثر من 60 ألف مشجع هادر، وهو الملعب التقليدي لديربي محلي شغوف بين فريق أحمر وأخضر وفريق أحمر وأسود."
+    }
+  },
+  {
+    "id": 419,
+    "type": "stadium",
+    "latitude": 14.7460,
+    "longitude": -17.4519,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Stade Léopold Sédar Senghor, Dakar",
+      "ar": "ملعب ليوبولد سيدار سنغور، داكار"
+    },
+    "clue": {
+      "en": "This stadium is named after its country's poet and first president, hosted the 1992 Africa Cup of Nations final, and is the historic fortress of a national team nicknamed the 'Lions of Teranga'.",
+      "ar": "سُمي هذا الملعب على اسم شاعر بلاده وأول رئيس لها، واستضاف نهائي كأس أمم إفريقيا 1992، وهو الحصن التاريخي لمنتخب وطني يُلقب بـ 'أسود التيرانغا'."
+    }
+  },
+  {
+    "id": 420,
+    "type": "stadium",
+    "latitude": 36.4862,
+    "longitude": 2.8256,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Stade Mustapha Tchaker, Blida",
+      "ar": "ملعب مصطفى تشاكر، البليدة"
+    },
+    "clue": {
+      "en": "This stadium is a modest venue that became an absolute fortress for its national team, saw its national squad remain undefeated here in competitive matches for almost two decades, and was the vibrant home of the 'Desert Foxes' during their 2010 and 2014 World Cup qualifications.",
+      "ar": "هذا الملعب هو منشأة متواضعة أصبحت حصناً مطلقاً لمنتخبه الوطني، وشهد بقاء فريقه الوطني بلا هزيمة هنا في المباريات التنافسية لما يقرب من عقدين، وكان الموطن النابض لـ 'ثعالب الصحراء' خلال تصفيات كأس العالم 2010 و2014."
+    }
+  },
+  {
+    "id": 421,
+    "type": "stadium",
+    "latitude": -33.9379,
+    "longitude": 25.6000,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Nelson Mandela Bay Stadium, Port Elizabeth (Gqeberha)",
+      "ar": "ملعب نيلسون مانديلا باي، بورت إليزابيث"
+    },
+    "clue": {
+      "en": "This stadium was built overlooking a scenic lake, features a unique roof design resembling the petals of a flower, and hosted a dramatic 2010 World Cup quarter-final between the Netherlands and Brazil.",
+      "ar": "بُني هذا الملعب ليطل على بحيرة ذات مناظر خلابة، ويتميز بتصميم سقف فريد يشبه بتلات الزهرة، واستضاف ربع نهائي درامي بكأس العالم 2010 بين هولندا والبرازيل."
+    }
+  },
+  {
+    "id": 422,
+    "type": "stadium",
+    "latitude": -25.7533,
+    "longitude": 28.2230,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Loftus Versfeld Stadium, Pretoria",
+      "ar": "ملعب لوفتوس فيرسفيلد، بريتوريا"
+    },
+    "clue": {
+      "en": "This stadium is a historic dual-purpose venue steeped in rugby history, hosted 2010 World Cup matches, and is the home fortress of a wealthy club known as 'The Brazilians' because of their yellow and blue kits.",
+      "ar": "هذا الملعب هو صرح تاريخي مزدوج الاستخدام غني بتاريخ الرجبي، واستضاف مباريات في كأس العالم 2010، وهو الحصن لنادٍ ثري يُعرف بـ 'البرازيليين' بسبب أطقمه الصفراء والزرقاء."
+    }
+  },
+  {
+    "id": 423,
+    "type": "stadium",
+    "latitude": 46.1772,
+    "longitude": 6.1275,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Stade de Genève, Geneva",
+      "ar": "ملعب جنيف، جنيف"
+    },
+    "clue": {
+      "en": "This stadium is located in a global diplomatic hub near a massive alpine lake, hosted matches during Euro 2008, and is the home of a historic garnet-colored club that survived severe financial crises in the 2000s.",
+      "ar": "يقع هذا الملعب في مركز دبلوماسي عالمي بالقرب من بحيرة ألبية ضخمة، واستضاف مباريات خلال يورو 2008، وهو موطن لنادٍ تاريخي بلون العقيق الأحمر نجا من أزمات مالية حادة في العقد الأول من الألفية."
+    }
+  },
+  {
+    "id": 424,
+    "type": "stadium",
+    "latitude": 38.3582,
+    "longitude": -0.4930,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estadio José Rico Pérez, Alicante",
+      "ar": "ملعب خوسيه ريكو بيريز، أليكانتي"
+    },
+    "clue": {
+      "en": "This stadium hosted the 1982 World Cup third-place playoff, is named after the former president of the club that plays there, and is home to a blue-and-white team named after a mythological Greek hero.",
+      "ar": "استضاف هذا الملعب مباراة تحديد المركز الثالث في كأس العالم 1982، وسُمي على اسم الرئيس السابق للنادي الذي يلعب فيه، وهو موطن لفريق أزرق وأبيض سُمي على اسم بطل أسطوري يوناني."
+    }
+  },
+  {
+    "id": 425,
+    "type": "stadium",
+    "latitude": 37.8732,
+    "longitude": -4.7612,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estadio Nuevo Arcángel, Córdoba",
+      "ar": "ملعب نويفو أركانجيل، قرطبة"
+    },
+    "clue": {
+      "en": "This stadium is located in an Andalusian city famous for its historic Mosque-Cathedral, features distinctively steep stands rebuilt in phases since the 1990s, and is the fortress of a green-and-white team that last played in the Spanish top flight in 2014-15.",
+      "ar": "يقع هذا الملعب في مدينة أندلسية تشتهر بمسجدها وكاتدرائيتها التاريخية، ويتميز بمدرجات شديدة الانحدار أُعيد بناؤها على مراحل منذ التسعينيات، وهو حصن لفريق أخضر وأبيض لعب آخر مرة بالدرجة الأولى في 2014-15."
+    }
+  },
+  {
+    "id": 426,
+    "type": "stadium",
+    "latitude": 39.4947,
+    "longitude": -0.3644,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estadio Ciudad de Valencia, Valencia",
+      "ar": "ملعب مدينة فالنسيا، فالنسيا"
+    },
+    "clue": {
+      "en": "This stadium is the home of the oldest football club in its city, belonging to a team uniquely nicknamed 'The Frogs', and is a compact blue-and-red ground sitting in the shadow of a much larger local rival's arena.",
+      "ar": "هذا الملعب هو معقل أقدم نادٍ لكرة القدم في مدينته، والذي ينتمي لفريق يُلقب بشكل فريد بـ 'الضفادع'، وهو ملعب مدمج باللونين الأزرق والأحمر يقع في ظل ساحة غريمه المحلي الأكبر بكثير."
+    }
+  },
+  {
+    "id": 427,
+    "type": "stadium",
+    "latitude": 42.8369,
+    "longitude": -2.6883,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estadio Mendizorrotza, Vitoria-Gasteiz",
+      "ar": "ملعب مينديزوروتزا، فيتوريا-غاستيز"
+    },
+    "clue": {
+      "en": "This stadium is the main football ground in the administrative capital of the Basque Country, is the historic home of a blue-and-white team nicknamed 'Babazorros', and witnessed its team embark on a miracle run to the 2001 UEFA Cup final.",
+      "ar": "هذا الملعب هو الملعب الرئيسي في العاصمة الإدارية لإقليم الباسك، وهو المعقل التاريخي لفريق أزرق وأبيض يُلقب بـ 'بابازوروس'، وشهد مسيرة فريقه الإعجازية إلى نهائي كأس الاتحاد الأوروبي 2001."
+    }
+  },
+  {
+    "id": 428,
+    "type": "stadium",
+    "latitude": 28.4616,
+    "longitude": -16.2625,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estadio Heliodoro Rodríguez López, Tenerife",
+      "ar": "ملعب هيليودورو رودريغيز لوبيز، تينيريفي"
+    },
+    "clue": {
+      "en": "This stadium is located on a sunny volcanic island off the coast of Africa, is the fortress of a blue-and-white team known as the 'Chicharreros', and is famously the site where Real Madrid agonizingly lost two consecutive league titles in the early 1990s.",
+      "ar": "يقع هذا الملعب في جزيرة بركانية مشمسة قبالة سواحل إفريقيا، وهو حصن لفريق أزرق وأبيض يُعرف بـ 'تشيتشاريروس'، وهو الموقع الشهير الذي خسر فيه ريال مدريد بشكل مؤلم لقبي دوري متتاليين في أوائل التسعينيات."
+    }
+  },
+  {
+    "id": 429,
+    "type": "stadium",
+    "latitude": 43.1065,
+    "longitude": 12.3551,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Stadio Renato Curi, Perugia",
+      "ar": "ملعب ريناتو كوري، بيروجيا"
+    },
+    "clue": {
+      "en": "This stadium is named after a player who tragically died of a heart attack on this very pitch in 1977, hosted a famous rain-soaked match in 2000 that cost Juventus the league title, and was the home ground of Japanese trailblazer Hidetoshi Nakata.",
+      "ar": "سُمي هذا الملعب على اسم لاعب توفي بشكل مأساوي بنوبة قلبية على هذه الأرضية تحديداً في 1977، واستضاف مباراة شهيرة غارقة بالأمطار في 2000 كلفت يوفنتوس لقب الدوري، وكان الملعب الذي لعب فيه الرائد الياباني هيديتوشي ناكاتا."
+    }
+  },
+  {
+    "id": 430,
+    "type": "stadium",
+    "latitude": 45.4276,
+    "longitude": 12.3619,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Stadio Pier Luigi Penzo, Venice",
+      "ar": "ملعب بيير لويجي بينزو، البندقية"
+    },
+    "clue": {
+      "en": "This stadium is uniquely accessible primarily by boat or on foot, is located on the edge of an island in a famous lagoon, and is the charming but tiny home of a team famous for its stylish black, green, and orange kits.",
+      "ar": "يمكن الوصول إلى هذا الملعب بشكل فريد أساساً بالقارب أو سيراً على الأقدام، ويقع على حافة جزيرة في بحيرة شهيرة، وهو الموطن الساحر والصغير لفريق يشتهر بأطقمه الأنيقة باللون الأسود والأخضر والبرتقالي."
+    }
+  },
+  {
+    "id": 431,
+    "type": "stadium",
+    "latitude": 37.0874,
+    "longitude": -7.9839,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estádio do Algarve, Faro/Loulé",
+      "ar": "ملعب الغارف (ألغارفي)، فارو/لولي"
+    },
+    "clue": {
+      "en": "This stadium was built for Euro 2004 with a distinctive curved roof supported by pillars, is located in the sunny southern tourist region of its country, and served as the temporary home for the Gibraltar national team for several years.",
+      "ar": "بُني هذا الملعب ليورو 2004 بسقف منحنٍ مميز مدعوم بأعمدة، ويقع في المنطقة السياحية الجنوبية المشمسة لبلاده، وكان بمثابة الموطن المؤقت لمنتخب جبل طارق لعدة سنوات."
+    }
+  },
+  {
+    "id": 432,
+    "type": "stadium",
+    "latitude": 40.2030,
+    "longitude": -8.4071,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Estádio Cidade de Coimbra, Coimbra",
+      "ar": "ملعب مدينة كويمبرا، كويمبرا"
+    },
+    "clue": {
+      "en": "This stadium is located in a historic university city known for students wearing black capes, hosted matches during Euro 2004, and is the traditional home of a team known as 'The Students'.",
+      "ar": "يقع هذا الملعب في مدينة جامعية تاريخية تُعرف بطلابها الذين يرتدون عباءات سوداء، واستضاف مباريات خلال يورو 2004، وهو المعقل التقليدي لفريق يُعرف بـ 'الطلاب'."
+    }
+  },
+  {
+    "id": 433,
+    "type": "stadium",
+    "latitude": 43.5833,
+    "longitude": 1.4341,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Stade Municipal, Toulouse",
+      "ar": "الملعب البلدي (ستاد مونسيبال)، تولوز"
+    },
+    "clue": {
+      "en": "This stadium is nicknamed 'Mini Wembley' due to its classic bowl shape, is located on an island in the Garonne river within a city known as the 'Pink City', and hosted matches during the 1998 World Cup and Euro 2016.",
+      "ar": "يُلقب هذا الملعب بـ 'ميني ويمبلي' بسبب تصميمه الكلاسيكي على شكل وعاء، ويقع على جزيرة في نهر غارون داخل مدينة تُعرف بـ 'المدينة الوردية'، واستضاف مباريات في كأس العالم 1998 ويورو 2016."
+    }
+  },
+  {
+    "id": 434,
+    "type": "stadium",
+    "latitude": 49.2468,
+    "longitude": 4.0248,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Stade Auguste-Delaune, Reims",
+      "ar": "ملعب أوغست ديلاون، ريمس"
+    },
+    "clue": {
+      "en": "This stadium is located in the capital of the Champagne region, is the historic home of a club that dominated French football in the 1950s, and witnessed the legendary goalscoring feats of Just Fontaine.",
+      "ar": "يقع هذا الملعب في عاصمة منطقة الشمبانيا، وهو المعقل التاريخي لنادٍ هيمن على كرة القدم الفرنسية في الخمسينيات، وشهد الإنجازات التهديفية الأسطورية لجاست فونتين."
+    }
+  },
+  {
+    "id": 435,
+    "type": "stadium",
+    "latitude": 40.2443,
+    "longitude": 28.9715,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Timsah Arena, Bursa",
+      "ar": "تمساح أرينا، بورصة"
+    },
+    "clue": {
+      "en": "This stadium features a literal massive, green, smiling crocodile head extending from its roof, was built to honor the nickname of a team that shockingly broke the Istanbul monopoly in 2010, and is one of the most uniquely shaped modern stadiums.",
+      "ar": "يتميز هذا الملعب برأس تمساح أخضر ضخم ومبتسم يمتد من سقفه حرفياً، وبُني تكريماً للقب فريق كسر احتكار إسطنبول بشكل صادم في عام 2010، وهو أحد الملاعب الحديثة الأكثر تفرداً في الشكل."
+    }
+  },
+  {
+    "id": 436,
+    "type": "city",
+    "latitude": 19.0414,
+    "longitude": -98.2063,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Puebla",
+      "ar": "بويبلا"
+    },
+    "clue": {
+      "en": "This city is heavily influenced by a massive German car factory driving its local economy, its main football team wears a distinctive diagonal blue sash across a white shirt, and it features a stadium that hosted matches in two separate World Cups.",
+      "ar": "تتأثر هذه المدينة بشدة بمصنع سيارات ألماني ضخم يقود اقتصادها المحلي، ويرتدي فريقها الأساسي لكرة القدم وشاحاً أزرق قطرياً مميزاً على قميص أبيض، وتضم ملعباً استضاف مباريات في نسختين منفصلتين لكأس العالم."
+    }
+  },
+  {
+    "id": 437,
+    "type": "city",
+    "latitude": 34.1478,
+    "longitude": -118.1445,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Pasadena",
+      "ar": "باسادينا"
+    },
+    "clue": {
+      "en": "This picturesque suburb located just northeast of Los Angeles hosted the 1994 Men's and 1999 Women's World Cup finals, and is globally famous for its massive bowl-shaped stadium and annual New Year's Day flower parade.",
+      "ar": "استضافت هذه الضاحية الخلابة الواقعة شمال شرق لوس أنجلوس نهائي كأس العالم للرجال 1994 وللسيدات 1999، وتشتهر عالمياً بملعبها الضخم على شكل وعاء وموكب الزهور السنوي في يوم رأس السنة."
+    }
+  },
+  {
+    "id": 438,
+    "type": "city",
+    "latitude": 38.3452,
+    "longitude": -0.4810,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Alicante",
+      "ar": "أليكانتي"
+    },
+    "clue": {
+      "en": "This sunny coastal city is the heart of the Costa Blanca, hosted World Cup matches in 1982 at the José Rico Pérez stadium, and is home to a blue-and-white football club named after a mythological Greek hero.",
+      "ar": "هذه المدينة الساحلية المشمسة هي قلب 'كوستا بلانكا'، واستضافت مباريات كأس العالم في عام 1982 بملعب خوسيه ريكو بيريز، وهي موطن لنادٍ كروي أزرق وأبيض سُمي على اسم بطل أسطوري يوناني."
+    }
+  },
+  {
+    "id": 439,
+    "type": "city",
+    "latitude": 42.8463,
+    "longitude": -2.6716,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Vitoria-Gasteiz",
+      "ar": "فيتوريا-غاستيز"
+    },
+    "clue": {
+      "en": "This administrative capital of the Basque Country is home to a team uniquely nicknamed the 'Babazorros', and proudly watched its local club reach a dramatic 2001 UEFA Cup final against Liverpool.",
+      "ar": "هذه العاصمة الإدارية لإقليم الباسك هي موطن لفريق يُلقب بشكل فريد بـ 'بابازوروس'، وشاهدت بفخر ناديها المحلي يصل إلى نهائي درامي في كأس الاتحاد الأوروبي عام 2001 ضد ليفربول."
+    }
+  },
+  {
+    "id": 440,
+    "type": "city",
+    "latitude": 28.4636,
+    "longitude": -16.2518,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Tenerife",
+      "ar": "تينيريفي"
+    },
+    "clue": {
+      "en": "This city on a volcanic island off the coast of Africa saw its local team famously cost Real Madrid two consecutive league titles in the early 1990s, and is home to a blue-and-white team playing at the Heliodoro stadium.",
+      "ar": "شهدت هذه المدينة الواقعة على جزيرة بركانية قبالة سواحل إفريقيا تسبب فريقها المحلي بشكل شهير في خسارة ريال مدريد للقبين متتاليين للدوري في أوائل التسعينيات، وهي موطن لفريق أزرق وأبيض يلعب في ملعب هيليودورو."
+    }
+  },
+  {
+    "id": 441,
+    "type": "city",
+    "latitude": 43.1107,
+    "longitude": 12.3908,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Perugia",
+      "ar": "بيروجيا"
+    },
+    "clue": {
+      "en": "This capital of the Umbria region famously signed a son of a Libyan dictator to play in its midfield in the early 2000s, and its local team won a rain-soaked final day match in 2000 that cost Juventus the Scudetto.",
+      "ar": "هذه العاصمة لإقليم أومبريا تعاقدت بشكل شهير مع نجل دكتاتور ليبي للعب في خط وسطها بأوائل الألفية، وفاز فريقها المحلي بمباراة غارقة بالأمطار في اليوم الأخير لعام 2000 كبدت يوفنتوس لقب الدوري."
+    }
+  },
+  {
+    "id": 442,
+    "type": "city",
+    "latitude": 45.4408,
+    "longitude": 12.3155,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Venice",
+      "ar": "البندقية (فينيسيا)"
+    },
+    "clue": {
+      "en": "This globally famous city built on canals features a tiny football stadium that is primarily accessed by boat, and its football team wears incredibly stylish black, green, and orange kits featuring a winged lion.",
+      "ar": "هذه المدينة المشهورة عالمياً والمبنية على القنوات المائية تتميز بملعب صغير لكرة القدم يتم الوصول إليه أساساً بالقوارب، ويرتدي فريقها أطقماً أنيقة للغاية باللون الأسود والأخضر والبرتقالي تضم أسداً مجنحاً."
+    }
+  },
+  {
+    "id": 443,
+    "type": "city",
+    "latitude": 37.0194,
+    "longitude": -7.9322,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Faro",
+      "ar": "فارو"
+    },
+    "clue": {
+      "en": "This main hub of the sunny Algarve region shares a distinctive curved Euro 2004 stadium with its neighboring town Loulé, and hosted the Gibraltar national team for several years while their home stadium was upgraded.",
+      "ar": "يشارك هذا المركز الرئيسي لمنطقة ألغارفي المشمسة ملعباً مميزاً منحنياً ليورو 2004 مع بلدة لولي المجاورة، واستضاف منتخب جبل طارق لعدة سنوات أثناء تجديد ملعبهم الخاص."
+    }
+  },
+  {
+    "id": 444,
+    "type": "city",
+    "latitude": 40.2033,
+    "longitude": -8.4103,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Coimbra",
+      "ar": "كويمبرا"
+    },
+    "clue": {
+      "en": "This historic city is famous for its ancient university and students wearing black capes, its football club is affectionately known as 'The Students', and it hosted matches during Euro 2004.",
+      "ar": "تشتهر هذه المدينة التاريخية بجامعتها القديمة وطلابها الذين يرتدون عباءات سوداء، ويُعرف ناديها الكروي بحب باسم 'الطلاب'، واستضافت مباريات خلال يورو 2004."
+    }
+  },
+  {
+    "id": 445,
+    "type": "city",
+    "latitude": 49.2583,
+    "longitude": 4.0317,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Reims",
+      "ar": "ريمس"
+    },
+    "clue": {
+      "en": "This historic capital of the Champagne region saw its local club become a massive European powerhouse in the 1950s by reaching two European Cup finals, and is the city where legendary goalscorer Just Fontaine spent his peak.",
+      "ar": "شهدت هذه العاصمة التاريخية لمنطقة الشمبانيا تحول ناديها المحلي لقوة أوروبية ضخمة في الخمسينيات ببلوغه نهائيين لكأس أوروبا، وهي المدينة التي قضى فيها الهداف الأسطوري جاست فونتين ذروة مسيرته."
+    }
+  },
+  {
+    "id": 446,
+    "type": "city",
+    "latitude": 43.6047,
+    "longitude": 1.4442,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Toulouse",
+      "ar": "تولوز"
+    },
+    "clue": {
+      "en": "This city is universally known as the 'Pink City' due to its terracotta bricks, is a massive rugby powerhouse that also boasts a top-flight football team, and saw its football club proudly win the Coupe de France in 2023 wearing purple.",
+      "ar": "تُعرف هذه المدينة عالمياً بـ 'المدينة الوردية' بسبب طوبها الطيني، وهي قوة ضخمة في الرجبي تمتلك أيضاً فريق كرة قدم في الدرجة الأولى، وشهدت فوز ناديها الكروي بكأس فرنسا في 2023 مرتدياً البنفسجي."
+    }
+  },
+  {
+    "id": 447,
+    "type": "city",
+    "latitude": 40.1826,
+    "longitude": 29.0669,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Bursa",
+      "ar": "بورصة"
+    },
+    "clue": {
+      "en": "This first major capital of the Ottoman Empire shocked the nation when its 'Green Crocodiles' broke the Istanbul title monopoly in 2010, and features one of the most eccentric modern stadiums in the world shaped like a reptile.",
+      "ar": "صدمت أول عاصمة كبرى للإمبراطورية العثمانية الأمة عندما كسرت 'تماسيحها الخضراء' احتكار إسطنبول للقب في 2010، وتضم أحد أكثر الملاعب الحديثة غرابة في العالم والذي صُمم على شكل زاحف."
+    }
+  },
+  {
+    "id": 448,
+    "type": "city",
+    "latitude": 36.8969,
+    "longitude": 30.7133,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Antalya",
+      "ar": "أنطاليا"
+    },
+    "clue": {
+      "en": "This massive tourist hub on the Mediterranean coast saw its local football club boldly sign African legend Samuel Eto'o in 2015, and plays its matches in a modern stadium uniquely powered by solar panels on its roof.",
+      "ar": "شهد هذا المركز السياحي الضخم على ساحل البحر المتوسط تعاقد ناديه الكروي المحلي بجرأة مع الأسطورة الإفريقي صامويل إيتو في 2015، ويلعب مبارياته في ملعب حديث يعمل بالطاقة الشمسية من سقفه."
+    }
+  },
+  {
+    "id": 449,
+    "type": "city",
+    "latitude": 52.6324,
+    "longitude": 4.7534,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Alkmaar",
+      "ar": "ألكمار"
+    },
+    "clue": {
+      "en": "This Dutch city is famous for its traditional cheese market, and its red-and-white football team surprisingly won the 2009 Eredivisie title under Louis van Gaal while playing matches at the AFAS Stadion.",
+      "ar": "تشتهر هذه المدينة الهولندية بسوق الجبن التقليدي، وفاز فريقها الأحمر والأبيض بشكل مفاجئ بلقب الدوري الهولندي في 2009 تحت قيادة لويس فان غال ويلعب مبارياته في ملعب (AFAS)."
+    }
+  },
+  {
+    "id": 450,
+    "type": "city",
+    "latitude": 51.9851,
+    "longitude": 5.8987,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Arnhem",
+      "ar": "أرنهيم"
+    },
+    "clue": {
+      "en": "This city located in the east of the country near the German border is home to a yellow-and-black team that historically had a massive loan partnership with Chelsea, and plays in a stadium with a retractable roof.",
+      "ar": "هذه المدينة الواقعة شرق البلاد قرب الحدود الألمانية هي موطن لفريق أصفر وأسود كان لديه تاريخياً شراكة إعارات ضخمة مع تشيلسي، ويلعب في ملعب بسقف قابل للطي."
+    }
+  },
+  {
+    "id": 451,
+    "type": "city",
+    "latitude": 52.0907,
+    "longitude": 5.1214,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Utrecht",
+      "ar": "أوترخت"
+    },
+    "clue": {
+      "en": "This city is famous for the towering Dom Tower in its center, its football club holds the distinction of being the only one outside the 'Big Three' to never be relegated, and its team was formed by merging three local teams in 1970.",
+      "ar": "تشتهر هذه المدينة ببرج دوم الشاهق في وسطها، ويحمل ناديها الكروي شرف كونه الوحيد خارج 'الثلاثة الكبار' الذي لم يهبط أبداً، وتشكل فريقها بدمج ثلاثة فرق محلية في عام 1970."
+    }
+  },
+  {
+    "id": 452,
+    "type": "city",
+    "latitude": 51.6565,
+    "longitude": -0.3903,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Watford",
+      "ar": "واتفورد"
+    },
+    "clue": {
+      "en": "This town located just outside London was famously owned by the legendary musician Sir Elton John during its golden era, and its local team wears yellow and black and is nicknamed 'The Hornets'.",
+      "ar": "هذه البلدة الواقعة خارج لندن مباشرة كانت مملوكة بشكل شهير للموسيقي الأسطوري السير إلتون جون خلال حقبتها الذهبية، ويرتدي فريقها المحلي الأصفر والأسود ويُلقب بـ 'الدبابير'."
+    }
+  },
+  {
+    "id": 453,
+    "type": "city",
+    "latitude": 51.4543,
+    "longitude": -0.9781,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Reading",
+      "ar": "ريدنغ"
+    },
+    "clue": {
+      "en": "This city is located in the Thames Valley and known for a massive annual music festival, its football team achieved a record-breaking 106-point Championship season in 2005-06, and its local team is nicknamed 'The Royals'.",
+      "ar": "تقع هذه المدينة في وادي التايمز وتُعرف بمهرجان موسيقي سنوي ضخم، وحقق فريقها لكرة القدم رقماً قياسياً بـ 106 نقاط في دوري البطولة بموسم 2005-06، ويُلقب فريقها المحلي بـ 'الملكيين'."
+    }
+  },
+  {
+    "id": 454,
+    "type": "city",
+    "latitude": 52.9225,
+    "longitude": -1.4746,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Derby",
+      "ar": "ديربي"
+    },
+    "clue": {
+      "en": "This East Midlands city was heavily shaped by the legendary manager Brian Clough in the 1970s, its team holds the unwanted record for the lowest-ever points tally in a Premier League season, and its local club is nicknamed 'The Rams'.",
+      "ar": "تأثرت هذه المدينة في شرق ميدلاندز بشدة بالمدرب الأسطوري بريان كلوف في السبعينيات، ويحمل فريقها الرقم القياسي غير المرغوب فيه لأقل عدد نقاط في موسم بالدوري الممتاز، ويُلقب ناديها المحلي بـ 'الكباش'."
+    }
+  },
+  {
+    "id": 455,
+    "type": "city",
+    "latitude": 52.4068,
+    "longitude": -1.5197,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Coventry",
+      "ar": "كوفنتري"
+    },
+    "clue": {
+      "en": "This city is represented by a team nicknamed the 'Sky Blues', won a dramatic FA Cup final in 1987, and was infamously forced to play home matches outside its city multiple times due to stadium ownership disputes.",
+      "ar": "يُمثل هذه المدينة فريق يُلقب بـ 'السماوي'، وفاز بنهائي درامي لكأس الاتحاد الإنجليزي في 1987، واُضطر بشكل سيء السمعة للعب مبارياته البيتية خارج مدينته عدة مرات بسبب نزاعات ملكية الملعب."
+    }
+  },
+  {
+    "id": 456,
+    "type": "city",
+    "latitude": 54.5762,
+    "longitude": -1.2348,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Middlesbrough",
+      "ar": "ميدلزبره"
+    },
+    "clue": {
+      "en": "This industrial northern town where locals are affectionately called 'Smoggies' made massive global headlines by signing Brazilian star Juninho in the 1990s, and plays its matches at the Riverside Stadium.",
+      "ar": "هذه البلدة الصناعية الشمالية التي يُطلق على سكانها تحبباً اسم 'سموجيز'، تصدرت العناوين العالمية بتعاقدها مع النجم البرازيلي جونينيو في التسعينيات، وتلعب مبارياتها في ملعب ريفرسايد."
+    }
+  },
+  {
+    "id": 457,
+    "type": "city",
+    "latitude": 53.7632,
+    "longitude": -2.7031,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Preston",
+      "ar": "بريستون"
+    },
+    "clue": {
+      "en": "This proud Lancashire town claims the original 'Invincibles' of English football from 1888-89, is the hometown of English legend Sir Tom Finney, and plays at Deepdale, recognized as the oldest continuously used professional football site.",
+      "ar": "تفتخر هذه البلدة اللانكشايرية بفريق 'الذي لا يقهر' الأصلي لكرة القدم الإنجليزية لموسم 1888-89، وهي مسقط رأس الأسطورة الإنجليزي السير توم فيني، وتلعب في ديبديل الذي يُعد أقدم موقع احترافي مستخدم باستمرار."
+    }
+  },
+  {
+    "id": 458,
+    "type": "city",
+    "latitude": 53.8175,
+    "longitude": -3.0357,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Blackpool",
+      "ar": "بلاكبول"
+    },
+    "clue": {
+      "en": "This famous seaside resort known for its iconic Tower saw its bright tangerine-clad team win a legendary 1953 FA Cup final named after Stanley Matthews, and reached the Premier League for a single highly entertaining season in 2010.",
+      "ar": "هذا المنتجع الساحلي الشهير ببرجه الأيقوني شهد فوز فريقه البرتقالي الساطع بنهائي كأس الاتحاد 1953 الأسطوري الذي سُمي تيمناً بستانلي ماثيوز، ووصل للدوري الممتاز لموسم واحد ممتع للغاية في 2010."
+    }
+  },
+  {
+    "id": 459,
+    "type": "city",
+    "latitude": 53.5451,
+    "longitude": -2.6325,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Wigan",
+      "ar": "ويغان"
+    },
+    "clue": {
+      "en": "This town is historically much more obsessed with Rugby League, but its football team shockingly defeated Manchester City to win the 2013 FA Cup before being relegated days later under manager Roberto Martínez.",
+      "ar": "هذه البلدة مهووسة تاريخياً بدوري الرجبي أكثر، لكن فريقها لكرة القدم هزم مانشستر سيتي بشكل صادم ليفوز بكأس الاتحاد الإنجليزي 2013 قبل أن يهبط بعد أيام تحت قيادة المدرب روبرتو مارتينيز."
+    }
+  },
+  {
+    "id": 460,
+    "type": "city",
+    "latitude": -26.2389,
+    "longitude": 27.8596,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Soweto",
+      "ar": "سويتو"
+    },
+    "clue": {
+      "en": "This massive township bordering Johannesburg is the birthplace of two colossal rival clubs: the Kaizer Chiefs and the Orlando Pirates, and features a stadium rebuilt to resemble a traditional African calabash pot.",
+      "ar": "هذه المنطقة السكنية الضخمة المتاخمة لجوهانسبرغ هي مسقط رأس ناديين عملاقين متنافسين: كايزر تشيفز وأورلاندو بايرتس، وتضم ملعباً أُعيد بناؤه ليحاكي وعاء 'الكالاباش' الإفريقي التقليدي."
+    }
+  },
+  {
+    "id": 461,
+    "type": "stadium",
+    "latitude": 50.9058,
+    "longitude": -1.3911,
+    "difficulty": "medium",
+    "answer": {
+      "en": "St Mary's Stadium, Southampton",
+      "ar": "ملعب سانت ماري، ساوثهامبتون"
+    },
+    "clue": {
+      "en": "This stadium is located on the south coast, is the modern home of a red-and-white striped team known for a brilliant youth academy that produced Gareth Bale, and witnessed the fastest hat-trick in Premier League history in 2015.",
+      "ar": "يقع هذا الملعب على الساحل الجنوبي، وهو المعقل الحديث لفريق مخطط بالأحمر والأبيض يُعرف بأكاديمية شباب رائعة أنتجت غاريث بيل، وشهد أسرع هاتريك في تاريخ الدوري الإنجليزي الممتاز عام 2015."
+    }
+  },
+  {
+    "id": 462,
+    "type": "stadium",
+    "latitude": 50.8616,
+    "longitude": -0.0837,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Amex Stadium, Brighton",
+      "ar": "ملعب أميكس، برايتون"
+    },
+    "clue": {
+      "en": "This modern stadium is located near the sea, is the home of a team nicknamed 'The Seagulls' famous for incredible data-driven global scouting, and replaced the temporary Withdean athletics track.",
+      "ar": "يقع هذا الملعب الحديث بالقرب من البحر، وهو موطن لفريق يُلقب بـ 'طيور النورس' يشتهر بشبكة كشافة عالمية مذهلة تعتمد على البيانات، وحل محل مضمار 'ويثدين' المؤقت لألعاب القوى."
+    }
+  },
+  {
+    "id": 463,
+    "type": "stadium",
+    "latitude": 50.7352,
+    "longitude": -1.8383,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Vitality Stadium (Dean Court), Bournemouth",
+      "ar": "فيتاليتي ستاديوم (دين كورت)، بورنموث"
+    },
+    "clue": {
+      "en": "This stadium is the smallest to host Premier League football for many years holding around 11,000 seats, is home to a team nicknamed 'The Cherries', and witnessed a miraculous rise from the brink of extinction to the top flight.",
+      "ar": "كان هذا الملعب هو الأصغر الذي يستضيف الدوري الإنجليزي الممتاز لسنوات عديدة بسعة حوالي 11 ألف مقعد، وهو موطن لفريق يُلقب بـ 'الكرز'، وشهد صعوداً إعجازياً من حافة الزوال إلى الدرجة الأولى."
+    }
+  },
+  {
+    "id": 464,
+    "type": "stadium",
+    "latitude": 52.0551,
+    "longitude": 1.1449,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Portman Road, Ipswich",
+      "ar": "بورتمان رود، إيبسويتش"
+    },
+    "clue": {
+      "en": "This East Anglian stadium is the historic home of a club that won the 1981 UEFA Cup under Sir Bobby Robson, and saw back-to-back promotions return it to the Premier League in 2024.",
+      "ar": "هذا الملعب في إيست أنجليا هو المعقل التاريخي لنادٍ فاز بكأس الاتحاد الأوروبي 1981 تحت قيادة السير بوبي روبسون، وشهد صعوداً متتالياً أعاده إلى الدوري الإنجليزي الممتاز في 2024."
+    }
+  },
+  {
+    "id": 465,
+    "type": "stadium",
+    "latitude": 51.4906,
+    "longitude": -0.2889,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Gtech Community Stadium, Brentford",
+      "ar": "ملعب جي تيك كوميونيتي، برينتفورد"
+    },
+    "clue": {
+      "en": "This modern West London stadium replaced Griffin Park, is home to a team nicknamed 'The Bees' who rely on a statistical 'Moneyball' approach, and briefly shared its pitch with a rugby club.",
+      "ar": "حل هذا الملعب الحديث في غرب لندن محل ملعب غريفين بارك، وهو موطن لفريق يُلقب بـ 'النحل' يعتمد على نهج 'ماني بول' الإحصائي، وشارك أرضيته لفترة وجيزة مع نادي رجبي."
+    }
+  },
+  {
+    "id": 466,
+    "type": "stadium",
+    "latitude": 51.5577,
+    "longitude": -0.1027,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Highbury, London",
+      "ar": "هايبري، لندن"
+    },
+    "clue": {
+      "en": "This historic North London stadium was famous for its Art Deco East Stand, witnessed an entire Premier League season without a single defeat in 2003-04, and was uniquely converted into luxury apartments after closing.",
+      "ar": "اشتهر هذا الملعب التاريخي في شمال لندن بمدرجه الشرقي على طراز الآرت ديكو، وشهد موسماً كاملاً في الدوري الإنجليزي الممتاز دون هزيمة واحدة في 2003-04، وتم تحويله بشكل فريد إلى شقق فاخرة بعد إغلاقه."
+    }
+  },
+  {
+    "id": 467,
+    "type": "stadium",
+    "latitude": 51.6033,
+    "longitude": -0.0658,
+    "difficulty": "medium",
+    "answer": {
+      "en": "White Hart Lane, London",
+      "ar": "وايت هارت لين، لندن"
+    },
+    "clue": {
+      "en": "This historic North London stadium featured a golden cockerel perched on its roof, was the home of a team that won the domestic double in 1961, and was completely demolished to build a massive modern arena on the exact same site.",
+      "ar": "تميز هذا الملعب التاريخي في شمال لندن بديك ذهبي يتربع على سقفه، وكان موطناً لفريق فاز بالثنائية المحلية في 1961، وتم هدمه بالكامل لبناء ساحة حديثة ضخمة في نفس الموقع بالضبط."
+    }
+  },
+  {
+    "id": 468,
+    "type": "stadium",
+    "latitude": 51.5319,
+    "longitude": 0.0394,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Boleyn Ground (Upton Park), London",
+      "ar": "بولين غراوند (أبتون بارك)، لندن"
+    },
+    "clue": {
+      "en": "This historic East London stadium was affectionately named after a Tudor castle, was famous for fans blowing bubbles before kickoff, and hosted its emotional final match in 2016 before the club moved to an Olympic venue.",
+      "ar": "سُمي هذا الملعب التاريخي في شرق لندن بحب تيمناً بقلعة من عهد تيودور، واشتهر بجماهيره التي تنفخ الفقاعات قبل انطلاق المباريات، واستضاف مباراته الختامية العاطفية في 2016 قبل انتقال النادي لملعب أولمبي."
+    }
+  },
+  {
+    "id": 469,
+    "type": "stadium",
+    "latitude": 53.4542,
+    "longitude": -2.2383,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Maine Road, Manchester",
+      "ar": "ماين رود، مانشستر"
+    },
+    "clue": {
+      "en": "This historic Manchester stadium was once nicknamed 'The Wembley of the North', was the home of a sky-blue team before they moved to a modern arena, and famously hosted legendary Oasis concerts in the 1990s.",
+      "ar": "يُلقب هذا الملعب التاريخي في مانشستر يوماً بـ 'ويمبلي الشمال'، وكان موطناً لفريق أزرق سماوي قبل انتقالهم لملعب حديث، واستضاف بشكل شهير حفلات أسطورية لفرقة أويسيس (Oasis) في التسعينيات."
+    }
+  },
+  {
+    "id": 470,
+    "type": "stadium",
+    "latitude": 51.6498,
+    "longitude": -0.4015,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Vicarage Road, Watford",
+      "ar": "فيكاريدج رود، واتفورد"
+    },
+    "clue": {
+      "en": "This stadium located just outside London features a stand named after the legendary musician Sir Elton John, and witnessed one of the most famous dramatic playoff goals in history in 2013 following a saved penalty.",
+      "ar": "يقع هذا الملعب خارج لندن مباشرة ويضم مدرجاً سُمي على اسم الموسيقي الأسطوري السير إلتون جون، وشهد أحد أشهر أهداف الملحق الدرامية في التاريخ عام 2013 إثر ركلة جزاء مهدرة."
+    }
+  },
+  {
+    "id": 471,
+    "type": "stadium",
+    "latitude": 54.5783,
+    "longitude": -1.2169,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Riverside Stadium, Middlesbrough",
+      "ar": "ملعب ريفرسايد، ميدلزبره"
+    },
+    "clue": {
+      "en": "This stadium built in the 1990s in the North East is the home of a red-clad team that miraculously reached the 2006 UEFA Cup final, and saw Brazilian star Juninho dazzle fans during its golden era.",
+      "ar": "هذا الملعب الذي بُني في التسعينيات بالشمال الشرقي هو موطن لفريق يرتدي الأحمر وصل بمعجزة لنهائي كأس الاتحاد الأوروبي 2006، وشهد النجم البرازيلي جونينيو يبهر الجماهير خلال حقبته الذهبية."
+    }
+  },
+  {
+    "id": 472,
+    "type": "stadium",
+    "latitude": 53.5805,
+    "longitude": -2.5356,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Toughsheet Community Stadium (Macron/Reebok), Bolton",
+      "ar": "ملعب تافشيت (ماكرون/ريبوك)، بولتون"
+    },
+    "clue": {
+      "en": "This distinctive stadium with prominent arched roof trusses was the home of a white-shirted team that enjoyed a glorious Premier League era under Sam Allardyce, featuring global legends like Jay-Jay Okocha and Fernando Hierro.",
+      "ar": "هذا الملعب المميز بدعامات السقف المقوسة البارزة كان موطناً لفريق يرتدي الأبيض استمتع بحقبة مجيدة بالدوري الممتاز تحت قيادة سام ألاردايس، وضمت أساطير عالميين مثل جاي جاي أوكوشا وفرناندو هييرو."
+    }
+  },
+  {
+    "id": 473,
+    "type": "stadium",
+    "latitude": 51.4864,
+    "longitude": 0.0366,
+    "difficulty": "hard",
+    "answer": {
+      "en": "The Valley, London",
+      "ar": "ذا فالي، لندن"
+    },
+    "clue": {
+      "en": "This South East London stadium was dug out of a chalk pit by volunteer fans in 1919, saw its supporters form a political party to force a return home in 1992, and is the fortress of a red-clad team nicknamed the 'Addicks'.",
+      "ar": "تم حفر هذا الملعب في جنوب شرق لندن من حفرة طباشير على يد جماهير متطوعة عام 1919، وشهد تشكيل مشجعيه لحزب سياسي لإجبار العودة إليه في 1992، وهو حصن فريق يرتدي الأحمر يُلقب بـ 'أديكس'."
+    }
+  },
+  {
+    "id": 474,
+    "type": "stadium",
+    "latitude": 52.4756,
+    "longitude": -1.8682,
+    "difficulty": "medium",
+    "answer": {
+      "en": "St Andrew's, Birmingham",
+      "ar": "سانت أندروز، برمنغهام"
+    },
+    "clue": {
+      "en": "This stadium in England's second city is home to a blue-clad team that famously won the 2011 League Cup before being relegated, and was rumored to be cursed by Romani people, leading managers to paint players' boot soles red.",
+      "ar": "هذا الملعب في مدينة إنجلترا الثانية هو موطن لفريق يرتدي الأزرق فاز بشكل شهير بكأس الرابطة 2011 قبل هبوطه، وأُشيع أنه ملعون من قبل الغجر، مما دفع المدربين لطلاء نعال أحذية اللاعبين بالأحمر."
+    }
+  },
+  {
+    "id": 475,
+    "type": "stadium",
+    "latitude": 53.7461,
+    "longitude": -0.3678,
+    "difficulty": "medium",
+    "answer": {
+      "en": "MKM Stadium (KC Stadium), Hull",
+      "ar": "ملعب إم كيه إم (كيه سي ستاديوم)، هال"
+    },
+    "clue": {
+      "en": "This modern Yorkshire stadium is shared with a rugby league team, is the home of a football club uniquely wearing amber and black stripes known as 'The Tigers', and witnessed a run to the 2014 FA Cup final.",
+      "ar": "هذا الملعب الحديث في يوركشاير مُشترك مع فريق رجبي، وهو موطن لنادٍ كروي يرتدي خطوطاً فريدة باللونين الكهرماني والأسود يُعرف بـ 'النمور'، وشهد مسيرة نحو نهائي كأس الاتحاد الإنجليزي 2014."
+    }
+  },
+  {
+    "id": 476,
+    "type": "stadium",
+    "latitude": 51.6422,
+    "longitude": -3.9351,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Liberty Stadium (Swansea.com), Swansea",
+      "ar": "ملعب ليبرتي (سوانزي.كوم)، سوانزي"
+    },
+    "clue": {
+      "en": "This modern Welsh stadium is the home of a white-clad team that became the first from its country to play in the Premier League, won the 2013 League Cup, and saw Spanish forward Michu dominate for a single unforgettable season.",
+      "ar": "هذا الملعب الويلزي الحديث هو موطن لفريق يرتدي الأبيض أصبح الأول من بلاده يلعب في الدوري الممتاز، وفاز بكأس الرابطة 2013، وشهد سيطرة المهاجم الإسباني ميتشو في موسم واحد لا يُنسى."
+    }
+  },
+  {
+    "id": 477,
+    "type": "stadium",
+    "latitude": 51.4728,
+    "longitude": -3.2030,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Cardiff City Stadium, Cardiff",
+      "ar": "ملعب كارديف سيتي، كارديف"
+    },
+    "clue": {
+      "en": "This capital city stadium in Wales is the home of a team that controversially had its traditional blue kits temporarily changed to red by a foreign owner, and frequently hosts the Welsh national team's crucial qualifiers.",
+      "ar": "هذا الملعب في العاصمة الويلزية هو موطن لفريق تم تغيير أطقمه الزرقاء التقليدية مؤقتاً إلى اللون الأحمر بشكل مثير للجدل من قبل مالك أجنبي، وغالباً ما يستضيف التصفيات الحاسمة للمنتخب الويلزي."
+    }
+  },
+  {
+    "id": 478,
+    "type": "stadium",
+    "latitude": 51.5093,
+    "longitude": -0.2321,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Loftus Road, London",
+      "ar": "لوفتس رود، لندن"
+    },
+    "clue": {
+      "en": "This extremely compact West London stadium places fans incredibly close to the pitch, is home to a team wearing blue-and-white hoops, and saw Sergio Agüero score the most famous title-winning goal in Premier League history against the home side.",
+      "ar": "يضع هذا الملعب الصغير جداً في غرب لندن المشجعين بالقرب الشديد من الملعب، وهو موطن لفريق يرتدي حلقات زرقاء وبيضاء، وشهد تسجيل سيرجيو أغويرو لأشهر هدف تتويج بلقب في تاريخ الدوري الإنجليزي ضد أصحاب الأرض."
+    }
+  },
+  {
+    "id": 479,
+    "type": "stadium",
+    "latitude": 51.4859,
+    "longitude": -0.0507,
+    "difficulty": "medium",
+    "answer": {
+      "en": "The Den, London",
+      "ar": "ذا دين (عرين الأسد)، لندن"
+    },
+    "clue": {
+      "en": "This South London stadium is known for arguably the most hostile atmosphere in England, is home to a working-class team whose fans proudly sing 'No one likes us, we don't care', and relocated slightly from its original site in 1993.",
+      "ar": "يُعرف هذا الملعب في جنوب لندن بامتلاكه ربما الأجواء الأكثر عدائية في إنجلترا، وهو موطن لفريق عمالي تغني جماهيره بفخر 'لا أحد يحبنا ولا نهتم'، وانتقل قليلاً عن موقعه الأصلي في 1993."
+    }
+  },
+  {
+    "id": 480,
+    "type": "stadium",
+    "latitude": 51.4400,
+    "longitude": -2.6202,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Ashton Gate, Bristol",
+      "ar": "أشتون غيت، بريستول"
+    },
+    "clue": {
+      "en": "This stadium in the South West of England is home to a red-clad team nicknamed 'The Robins', and witnessed a famous 2017 League Cup upset where the home side knocked out Manchester United in the final minute.",
+      "ar": "هذا الملعب في جنوب غرب إنجلترا هو موطن لفريق يرتدي الأحمر يُلقب بـ 'روبينز' (طيور الحناء)، وشهد مفاجأة شهيرة في كأس الرابطة 2017 حيث أقصى أصحاب الأرض مانشستر يونايتد في الدقيقة الأخيرة."
+    }
+  },
+  {
+    "id": 481,
+    "type": "stadium",
+    "latitude": 53.5553,
+    "longitude": -2.1287,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Boundary Park, Oldham",
+      "ar": "باوندري بارك، أولدهام"
+    },
+    "clue": {
+      "en": "This stadium is famous for being the coldest and highest in the Football League, was home to a blue-clad team that played in the inaugural Premier League season, and recently suffered the heartbreak of dropping out of the professional leagues entirely.",
+      "ar": "يشتهر هذا الملعب بكونه الأبرد والأعلى في دوري كرة القدم، وكان موطناً لفريق أزرق لعب في أول موسم للدوري الإنجليزي الممتاز، وعانى مؤخراً من حسرة الخروج من الدوريات الاحترافية بالكامل."
+    }
+  },
+  {
+    "id": 482,
+    "type": "stadium",
+    "latitude": 53.8042,
+    "longitude": -1.7593,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Valley Parade, Bradford",
+      "ar": "فالي باريد، برادفورد"
+    },
+    "clue": {
+      "en": "This Yorkshire stadium built into a hillside is tragically remembered for a devastating fire in 1985, and is home to a claret-and-amber team that miraculously survived the 1999-2000 Premier League season on the final day.",
+      "ar": "هذا الملعب في يوركشاير المبني في تلة يُذكر بشكل مأساوي بحريق مدمر عام 1985، وهو موطن لفريق عنابي وكهرماني نجا بأعجوبة من الهبوط في موسم الدوري الممتاز 1999-2000 في اليوم الأخير."
+    }
+  },
+  {
+    "id": 483,
+    "type": "stadium",
+    "latitude": 53.5522,
+    "longitude": -1.4676,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Oakwell, Barnsley",
+      "ar": "أوكويل، بارنسلي"
+    },
+    "clue": {
+      "en": "This traditional South Yorkshire stadium is the home of a red-clad team nicknamed 'The Tykes', and enjoyed exactly one historic season in the Premier League in 1997-98.",
+      "ar": "هذا الملعب التقليدي في جنوب يوركشاير هو موطن لفريق يرتدي الأحمر يُلقب بـ 'ذا تايكس'، واستمتع بموسم تاريخي واحد فقط في الدوري الإنجليزي الممتاز عام 1997-98."
+    }
+  },
+  {
+    "id": 484,
+    "type": "stadium",
+    "latitude": 51.8841,
+    "longitude": -0.4316,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Kenilworth Road, Luton",
+      "ar": "كينيلورث رود، لوتون"
+    },
+    "clue": {
+      "en": "This incredibly unique stadium forces away fans to walk through the back gardens of terraced houses to enter, had an infamous artificial pitch in the 1980s, and hosted Premier League football in 2023-24 for a team nicknamed 'The Hatters'.",
+      "ar": "يجبر هذا الملعب الفريد جداً الجماهير الزائرة على المشي عبر الحدائق الخلفية للمنازل المتراصة للدخول، وامتلك ملعباً صناعياً سيئ السمعة في الثمانينيات، واستضاف الدوري الممتاز في 2023-24 لفريق يُلقب بـ 'صُناع القبعات'."
+    }
+  },
+  {
+    "id": 485,
+    "type": "stadium",
+    "latitude": 52.9150,
+    "longitude": -1.4472,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Pride Park, Derby",
+      "ar": "برايد بارك، ديربي"
+    },
+    "clue": {
+      "en": "This modern stadium in the East Midlands replaced the historic Baseball Ground, and infamously hosted the worst season in Premier League history where the home team won only one match and secured just 11 points.",
+      "ar": "هذا الملعب الحديث في إيست ميدلاندز حل محل ملعب البيسبول التاريخي، واستضاف بشكل سيء السمعة أسوأ موسم في تاريخ الدوري الممتاز حيث فاز أصحاب الأرض بمباراة واحدة فقط وجمعوا 11 نقطة."
+    }
+  },
+  {
+    "id": 486,
+    "type": "city",
+    "latitude": 50.8225,
+    "longitude": -0.1372,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Brighton",
+      "ar": "برايتون"
+    },
+    "clue": {
+      "en": "This famous coastal city with an iconic pebble beach and pier saw its football team surge into European competition relying on brilliant global data scouting, and affectionately calls its team the 'Seagulls'.",
+      "ar": "شهدت هذه المدينة الساحلية الشهيرة بشاطئها الحصوي ورصيفها الأيقوني صعود فريقها لكرة القدم للمنافسات الأوروبية معتمداً على كشافة بيانات عالمية رائعة، وتُطلق على فريقها بحب اسم 'طيور النورس'."
+    }
+  },
+  {
+    "id": 487,
+    "type": "city",
+    "latitude": 50.7192,
+    "longitude": -1.8808,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Bournemouth",
+      "ar": "بورنموث"
+    },
+    "clue": {
+      "en": "This southern coastal resort town known for its sandy beaches saw its tiny football club miraculously climb from the bottom of the pyramid to the Premier League, and supports a red-and-black team called 'The Cherries'.",
+      "ar": "شهدت هذه البلدة الساحلية السياحية الجنوبية المعروفة بشواطئها الرملية صعود ناديها الصغير بمعجزة من قاع الهرم إلى الدوري الممتاز، وتدعم فريقاً أحمر وأسود يُدعى 'الكرز'."
+    }
+  },
+  {
+    "id": 488,
+    "type": "city",
+    "latitude": 52.0567,
+    "longitude": 1.1482,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Ipswich",
+      "ar": "إيبسويتش"
+    },
+    "clue": {
+      "en": "This East Anglian town saw its local football club win the UEFA Cup in 1981 under the legendary Sir Bobby Robson, and gained global fame for having pop star Ed Sheeran as a prominent sponsor and superfan.",
+      "ar": "شهدت هذه البلدة في إيست أنجليا فوز ناديها المحلي بكأس الاتحاد الأوروبي 1981 تحت قيادة الأسطورة السير بوبي روبسون، واكتسبت شهرة عالمية بكون نجم البوب إد شيران راعياً بارزاً ومشجعاً كبيراً لها."
+    }
+  },
+  {
+    "id": 489,
+    "type": "city",
+    "latitude": 53.7676,
+    "longitude": -0.3274,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Hull",
+      "ar": "هال"
+    },
+    "clue": {
+      "en": "This Yorkshire port city has a local team that uniquely wears amber and black stripes, is nicknamed 'The Tigers', and saw its owner controversially attempt to officially change the club's name, angering traditional fans.",
+      "ar": "تمتلك هذه المدينة الساحلية في يوركشاير فريقاً محلياً يرتدي خطوطاً فريدة باللونين الكهرماني والأسود، ويُلقب بـ 'النمور'، وشهدت محاولة مثيرة للجدل من مالكها لتغيير اسم النادي رسمياً مما أغضب الجماهير التقليدية."
+    }
+  },
+  {
+    "id": 490,
+    "type": "city",
+    "latitude": 51.6214,
+    "longitude": -3.9436,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Swansea",
+      "ar": "سوانزي"
+    },
+    "clue": {
+      "en": "This Welsh coastal city saw its white-clad football team become the first from Wales to play in the Premier League, and celebrated a historic 2013 League Cup victory in their centenary year.",
+      "ar": "شهدت هذه المدينة الساحلية الويلزية فريقها الذي يرتدي الأبيض يصبح الأول من ويلز يلعب في الدوري الإنجليزي الممتاز، واحتفلت بانتصار تاريخي في كأس الرابطة 2013 في عامها المئوي."
+    }
+  },
+  {
+    "id": 491,
+    "type": "city",
+    "latitude": 53.5769,
+    "longitude": -2.4282,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Bolton",
+      "ar": "بولتون"
+    },
+    "clue": {
+      "en": "This Greater Manchester town saw its local team enjoy a golden era in the early 2000s under Sam Allardyce playing physical football mixed with global superstars, and its white-clad team was a founding member of the Football League in 1888.",
+      "ar": "شهدت هذه البلدة في مانشستر الكبرى فريقها المحلي يستمتع بحقبة ذهبية في أوائل الألفية تحت قيادة سام ألاردايس بلعب بدني ممزوج بنجوم عالميين، وكان فريقها الأبيض عضواً مؤسساً لدوري كرة القدم عام 1888."
+    }
+  },
+  {
+    "id": 492,
+    "type": "city",
+    "latitude": 53.0027,
+    "longitude": -2.1794,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Stoke-on-Trent",
+      "ar": "ستوك أون ترينت"
+    },
+    "clue": {
+      "en": "This city famous for its pottery industry saw its football team become infamous for a highly physical, long-throw style that terrified elite teams, posing the ultimate test: 'Can Lionel Messi do it on a cold, rainy Tuesday night here?'",
+      "ar": "هذه المدينة الشهيرة بصناعة الفخار أصبح فريقها سيء السمعة بأسلوب بدني للغاية ورميات تماس طويلة أرعبت النخبة، وطرحت الاختبار المطلق: 'هل يستطيع ميسي فعلها في ليلة ثلاثاء باردة وممطرة هنا؟'"
+    }
+  },
+  {
+    "id": 493,
+    "type": "city",
+    "latitude": 50.8198,
+    "longitude": -1.0880,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Portsmouth",
+      "ar": "بورتسموث"
+    },
+    "clue": {
+      "en": "This historic naval port city on the south coast saw its football team win the 2008 FA Cup under Harry Redknapp before suffering financial collapse, and is supported by vocal fans nicknamed the 'Pompey Chimes'.",
+      "ar": "شهدت هذه المدينة الساحلية البحرية التاريخية فوز فريقها بكأس الاتحاد 2008 تحت قيادة هاري ريدناب قبل أن تعاني من انهيار مالي، وتدعمها جماهير صاخبة تُلقب بـ 'دقات بومبي'."
+    }
+  },
+  {
+    "id": 494,
+    "type": "city",
+    "latitude": 51.4545,
+    "longitude": -2.5879,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Bristol",
+      "ar": "بريستول"
+    },
+    "clue": {
+      "en": "This major South West city famous for the Clifton Suspension Bridge is fiercely divided by a rivalry between a red-clad 'City' team and a blue-and-white 'Rovers' team, and is the largest English city never to reach the modern Premier League.",
+      "ar": "تنقسم هذه المدينة الكبرى في الجنوب الغربي والشهيرة بجسر كليفتون المعلق بشراسة بين فريق 'سيتي' الأحمر وفريق 'روفرز' الأزرق والأبيض، وهي أكبر مدينة إنجليزية لم تصل إلى الدوري الممتاز الحديث أبداً."
+    }
+  },
+  {
+    "id": 495,
+    "type": "city",
+    "latitude": 52.5870,
+    "longitude": -2.1284,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Wolverhampton",
+      "ar": "ولفرهامبتون"
+    },
+    "clue": {
+      "en": "This West Midlands industrial city saw its historic gold-and-black team pioneer European floodlit matches in the 1950s, and recently became deeply influenced by a massive influx of Portuguese players and managers.",
+      "ar": "شهدت هذه المدينة الصناعية في ويست ميدلاندز ريادة فريقها التاريخي الذهبي والأسود للمباريات الأوروبية تحت الأضواء الكاشفة بالخمسينيات، وأصبحت مؤخراً متأثرة بشدة بتدفق هائل للاعبين والمدربين البرتغاليين."
+    }
+  },
+  {
+    "id": 496,
+    "type": "city",
+    "latitude": 53.7478,
+    "longitude": -2.4820,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Blackburn",
+      "ar": "بلاكبيرن"
+    },
+    "clue": {
+      "en": "This Lancashire mill town saw its blue-and-white halved team shockingly win the 1995 Premier League title fueled by local steel money, and was the legendary home of striker Alan Shearer before his record transfer.",
+      "ar": "شهدت هذه البلدة اللانكشايرية فوز فريقها المقسم للأزرق والأبيض بشكل صادم بلقب الدوري الممتاز 1995 بتمويل من أموال الصلب المحلي، وكانت المعقل الأسطوري للمهاجم آلان شيرر قبل انتقاله القياسي."
+    }
+  },
+  {
+    "id": 497,
+    "type": "city",
+    "latitude": 53.7893,
+    "longitude": -2.2405,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Burnley",
+      "ar": "بيرنلي"
+    },
+    "clue": {
+      "en": "This traditional Lancashire town is home to a claret-and-blue team that punches massively above its weight, recently enjoyed a long Premier League stint under Sean Dyche, and deeply hates its local rival from Blackburn.",
+      "ar": "هذه البلدة اللانكشايرية التقليدية هي موطن لفريق عنابي وأزرق يتفوق بشكل كبير على حجمه، استمتع مؤخراً بفترة طويلة بالدوري الممتاز تحت قيادة شون دايش، ويكره بشدة غريمه المحلي من بلاكبيرن."
+    }
+  },
+  {
+    "id": 498,
+    "type": "city",
+    "latitude": 52.6309,
+    "longitude": 1.2974,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Norwich",
+      "ar": "نورويتش"
+    },
+    "clue": {
+      "en": "This East Anglian city has a local team that wears yellow and green, is famously owned by a celebrity TV chef, and became completely synonymous with the 'yo-yo' phenomenon of constantly getting promoted and relegated.",
+      "ar": "تمتلك هذه المدينة في إيست أنجليا فريقاً محلياً يرتدي الأصفر والأخضر، ومملوك بشكل شهير لطاهية تلفزيونية شهيرة، وأصبح مرادفاً تماماً لظاهرة 'اليو-يو' المتمثلة في الصعود والهبوط المستمر."
+    }
+  },
+  {
+    "id": 499,
+    "type": "city",
+    "latitude": 51.8787,
+    "longitude": -0.4200,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Luton",
+      "ar": "لوتون"
+    },
+    "clue": {
+      "en": "This town famous for its international airport saw its football club go from non-league to the Premier League in under a decade, and its stadium is globally famous for away fans entering through terraced row houses.",
+      "ar": "هذه البلدة الشهيرة بمطارها الدولي شهدت انتقال ناديها من دوريات الهواة إلى الدوري الممتاز في أقل من عقد، وملعبها مشهور عالمياً بدخول الجماهير الزائرة عبر صفوف من المنازل المتراصة."
+    }
+  },
+  {
+    "id": 500,
+    "type": "city",
+    "latitude": 53.7928,
+    "longitude": -1.7516,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Bradford",
+      "ar": "برادفورد"
+    },
+    "clue": {
+      "en": "This Yorkshire city saw its football club survive a dramatic final-day relegation battle in 2000, but is tragically remembered for a devastating 1985 stadium fire that deeply scarred the community.",
+      "ar": "شهدت هذه المدينة في يوركشاير نجاة ناديها من معركة هبوط درامية في اليوم الأخير عام 2000، لكنها تُذكر بشكل مأساوي بحريق ملعب مدمر في 1985 ترك ندوباً عميقة في المجتمع."
+    }
+  },
+  {
+    "id": 501,
+    "type": "city",
+    "latitude": 53.5526,
+    "longitude": -1.4823,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Barnsley",
+      "ar": "بارنسلي"
+    },
+    "clue": {
+      "en": "This South Yorkshire coal mining town is home to a red-clad football team nicknamed 'The Tykes', and enjoyed exactly one magical season in the Premier League in the late 1990s.",
+      "ar": "هذه البلدة الخاصة بتعدين الفحم في جنوب يوركشاير هي موطن لفريق يرتدي الأحمر يُلقب بـ 'ذا تايكس'، واستمتعت بموسم سحري واحد فقط في الدوري الإنجليزي الممتاز بأواخر التسعينيات."
+    }
+  },
+  {
+    "id": 502,
+    "type": "city",
+    "latitude": 52.0406,
+    "longitude": -0.7594,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Milton Keynes",
+      "ar": "ميلتون كينز"
+    },
+    "clue": {
+      "en": "This modern 'new town' known for its concrete roundabouts became the center of English football's most controversial franchising move when Wimbledon FC relocated here, and its local team is deeply despised as a 'franchise' club.",
+      "ar": "أصبحت هذه 'المدينة الجديدة' الحديثة المعروفة بدواراتها الخرسانية مركزاً لأكثر تحركات كرة القدم الإنجليزية إثارة للجدل عندما انتقل نادي ويمبلدون إليها، وفريقها المحلي مكروه بشدة كنادٍ 'امتيازي'."
+    }
+  },
+  {
+    "id": 503,
+    "type": "city",
+    "latitude": 53.5409,
+    "longitude": -2.1114,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Oldham",
+      "ar": "أولدهام"
+    },
+    "clue": {
+      "en": "This Greater Manchester town saw its local team play in the very first Premier League season, reach the 1990 League Cup final, and infamously become the first former Premier League club to be relegated entirely out of the professional leagues.",
+      "ar": "هذه البلدة في مانشستر الكبرى شهدت لعب فريقها في أول موسم للدوري الممتاز وبلوغ نهائي كأس الرابطة 1990، وأصبحت بشكل سيء السمعة أول نادٍ سابق بالدوري الممتاز يهبط بالكامل خارج الدوريات الاحترافية."
+    }
+  },
+  {
+    "id": 504,
+    "type": "city",
+    "latitude": 53.6458,
+    "longitude": -1.7850,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Huddersfield",
+      "ar": "هدرسفيلد"
+    },
+    "clue": {
+      "en": "This Yorkshire town saw its historically great blue-and-white team win three consecutive league titles in the 1920s under Herbert Chapman, and miraculously returned to the Premier League in 2017 under a charismatic German manager.",
+      "ar": "هذه البلدة في يوركشاير شهدت فوز فريقها الأزرق والأبيض التاريخي بثلاثة ألقاب دوري متتالية بالعشرينيات تحت قيادة هربرت تشابمان، وعادت بمعجزة للدوري الممتاز في 2017 تحت قيادة مدرب ألماني كاريزمي."
+    }
+  },
+  {
+    "id": 505,
+    "type": "city",
+    "latitude": 51.5558,
+    "longitude": -1.7812,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Swindon",
+      "ar": "سويندون"
+    },
+    "clue": {
+      "en": "This town in Wiltshire famous for its 'Magic Roundabout' saw its football team spend exactly one season in the Premier League (93/94) where they conceded exactly 100 goals, and plays its home matches at the County Ground.",
+      "ar": "هذه البلدة في ويلتشير الشهيرة بـ 'الدوار السحري' قضى فريقها موسماً واحداً بالضبط في الدوري الممتاز (93/94) حيث استقبل 100 هدف بالضبط، وتلعب مبارياتها في ملعب 'كاونتي غراوند'."
+    }
+  },
+  {
+    "id": 506,
+    "type": "city",
+    "latitude": 50.3755,
+    "longitude": -4.1427,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Plymouth",
+      "ar": "بليموث"
+    },
+    "clue": {
+      "en": "This historic naval port city in Devon is home to a green-clad football team nicknamed 'The Pilgrims', and is frequently cited as the largest city in England to have never played in the top flight of English football.",
+      "ar": "هذه المدينة الساحلية البحرية التاريخية في ديفون هي موطن لفريق يرتدي الأخضر يُلقب بـ 'الحجاج'، ويُشار إليها غالباً كأكبر مدينة في إنجلترا لم تلعب أبداً في دوري الدرجة الأولى الإنجليزي."
+    }
+  },
+  {
+    "id": 507,
+    "type": "city",
+    "latitude": 53.4875,
+    "longitude": -2.2901,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Salford",
+      "ar": "سالفورد"
+    },
+    "clue": {
+      "en": "This city located directly adjacent to Manchester saw its local non-league football club famously bought and propelled up the leagues by the legendary 'Class of 92' Manchester United players, and featured in a popular sports documentary.",
+      "ar": "شهدت هذه المدينة المحاذية لمانشستر شراء ناديها المحلي للهواة ودفعه في سلم الدوريات من قبل أساطير مانشستر يونايتد من 'جيل 92' بشكل شهير، وظهرت في فيلم وثائقي رياضي شهير."
+    }
+  },
+  {
+    "id": 508,
+    "type": "city",
+    "latitude": 53.0429,
+    "longitude": -2.9927,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Wrexham",
+      "ar": "ريكسهام"
+    },
+    "clue": {
+      "en": "This North Wales town is home to the third oldest football club in the world, and achieved massive global fame and back-to-back promotions after being purchased by two Hollywood actors.",
+      "ar": "هذه البلدة في شمال ويلز هي موطن لثالث أقدم نادٍ لكرة القدم في العالم، وحققت شهرة عالمية هائلة وصعوداً متتالياً بعد أن اشتراها ممثلان من هوليوود."
+    }
+  },
+  {
+    "id": 509,
+    "type": "city",
+    "latitude": 53.4106,
+    "longitude": -2.1575,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Stockport",
+      "ar": "ستوكبورت"
+    },
+    "clue": {
+      "en": "This Greater Manchester town is home to a blue-clad local football team nicknamed 'The Hatters', which dropped down to the regional leagues but recently surged back with multiple promotions to reach League One.",
+      "ar": "هذه البلدة في مانشستر الكبرى هي موطن لفريق محلي يرتدي الأزرق يُلقب بـ 'صُناع القبعات'، والذي تراجع للدوريات الإقليمية لكنه صعد مؤخراً بعدة ترقيات ليصل إلى 'ليغ وان' (الدرجة الثالثة)."
+    }
+  },
+  {
+    "id": 510,
+    "type": "city",
+    "latitude": 51.4214,
+    "longitude": -0.2074,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Wimbledon",
+      "ar": "ويمبلدون"
+    },
+    "clue": {
+      "en": "This affluent London district famous globally for tennis had an original football club famously nicknamed the 'Crazy Gang' that shocked Liverpool in the 1988 FA Cup final, before the team was controversially relocated to Milton Keynes.",
+      "ar": "هذا الحي اللندني الراقي الشهير عالمياً بالتنس امتلك نادياً أصلياً لُقب بـ 'العصابة المجنونة' صدم ليفربول في نهائي كأس الاتحاد 1988، قبل أن يُنقل الفريق بشكل مثير للجدل إلى ميلتون كينز."
+    }
+  },
+  {
+    "id": 511,
+    "type": "stadium",
+    "latitude": 53.4430,
+    "longitude": -3.0000,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Everton Stadium, Liverpool",
+      "ar": "ملعب إيفرتون، ليفربول"
+    },
+    "clue": {
+      "en": "This stadium replaced a historic park in 2025, sits right on the docks of the River Mersey, and is the shiny new home of the blue half of a massive city.",
+      "ar": "هذا الملعب حل محل حديقة تاريخية في عام 2025، ويقع مباشرة على أرصفة نهر ميرسي، وهو الموطن الجديد اللامع للنصف الأزرق من مدينة ضخمة."
+    }
+  },
+  {
+    "id": 512,
+    "type": "stadium",
+    "latitude": 53.0520,
+    "longitude": -2.9880,
+    "difficulty": "easy",
+    "answer": {
+      "en": "The Racecourse Ground, Wrexham",
+      "ar": "ملعب ريسكورس غراوند، ريكسهام"
+    },
+    "clue": {
+      "en": "This stadium is the oldest international venue in the world, is owned by two Hollywood actors, and featured in a massively popular sports documentary.",
+      "ar": "هذا الملعب هو أقدم ملعب دولي في العالم، ويمتلكه ممثلان من هوليوود، وظهر في فيلم وثائقي رياضي ذي شعبية هائلة."
+    }
+  },
+  {
+    "id": 513,
+    "type": "stadium",
+    "latitude": 53.7720,
+    "longitude": -2.6880,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Deepdale, Preston",
+      "ar": "ديبديل، بريستون"
+    },
+    "clue": {
+      "en": "This stadium is the oldest continuously used football ground in the world, features a stand named after Sir Tom Finney, and is home to the original 'Invincibles' of 1888-89.",
+      "ar": "هذا الملعب هو أقدم ملعب كرة قدم مستخدم باستمرار في العالم، ويضم مدرجاً سُمي على اسم السير توم فيني، وهو موطن 'الذي لا يقهر' الأصلي لموسم 1888-89."
+    }
+  },
+  {
+    "id": 514,
+    "type": "stadium",
+    "latitude": 53.8040,
+    "longitude": -3.0480,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Bloomfield Road, Blackpool",
+      "ar": "بلومفيلد رود، بلاكبول"
+    },
+    "clue": {
+      "en": "This stadium features bright tangerine-colored seats, hosted a single glorious Premier League season in 2010, and is located in a famous seaside resort town known for its tower.",
+      "ar": "يتميز هذا الملعب بمقاعد زاهية بلون اليوسفي، واستضاف موسماً مجيداً واحداً في الدوري الإنجليزي الممتاز عام 2010، ويقع في بلدة سياحية ساحلية شهيرة ببرجها."
+    }
+  },
+  {
+    "id": 515,
+    "type": "stadium",
+    "latitude": 52.9420,
+    "longitude": -1.1370,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Meadow Lane, Nottingham",
+      "ar": "ميدو لين، نوتينغهام"
+    },
+    "clue": {
+      "en": "This stadium is located incredibly close to its city rival just across the River Trent, is the home of the oldest professional football club in the world, and features iconic black-and-white striped kits.",
+      "ar": "يقع هذا الملعب بالقرب الشديد من غريمه في نفس المدينة عبر نهر ترينت مباشرة، وهو موطن لأقدم نادٍ احترافي لكرة القدم في العالم، ويتميز بأطقم مخططة أيقونية باللونين الأسود والأبيض."
+    }
+  },
+  {
+    "id": 516,
+    "type": "stadium",
+    "latitude": 52.0090,
+    "longitude": -0.7330,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Stadium MK, Milton Keynes",
+      "ar": "ملعب إم كيه (Stadium MK)، ميلتون كينز"
+    },
+    "clue": {
+      "en": "This stadium was controversially built to house a relocated London team, features comfortable padded seats throughout the entire arena, and is despised by traditional English football purists as a 'franchise' venue.",
+      "ar": "بُني هذا الملعب بشكل مثير للجدل لإيواء فريق لندني تم نقله، ويتميز بمقاعد مبطنة مريحة في جميع أنحائه، ومكروه من قبل أنصار كرة القدم الإنجليزية التقليديين كملعب 'امتيازي'."
+    }
+  },
+  {
+    "id": 517,
+    "type": "stadium",
+    "latitude": 53.5470,
+    "longitude": -2.6540,
+    "difficulty": "easy",
+    "answer": {
+      "en": "DW Stadium, Wigan",
+      "ar": "دي دبليو ستاديوم (DW Stadium)، ويغان"
+    },
+    "clue": {
+      "en": "This stadium is shared between a rugby league giant and a football team, saw its football club miraculously win the 2013 FA Cup, and witnessed relegation from the Premier League just days after that cup win.",
+      "ar": "يشترك في هذا الملعب عملاق في دوري الرجبي وفريق كرة قدم، وشهد فوز ناديه الكروي بمعجزة بكأس الاتحاد الإنجليزي 2013، وشهد الهبوط من الدوري الممتاز بعد أيام فقط من ذلك الفوز بالكأس."
+    }
+  },
+  {
+    "id": 518,
+    "type": "stadium",
+    "latitude": 51.4220,
+    "longitude": -0.9820,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Madejski Stadium, Reading",
+      "ar": "ملعب ماديسكي، ريدنغ"
+    },
+    "clue": {
+      "en": "This stadium is named after the club's former auto-trader millionaire chairman, witnessed a record-breaking 106-point Championship season in 2005-06, and is the fortress of a blue-and-white team nicknamed 'The Royals'.",
+      "ar": "سُمي هذا الملعب على اسم رئيس النادي السابق المليونير في تجارة السيارات، وشهد موسماً قياسياً بـ 106 نقاط في دوري البطولة عام 2005-06، وهو حصن لفريق أزرق وأبيض يُلقب بـ 'الملكيين'."
+    }
+  },
+  {
+    "id": 519,
+    "type": "stadium",
+    "latitude": 52.4480,
+    "longitude": -1.4950,
+    "difficulty": "medium",
+    "answer": {
+      "en": "CBS Arena, Coventry",
+      "ar": "سي بي إس أرينا (ريكو أرينا)، كوفنتري"
+    },
+    "clue": {
+      "en": "This stadium is the home of the 'Sky Blues', experienced multiple ownership disputes forcing the team to play in different cities, and replaced the historic Highfield Road ground in 2005.",
+      "ar": "هذا الملعب هو موطن فريق 'السماوي'، وشهد نزاعات ملكية متعددة أجبرت الفريق على اللعب في مدن مختلفة، وحل محل ملعب هايفيلد رود التاريخي في عام 2005."
+    }
+  },
+  {
+    "id": 520,
+    "type": "stadium",
+    "latitude": 53.6540,
+    "longitude": -1.7680,
+    "difficulty": "medium",
+    "answer": {
+      "en": "John Smith's Stadium, Huddersfield",
+      "ar": "ملعب جون سميث، هدرسفيلد"
+    },
+    "clue": {
+      "en": "This stadium features distinctive banana-shaped curved roof trusses, hosted Premier League football in 2017 for a team managed by David Wagner, and won the prestigious RIBA Building of the Year award in 1995.",
+      "ar": "يتميز هذا الملعب بدعامات سقف منحنية مميزة على شكل موزة، واستضاف الدوري الإنجليزي الممتاز في 2017 لفريق دربه ديفيد فاغنر، وفاز بجائزة (RIBA) المرموقة لمبنى العام في 1995."
+    }
+  },
+  {
+    "id": 521,
+    "type": "stadium",
+    "latitude": 51.7160,
+    "longitude": -1.2080,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Kassam Stadium, Oxford",
+      "ar": "ملعب قسام، أكسفورد"
+    },
+    "clue": {
+      "en": "This stadium uniquely features only three stands leaving one end completely open, was built near a large leisure complex, and is the home of a 'Yellows' team from a world-famous university city.",
+      "ar": "يتميز هذا الملعب بشكل فريد بثلاثة مدرجات فقط تاركاً نهاية واحدة مفتوحة بالكامل، وبُني بالقرب من مجمع ترفيهي كبير، وهو موطن فريق 'الأصفر' من مدينة جامعية مشهورة عالمياً."
+    }
+  },
+  {
+    "id": 522,
+    "type": "stadium",
+    "latitude": 51.4300,
+    "longitude": -0.1870,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Plough Lane, London",
+      "ar": "بلاو لين، لندن"
+    },
+    "clue": {
+      "en": "This stadium opened in 2020 as a miraculous return home for a fan-owned club, sits near the original site of the 'Crazy Gang', and replaced their temporary exile ground in Kingston.",
+      "ar": "اُفتتح هذا الملعب في 2020 كعودة إعجازية للديار لنادٍ مملوك للجماهير، ويقع بالقرب من الموقع الأصلي لـ 'العصابة المجنونة'، وحل محل ملعب منفاهم المؤقت في كينغستون."
+    }
+  },
+  {
+    "id": 523,
+    "type": "stadium",
+    "latitude": 50.3880,
+    "longitude": -4.1500,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Home Park, Plymouth",
+      "ar": "هوم بارك، بليموث"
+    },
+    "clue": {
+      "en": "This stadium is nicknamed the 'Theatre of Greens', is the southernmost major stadium in the English professional football league, and is the fortress of 'The Pilgrims'.",
+      "ar": "يُلقب هذا الملعب بـ 'مسرح الخُضر'، وهو أبعد ملعب رئيسي في الجنوب ضمن دوري كرة القدم الإنجليزي الاحترافي، وهو حصن لفريق 'الحجاج'."
+    }
+  },
+  {
+    "id": 524,
+    "type": "stadium",
+    "latitude": 53.3730,
+    "longitude": -3.0320,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Prenton Park, Birkenhead",
+      "ar": "برينتون بارك، بيركنهيد"
+    },
+    "clue": {
+      "en": "This stadium is the home of a white-clad team known as the 'Super White Army', frequently hosts Liverpool's women's and reserve teams, and sits prominently on the Wirral Peninsula.",
+      "ar": "هذا الملعب هو موطن لفريق يرتدي الأبيض يُعرف بـ 'الجيش الأبيض الخارق'، وغالباً ما يستضيف فرق السيدات والاحتياط لليفربول، ويقع بشكل بارز في شبه جزيرة ويرال."
+    }
+  },
+  {
+    "id": 525,
+    "type": "stadium",
+    "latitude": 53.4270,
+    "longitude": -1.3620,
+    "difficulty": "medium",
+    "answer": {
+      "en": "New York Stadium, Rotherham",
+      "ar": "ملعب نيويورك، روثرهام"
+    },
+    "clue": {
+      "en": "This stadium's name nods to the historic steelmaking heritage of the local area rather than an American city, features steep red stands, and opened in 2012 for a team known as 'The Millers'.",
+      "ar": "يشير اسم هذا الملعب إلى التراث التاريخي لصناعة الصلب في المنطقة المحلية بدلاً من مدينة أمريكية، ويتميز بمدرجات حمراء شديدة الانحدار، واُفتتح في 2012 لفريق يُعرف بـ 'الطحانين'."
+    }
+  },
+  {
+    "id": 526,
+    "type": "stadium",
+    "latitude": 51.5640,
+    "longitude": -1.7710,
+    "difficulty": "medium",
+    "answer": {
+      "en": "The County Ground, Swindon",
+      "ar": "كاونتي غراوند، سويندون"
+    },
+    "clue": {
+      "en": "This stadium hosted exactly one Premier League season yielding 100 conceded goals, is located near a famous 'Magic Roundabout', and is the red-clad fortress in the county of Wiltshire.",
+      "ar": "استضاف هذا الملعب موسماً واحداً بالضبط في الدوري الممتاز أسفر عن استقبال 100 هدف، ويقع بالقرب من 'الدوار السحري' الشهير، وهو الحصن المكسو بالأحمر في مقاطعة ويلتشير."
+    }
+  },
+  {
+    "id": 527,
+    "type": "stadium",
+    "latitude": 51.4820,
+    "longitude": -2.5830,
+    "difficulty": "medium",
+    "answer": {
+      "en": "The Memorial Stadium, Bristol",
+      "ar": "الملعب التذكاري، بريستول"
+    },
+    "clue": {
+      "en": "This stadium was originally built for rugby, was dedicated to local players killed in World War I, and is the blue-and-white home of the 'Gas' (Rovers).",
+      "ar": "بُني هذا الملعب في الأصل للرجبي، وكُرس للاعبين المحليين الذين قُتلوا في الحرب العالمية الأولى، وهو الموطن الأزرق والأبيض لفريق 'الغاز' (روفرز)."
+    }
+  },
+  {
+    "id": 528,
+    "type": "stadium",
+    "latitude": 52.5640,
+    "longitude": -0.2400,
+    "difficulty": "medium",
+    "answer": {
+      "en": "London Road, Peterborough",
+      "ar": "لندن رود، بيتربورو"
+    },
+    "clue": {
+      "en": "This stadium is the home of a team nicknamed 'The Posh', features traditional standing terracing that was converted to seating late, and sits in an eastern cathedral city.",
+      "ar": "هذا الملعب هو موطن لفريق يُلقب بـ 'ذا بوش' (الراقي)، ويتميز بمدرجات وقوف تقليدية تم تحويلها إلى مقاعد في وقت متأخر، ويقع في مدينة كاتدرائية شرقية."
+    }
+  },
+  {
+    "id": 529,
+    "type": "stadium",
+    "latitude": 53.5800,
+    "longitude": -2.2950,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Gigg Lane, Bury",
+      "ar": "غيغ لين، بيري"
+    },
+    "clue": {
+      "en": "This stadium is one of the world's oldest professional grounds, tragically lay completely empty when its historic club was expelled from the football league in 2019, and recently saw intense fan-led efforts to restore football there.",
+      "ar": "يُعد هذا الملعب من أقدم الملاعب الاحترافية في العالم، وبقي فارغاً تماماً بشكل مأساوي عندما طُرد ناديه التاريخي من دوري كرة القدم في 2019، وشهد مؤخراً جهوداً مكثفة بقيادة الجماهير لاستعادة كرة القدم هناك."
+    }
+  },
+  {
+    "id": 530,
+    "type": "stadium",
+    "latitude": 53.3990,
+    "longitude": -2.1670,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Edgeley Park, Stockport",
+      "ar": "إيدجلي بارك، ستوكبورت"
+    },
+    "clue": {
+      "en": "This stadium was originally home to a rugby club in 1891, is located in Greater Manchester, and recently witnessed its blue-clad team climb back from non-league to League One.",
+      "ar": "كان هذا الملعب في الأصل موطناً لنادي رجبي في عام 1891، ويقع في مانشستر الكبرى، وشهد مؤخراً صعود فريقه الذي يرتدي الأزرق من دوريات الهواة إلى دوري الدرجة الأولى (ليغ وان)."
+    }
+  },
+  {
+    "id": 531,
+    "type": "stadium",
+    "latitude": 53.5090,
+    "longitude": -1.1210,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Keepmoat Stadium, Doncaster",
+      "ar": "ملعب كيبموت، دونكاستر"
+    },
+    "clue": {
+      "en": "This stadium is a modern bowl built to replace the historic Belle Vue, features a distinctive red-and-white hoop design inside, and is home to a team known as 'The Rovers' in South Yorkshire.",
+      "ar": "هذا الملعب هو وعاء حديث بُني ليحل محل 'بيل فيو' التاريخي، ويتميز بتصميم داخلي فريد من الحلقات الحمراء والبيضاء، وهو موطن لفريق يُعرف بـ 'الروفرز' في جنوب يوركشاير."
+    }
+  },
+  {
+    "id": 532,
+    "type": "stadium",
+    "latitude": 51.3840,
+    "longitude": 0.5600,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Priestfield Stadium, Gillingham",
+      "ar": "ملعب بريستفيلد، جيلينغهام"
+    },
+    "clue": {
+      "en": "This stadium is the only Football League ground in the county of Kent, features an away stand that famously had no roof for many years, and is the home of a blue-clad team nicknamed 'The Gills'.",
+      "ar": "هذا الملعب هو الملعب الوحيد التابع لدوري كرة القدم في مقاطعة كنت، ويتميز بمدرج للضيوف اشتهر بعدم وجود سقف له لسنوات عديدة، وهو موطن لفريق يرتدي الأزرق يُلقب بـ 'ذا جيلز'."
+    }
+  },
+  {
+    "id": 533,
+    "type": "stadium",
+    "latitude": 51.6300,
+    "longitude": -0.7990,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Adams Park, High Wycombe",
+      "ar": "آدامز بارك، هاي ويكومب"
+    },
+    "clue": {
+      "en": "This stadium is located at the end of a long industrial estate road surrounded by woods, is the home of the 'Chairboys', and famously hosted a team that uses a light-and-dark blue quartered kit.",
+      "ar": "يقع هذا الملعب في نهاية طريق منطقة صناعية طويلة تحيط بها الأخشاب، وهو موطن فريق 'صُناع الكراسي'، واستضاف بشكل شهير فريقاً يستخدم طقماً مقسماً لأرباع باللونين الأزرق الفاتح والداكن."
+    }
+  },
+  {
+    "id": 534,
+    "type": "stadium",
+    "latitude": 51.5490,
+    "longitude": 0.7010,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Roots Hall, Southend",
+      "ar": "روتس هول، ساوثيند"
+    },
+    "clue": {
+      "en": "This stadium is located in an Essex seaside town, was built on the site of an old rubbish dump, and is the traditional home of 'The Shrimpers'.",
+      "ar": "يقع هذا الملعب في بلدة ساحلية في إسكس، وبُني على موقع مكب نفايات قديم، وهو المعقل التقليدي لفريق 'صيادي الجمبري'."
+    }
+  },
+  {
+    "id": 535,
+    "type": "stadium",
+    "latitude": 53.2210,
+    "longitude": -0.5370,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Sincil Bank, Lincoln",
+      "ar": "سينسيل بانك، لينكولن"
+    },
+    "clue": {
+      "en": "This stadium is overlooked by a massive medieval cathedral, is the home of a team nicknamed 'The Imps', and witnessed a stunning run to the FA Cup quarter-finals as a non-league team in 2017.",
+      "ar": "يُطل على هذا الملعب كاتدرائية ضخمة من العصور الوسطى، وهو موطن لفريق يُلقب بـ 'العفاريت'، وشهد مسيرة مذهلة إلى ربع نهائي كأس الاتحاد الإنجليزي كفريق هواة في 2017."
+    }
+  },
+  {
+    "id": 536,
+    "type": "stadium",
+    "latitude": 52.6240,
+    "longitude": -1.1410,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Filbert Street, Leicester",
+      "ar": "فيلبرت ستريت، ليستر"
+    },
+    "clue": {
+      "en": "This historic stadium was completely demolished in 2003, famously featured a massive double-decker 'Carling Stand', and was the traditional home of 'The Foxes' for over 100 years.",
+      "ar": "هذا الملعب التاريخي هُدم بالكامل في عام 2003، واشتهر بمدرج 'كارلينج' الضخم المكون من طابقين، وكان المعقل التقليدي لـ 'الثعالب' لأكثر من 100 عام."
+    }
+  },
+  {
+    "id": 537,
+    "type": "stadium",
+    "latitude": 54.9180,
+    "longitude": -1.3780,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Roker Park, Sunderland",
+      "ar": "روكر بارك، سندرلاند"
+    },
+    "clue": {
+      "en": "This historic North East stadium was famous for a deafening 'Roar', hosted 1966 World Cup matches, and was replaced by a larger stadium on a former coal mine in 1997.",
+      "ar": "هذا الملعب التاريخي في الشمال الشرقي اشتهر بـ 'زئير' يصم الآذان، واستضاف مباريات في كأس العالم 1966، وتم استبداله بملعب أكبر في منجم فحم سابق عام 1997."
+    }
+  },
+  {
+    "id": 538,
+    "type": "stadium",
+    "latitude": 54.5640,
+    "longitude": -1.2470,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Ayresome Park, Middlesbrough",
+      "ar": "أيرسوم بارك، ميدلزبره"
+    },
+    "clue": {
+      "en": "This historic stadium saw North Korea famously defeat Italy in the 1966 World Cup, had its iconic iron gates relocated to the club's new modern stadium, and was the home of a red-clad Teesside club until 1995.",
+      "ar": "شهد هذا الملعب التاريخي هزيمة إيطاليا الشهيرة أمام كوريا الشمالية في كأس العالم 1966، ونُقلت بواباته الحديدية الأيقونية إلى الملعب الحديث الجديد للنادي، وكان موطناً لنادٍ يرتدي الأحمر في تيسايد حتى 1995."
+    }
+  },
+  {
+    "id": 539,
+    "type": "stadium",
+    "latitude": 52.4110,
+    "longitude": -1.4930,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Highfield Road, Coventry",
+      "ar": "هايفيلد رود، كوفنتري"
+    },
+    "clue": {
+      "en": "This historic stadium became the first all-seater ground in the English league in 1981, was the home of the 'Sky Blues' for 106 years, and was demolished in 2006 to build a housing estate.",
+      "ar": "أصبح هذا الملعب التاريخي أول ملعب بمقاعد بالكامل في الدوري الإنجليزي عام 1981، وكان موطناً لـ 'السماوي' لمدة 106 سنوات، وهُدم في عام 2006 لبناء مجمع سكني."
+    }
+  },
+  {
+    "id": 540,
+    "type": "stadium",
+    "latitude": 52.9060,
+    "longitude": -1.4770,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Baseball Ground, Derby",
+      "ar": "بيسبول غراوند، ديربي"
+    },
+    "clue": {
+      "en": "This historic stadium was originally built for a completely different American sport, famously featured an incredibly muddy pitch in the 1970s under Brian Clough, and was the home of 'The Rams' until 1997.",
+      "ar": "بُني هذا الملعب التاريخي في الأصل لرياضة أمريكية مختلفة تماماً، واشتهر بأرضية شديدة الوحل في السبعينيات تحت قيادة بريان كلوف، وكان موطناً لـ 'الكباش' حتى عام 1997."
+    }
+  },
+  {
+    "id": 541,
+    "type": "city",
+    "latitude": 52.5190,
+    "longitude": -1.9960,
+    "difficulty": "medium",
+    "answer": {
+      "en": "West Bromwich",
+      "ar": "وست بروميتش"
+    },
+    "clue": {
+      "en": "This city in the West Midlands is home to a club that plays at the highest altitude ground in the English football league, features a team wearing navy-and-white stripes, and identifies with a singing 'throstle' bird.",
+      "ar": "هذه المدينة في ويست ميدلاندز هي موطن لنادٍ يلعب في أعلى ملعب ارتفاعاً في دوري كرة القدم الإنجليزي، وتضم فريقاً يرتدي خطوطاً كحلية وبيضاء، وتتخذ من طائر 'السمنة' المغرد رمزاً لها."
+    }
+  },
+  {
+    "id": 542,
+    "type": "city",
+    "latitude": 51.7520,
+    "longitude": -1.2570,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Oxford",
+      "ar": "أكسفورد"
+    },
+    "clue": {
+      "en": "This city boasts a world-famous university, boasts a yellow-and-blue football team that plays in a unique three-sided stadium, and won the League Cup in 1986.",
+      "ar": "هذه المدينة تفتخر بجامعة مشهورة عالمياً، وتمتلك فريق كرة قدم باللونين الأصفر والأزرق يلعب في ملعب فريد من ثلاثة مدرجات، وفازت بكأس الرابطة في عام 1986."
+    }
+  },
+  {
+    "id": 543,
+    "type": "city",
+    "latitude": 52.2050,
+    "longitude": 0.1210,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Cambridge",
+      "ar": "كامبريدج"
+    },
+    "clue": {
+      "en": "This city is an elite academic hub, has a team known as 'The U's' that plays its matches at the Abbey Stadium, and famously drew 0-0 with Manchester United in the 2015 FA Cup.",
+      "ar": "هذه المدينة هي مركز أكاديمي نخبوي، وتمتلك فريقاً يُعرف بـ 'The U's' يلعب مبارياته في ملعب آبي، وتعادلت بشكل شهير 0-0 مع مانشستر يونايتد في كأس الاتحاد 2015."
+    }
+  },
+  {
+    "id": 544,
+    "type": "city",
+    "latitude": 52.5730,
+    "longitude": -0.2440,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Peterborough",
+      "ar": "بيتربورو"
+    },
+    "clue": {
+      "en": "This city in the east is home to a team uniquely nicknamed 'The Posh', plays in blue, and frequently relies on a prolific lower-league scouting network to sell strikers for massive profits.",
+      "ar": "هذه المدينة في الشرق هي موطن لفريق يُلقب بشكل فريد بـ 'الراقي'، ويلعب باللون الأزرق، ويعتمد غالباً على شبكة كشافة غزيرة الإنتاج في الدوريات الدنيا لبيع المهاجمين بأرباح هائلة."
+    }
+  },
+  {
+    "id": 545,
+    "type": "city",
+    "latitude": 53.2300,
+    "longitude": -0.5400,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Lincoln",
+      "ar": "لينكولن"
+    },
+    "clue": {
+      "en": "This city is dominated by a stunning hilltop cathedral, its football club is named after a mythological imp, and became the first non-league team in 103 years to reach the FA Cup quarter-finals in 2017.",
+      "ar": "يُهيمن على هذه المدينة كاتدرائية مذهلة على قمة تل، وسُمي ناديها الكروي على اسم عفريت أسطوري، وأصبح أول فريق للهواة منذ 103 سنوات يصل لربع نهائي كأس الاتحاد في 2017."
+    }
+  },
+  {
+    "id": 546,
+    "type": "city",
+    "latitude": 53.0990,
+    "longitude": -2.4400,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Crewe",
+      "ar": "كرو"
+    },
+    "clue": {
+      "en": "This city is a historic railway town, is globally famous in football for an exceptional youth academy that produced David Platt and Danny Murphy, and its team is aptly nicknamed 'The Railwaymen'.",
+      "ar": "هذه المدينة هي بلدة تاريخية للسكك الحديدية، وتشتهر عالمياً في كرة القدم بأكاديمية شباب استثنائية أنتجت ديفيد بلات وداني ميرفي، ويُلقب فريقها بجدارة بـ 'عمال السكك الحديدية'."
+    }
+  },
+  {
+    "id": 547,
+    "type": "city",
+    "latitude": 53.9590,
+    "longitude": -1.0810,
+    "difficulty": "medium",
+    "answer": {
+      "en": "York",
+      "ar": "يورك"
+    },
+    "clue": {
+      "en": "This city is an ancient walled settlement, is home to a team nicknamed 'The Minstermen' playing at the LNER Community Stadium, and famously knocked Manchester United out of the League Cup in 1995.",
+      "ar": "هذه المدينة هي مستوطنة قديمة مسورة، وموطن لفريق يُلقب بـ 'المنشدين' يلعب في ملعب (LNER) المجتمعي، وأقصت بشكل شهير مانشستر يونايتد من كأس الرابطة في 1995."
+    }
+  },
+  {
+    "id": 548,
+    "type": "city",
+    "latitude": 50.7180,
+    "longitude": -3.5330,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Exeter",
+      "ar": "إكستر"
+    },
+    "clue": {
+      "en": "This city in the southwest is completely owned by a supporters' trust, plays at St James Park, and gave a professional launching pad to a young Ollie Watkins.",
+      "ar": "هذه المدينة في الجنوب الغربي مملوكة بالكامل لرابطة المشجعين، وتلعب مبارياتها في سانت جيمس بارك، ومنحت نقطة انطلاق احترافية للشاب أولي واتكينز."
+    }
+  },
+  {
+    "id": 549,
+    "type": "city",
+    "latitude": 52.5860,
+    "longitude": -1.9820,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Walsall",
+      "ar": "والسال"
+    },
+    "clue": {
+      "en": "This city in the West Midlands is known as the traditional capital of saddle-making, is represented by a red-clad team nicknamed 'The Saddlers', and sits extremely close to Birmingham and Wolverhampton.",
+      "ar": "تُعرف هذه المدينة في ويست ميدلاندز بالعاصمة التقليدية لصناعة السروج، ويُمثلها فريق يرتدي الأحمر يُلقب بـ 'صُناع السروج'، وتقع قريبة جداً من برمنغهام وولفرهامبتون."
+    }
+  },
+  {
+    "id": 550,
+    "type": "city",
+    "latitude": 53.7530,
+    "longitude": -2.3630,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Accrington",
+      "ar": "أكرينغتون"
+    },
+    "clue": {
+      "en": "This city in Lancashire is famous for a 1980s milk advert mocking its football team's obscurity, reformed its club in 1968 after going bankrupt, and miraculously reached League One as 'Stanley'.",
+      "ar": "تشتهر هذه المدينة في لانكشاير بإعلان حليب في الثمانينيات سخر من غموض فريقها لكرة القدم، وأعادت تأسيس ناديها في 1968 بعد إفلاسه، ووصلت بمعجزة إلى 'ليغ وان' باسم 'ستانلي'."
+    }
+  },
+  {
+    "id": 551,
+    "type": "city",
+    "latitude": 53.6130,
+    "longitude": -2.1600,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Rochdale",
+      "ar": "روتشديل"
+    },
+    "clue": {
+      "en": "This city in Greater Manchester is home to a team that played at Spotland for over 100 years, spent a record 36 consecutive seasons in the bottom division, and is represented by blue and black colors.",
+      "ar": "هذه المدينة في مانشستر الكبرى هي موطن لفريق لعب في ملعب سبوتلاند لأكثر من 100 عام، وقضى رقماً قياسياً بلغ 36 موسماً متتالياً في الدرجة الدنيا، ويُمثله اللونان الأزرق والأسود."
+    }
+  },
+  {
+    "id": 552,
+    "type": "city",
+    "latitude": 53.5930,
+    "longitude": -2.2960,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Bury",
+      "ar": "بيري"
+    },
+    "clue": {
+      "en": "This city suffered immense footballing heartbreak when its historic club was expelled from the English Football League in 2019, its expelled club historically won the FA Cup twice, and it features a stadium named Gigg Lane.",
+      "ar": "عانت هذه المدينة من حسرة كروية هائلة عندما طُرد ناديها التاريخي من دوري كرة القدم الإنجليزي في 2019، وكان ناديها المطرود قد فاز تاريخياً بكأس الاتحاد مرتين، وتضم ملعباً يُدعى غيغ لين."
+    }
+  },
+  {
+    "id": 553,
+    "type": "city",
+    "latitude": 53.9250,
+    "longitude": -3.0120,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Fleetwood",
+      "ar": "فليتوود"
+    },
+    "clue": {
+      "en": "This city on the coast is the hometown of a famous lozenge brand, saw its football team surge up the leagues funded by a local energy magnate, and was the launching pad for Jamie Vardy before his Leicester move.",
+      "ar": "هذه المدينة الساحلية هي مسقط رأس علامة تجارية شهيرة لأقراص الاستحلاب، وشهدت صعود فريقها في الدوريات بتمويل من قطب طاقة محلي، وكانت نقطة الانطلاق لجيمي فاردي قبل انتقاله إلى ليستر."
+    }
+  },
+  {
+    "id": 554,
+    "type": "city",
+    "latitude": 52.2400,
+    "longitude": -0.9020,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Northampton",
+      "ar": "نورثامبتون"
+    },
+    "clue": {
+      "en": "This city in the East Midlands is traditionally the center of English shoemaking, is home to a team nicknamed 'The Cobblers', and uniquely shares its stadium with a professional rugby club.",
+      "ar": "هذه المدينة في إيست ميدلاندز هي المركز التقليدي لصناعة الأحذية الإنجليزية، وموطن لفريق يُلقب بـ 'الإسكافيون'، وتتشارك ملعبها بشكل فريد مع نادٍ محترف للرجبي."
+    }
+  },
+  {
+    "id": 555,
+    "type": "city",
+    "latitude": 54.8920,
+    "longitude": -2.9320,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Carlisle",
+      "ar": "كارلايل"
+    },
+    "clue": {
+      "en": "This city is the most northerly in England, experienced devastating floods in 2005 that completely submerged its football pitch, and is the home of a blue-clad team nicknamed 'The Cumbrians'.",
+      "ar": "هذه المدينة هي الأبعد في شمال إنجلترا، وعانت من فيضانات مدمرة في 2005 غمرت ملعبها الكروي بالكامل، وهي موطن لفريق يرتدي الأزرق يُلقب بـ 'الكمبريون'."
+    }
+  },
+  {
+    "id": 556,
+    "type": "city",
+    "latitude": 53.1930,
+    "longitude": -2.8930,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Chester",
+      "ar": "تشيستر"
+    },
+    "clue": {
+      "en": "This city is famous for its complete Roman walls, saw its historic football club go bankrupt in 2010 before being reborn as a fan-owned team, and has a stadium where the pitch is technically in Wales but the offices are in England.",
+      "ar": "تشتهر هذه المدينة بأسوارها الرومانية الكاملة، وشهدت إفلاس ناديها الكروي التاريخي في 2010 قبل أن يُولد من جديد كفريق مملوك للجماهير، وتمتلك ملعباً تقع أرضيته تقنياً في ويلز بينما تقع مكاتبه في إنجلترا."
+    }
+  },
+  {
+    "id": 557,
+    "type": "city",
+    "latitude": 53.5220,
+    "longitude": -1.1390,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Doncaster",
+      "ar": "دونكاستر"
+    },
+    "clue": {
+      "en": "This city in South Yorkshire is famous for its railway heritage, is home to a red-and-white hooped football team nicknamed 'The Rovers', and plays its matches at the modern Eco-Power Stadium.",
+      "ar": "تشتهر هذه المدينة في جنوب يوركشاير بتراث السكك الحديدية، وهي موطن لفريق يرتدي حلقات حمراء وبيضاء يُلقب بـ 'الروفرز'، وتلعب مبارياتها في ملعب (Eco-Power) الحديث."
+    }
+  },
+  {
+    "id": 558,
+    "type": "city",
+    "latitude": 53.2580,
+    "longitude": -2.1270,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Macclesfield",
+      "ar": "ماكليسفيلد"
+    },
+    "clue": {
+      "en": "This city is famous for its historical silk industry, saw its historic football club tragically liquidated in 2020, and recently witnessed a football rebirth heavily backed by local legend Robbie Savage.",
+      "ar": "تشتهر هذه المدينة بصناعة الحرير التاريخية، وشهدت تصفية ناديها الكروي التاريخي بشكل مأساوي في 2020، وشهدت مؤخراً نهضة كروية مدعومة بقوة من الأسطورة المحلي روبي سافاج."
+    }
+  },
+  {
+    "id": 559,
+    "type": "city",
+    "latitude": 53.3930,
+    "longitude": -3.0140,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Birkenhead",
+      "ar": "بيركنهيد"
+    },
+    "clue": {
+      "en": "This city sits on the Wirral Peninsula across the River Mersey, is the true home of a white-clad team known as the 'Super White Army', and frequently hosts Liverpool's reserve and women's matches at Prenton Park.",
+      "ar": "تقع هذه المدينة في شبه جزيرة ويرال عبر نهر ميرسي، وهي الموطن الحقيقي لفريق يرتدي الأبيض يُعرف بـ 'الجيش الأبيض الخارق'، وتستضيف غالباً مباريات الاحتياط والسيدات لليفربول في برينتون بارك."
+    }
+  },
+  {
+    "id": 560,
+    "type": "city",
+    "latitude": 53.1430,
+    "longitude": -1.1970,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Mansfield",
+      "ar": "مانسفيلد"
+    },
+    "clue": {
+      "en": "This city in Nottinghamshire sits near the ancient Sherwood Forest, is home to a team known as 'The Stags', and features the oldest professional football ground in the world, Field Mill.",
+      "ar": "تقع هذه المدينة في نوتينغهامشير بالقرب من غابة شيروود القديمة، وهي موطن لفريق يُعرف بـ 'الظباء'، وتضم أقدم ملعب كرة قدم احترافي في العالم، وهو فيلد ميل."
+    }
+  },
+  {
+    "id": 561,
+    "type": "stadium",
+    "latitude": 51.5606,
+    "longitude": -0.0125,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Brisbane Road, London",
+      "ar": "بريزبين رود، لندن"
+    },
+    "clue": {
+      "en": "This stadium is located in East London near the Olympic Park, features a block of flats integrated directly into its corners, and is the home of a team uniquely nicknamed 'The O's'.",
+      "ar": "يقع هذا الملعب في شرق لندن بالقرب من الحديقة الأولمبية، ويتميز بمبنى سكني مدمج مباشرة في زواياه، وهو معقل فريق يُلقب بشكل فريد بـ 'The O's'."
+    }
+  },
+  {
+    "id": 562,
+    "type": "stadium",
+    "latitude": 51.3683,
+    "longitude": -0.1983,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Gander Green Lane, London",
+      "ar": "غاندر غرين لين، لندن"
+    },
+    "clue": {
+      "en": "This stadium hosted a famous FA Cup upset in 1989 against Coventry City, controversially had to tear up its artificial pitch upon promotion to the Football League in 2021, and is the traditional fortress of a team nicknamed 'The U's' based in South London.",
+      "ar": "استضاف هذا الملعب مفاجأة شهيرة في كأس الاتحاد عام 1989 ضد كوفنتري سيتي، واضطر بشكل مثير للجدل لتمزيق ملعبه الصناعي عند الصعود لدوري كرة القدم في 2021، وهو الحصن التقليدي لفريق يُلقب بـ 'The U's' في جنوب لندن."
+    }
+  },
+  {
+    "id": 563,
+    "type": "stadium",
+    "latitude": 51.5478,
+    "longitude": 0.1603,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Victoria Road, London",
+      "ar": "فيكتوريا رود، لندن"
+    },
+    "clue": {
+      "en": "This stadium sits in the Borough of Barking and Dagenham, is the home of a red-and-blue team formed by a massive four-club merger, and witnessed a remarkable run to League One under manager John Still.",
+      "ar": "يقع هذا الملعب في حي باركينغ وداغينهام، وهو موطن لفريق أحمر وأزرق تشكل من اندماج ضخم لأربعة أندية، وشهد مسيرة رائعة إلى دوري الدرجة الأولى (ليغ وان) تحت قيادة المدرب جون ستيل."
+    }
+  },
+  {
+    "id": 564,
+    "type": "stadium",
+    "latitude": 54.0622,
+    "longitude": -2.8631,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Mazuma Mobile Stadium (Globe Arena), Morecambe",
+      "ar": "ملعب مازوما (غلوب أرينا)، موركامب"
+    },
+    "clue": {
+      "en": "This stadium sits in a coastal town famous for its bay and potted shrimps, replaced the historic Christie Park in 2010, and is the home of a team uniquely nicknamed 'The Shrimps'.",
+      "ar": "يقع هذا الملعب في بلدة ساحلية تشتهر بخليجها والجمبري المحفوظ، وحل محل 'كريستي بارك' التاريخي في عام 2010، وهو موطن لفريق يُلقب بشكل فريد بـ 'الجمبري' (The Shrimps)."
+    }
+  },
+  {
+    "id": 565,
+    "type": "stadium",
+    "latitude": 54.1225,
+    "longitude": -3.2386,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Holker Street, Barrow",
+      "ar": "هولكر ستريت، بارو"
+    },
+    "clue": {
+      "en": "This stadium is located in a Cumbrian shipbuilding town, saw its team miraculously return to the Football League in 2020 after a 48-year absence, and features a distinctive team nicknamed 'The Bluebirds'.",
+      "ar": "يقع هذا الملعب في بلدة لبناء السفن في كمبريا، وشهد عودة فريقه بأعجوبة إلى دوري كرة القدم في 2020 بعد غياب 48 عاماً، ويتميز بفريق يُلقب بـ 'الطيور الزرقاء'."
+    }
+  },
+  {
+    "id": 566,
+    "type": "stadium",
+    "latitude": 52.0628,
+    "longitude": -2.7183,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Edgar Street, Hereford",
+      "ar": "إدغار ستريت، هيرفورد"
+    },
+    "clue": {
+      "en": "This stadium witnessed one of the greatest FA Cup giant-killings in 1972 featuring a legendary Ronnie Radford goal, is historically associated with a club represented by a distinctive breed of cattle, and holds the record for the lowest attended Football League match.",
+      "ar": "شهد هذا الملعب إحدى أعظم مفاجآت كأس الاتحاد في 1972 بهدف أسطوري لروني رادفورد، ويرتبط تاريخياً بنادٍ يُمثله سلالة مميزة من الماشية، ويحمل الرقم القياسي لأقل حضور جماهيري في مباراة بدوري كرة القدم."
+    }
+  },
+  {
+    "id": 567,
+    "type": "stadium",
+    "latitude": 53.5700,
+    "longitude": -0.0522,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Blundell Park, Cleethorpes",
+      "ar": "بلونديل بارك، كليثوربس"
+    },
+    "clue": {
+      "en": "This stadium is technically located in Cleethorpes rather than the neighboring town its club is named after, is famously battered by freezing winds coming off the North Sea, and is the historic home of the 'Mariners'.",
+      "ar": "يقع هذا الملعب تقنياً في كليثوربس بدلاً من البلدة المجاورة التي سُمي النادي باسمها، ويشتهر بتعرضه لرياح متجمدة قادمة من بحر الشمال، وهو المعقل التاريخي لـ 'البحارة'."
+    }
+  },
+  {
+    "id": 568,
+    "type": "stadium",
+    "latitude": 53.5864,
+    "longitude": -0.6953,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Glanford Park, Scunthorpe",
+      "ar": "جلانفورد بارك، سكونثورب"
+    },
+    "clue": {
+      "en": "This stadium was the very first purpose-built newly constructed Football League venue in over 30 years when it opened in 1988, is the fortress of a claret-and-blue team nicknamed 'The Iron', and recently saw its team suffer consecutive relegations.",
+      "ar": "كان هذا أول ملعب يُبنى حديثاً خصيصاً لدوري كرة القدم منذ أكثر من 30 عاماً عندما اُفتتح عام 1988، وهو حصن فريق عنابي وأزرق يُلقب بـ 'الحديد'، وشهد مؤخراً هبوط فريقه بشكل متتالٍ."
+    }
+  },
+  {
+    "id": 569,
+    "type": "stadium",
+    "latitude": 53.0494,
+    "longitude": -2.1925,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Vale Park, Stoke-on-Trent",
+      "ar": "فيل بارك، ستوك أون ترينت"
+    },
+    "clue": {
+      "en": "This stadium boasts one of the widest pitches in English football, was ambitiously dubbed 'The Wembley of the North' during its initial construction in the 1950s, and is the home of a team famously championed by pop star Robbie Williams.",
+      "ar": "يفتخر هذا الملعب بواحد من أوسع الملاعب في كرة القدم الإنجليزية، ولُقب بطموح بـ 'ويمبلي الشمال' أثناء بنائه الأولي في الخمسينيات، وهو موطن لفريق يدعمه نجم البوب روبي ويليامز بشكل شهير."
+    }
+  },
+  {
+    "id": 570,
+    "type": "stadium",
+    "latitude": 54.6933,
+    "longitude": -1.2131,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Victoria Park, Hartlepool",
+      "ar": "فيكتوريا بارك، هارتلبول"
+    },
+    "clue": {
+      "en": "This stadium is located in a North East coastal town that supposedly once hanged a monkey, saw TV presenter Jeff Stelling frequently celebrate its goals on national television, and is the home of a blue-and-white team.",
+      "ar": "يقع هذا الملعب في بلدة ساحلية بالشمال الشرقي يُزعم أنها أعدمت قرداً يوماً ما، وشهد احتفال المذيع جيف ستيلينج بأهدافه بانتظام على التلفزيون الوطني، وهو موطن لفريق أزرق وأبيض."
+    }
+  },
+  {
+    "id": 571,
+    "type": "stadium",
+    "latitude": 51.3783,
+    "longitude": -2.3922,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Twerton Park, Bath",
+      "ar": "تورتون بارك، باث"
+    },
+    "clue": {
+      "en": "This historic ground previously served as the temporary home for Bristol Rovers for a decade, is the permanent fortress of a non-league team named after a famous Roman spa city, and features classic old-school terracing.",
+      "ar": "كان هذا الملعب التاريخي موطناً مؤقتاً لبريستول روفرز لعقد من الزمان، وهو الحصن الدائم لفريق هواة سُمي على اسم مدينة منتجعات رومانية شهيرة، ويتميز بمدرجات وقوف كلاسيكية قديمة الطراز."
+    }
+  },
+  {
+    "id": 572,
+    "type": "stadium",
+    "latitude": 53.7153,
+    "longitude": -1.8603,
+    "difficulty": "medium",
+    "answer": {
+      "en": "The Shay, Halifax",
+      "ar": "ذا شاي، هاليفاكس"
+    },
+    "clue": {
+      "en": "This stadium is uniquely shared between a professional football team and a professional rugby league team in West Yorkshire, sits on the site of a former municipal rubbish dump, and is the home of a team affectionately known as 'The Shaymen'.",
+      "ar": "يتشارك هذا الملعب بشكل فريد بين فريق كرة قدم محترف وفريق دوري رجبي محترف في غرب يوركشاير، ويقع على موقع مكب نفايات بلدي سابق، وهو موطن لفريق يُعرف بحب بـ 'رجال شاي'."
+    }
+  },
+  {
+    "id": 573,
+    "type": "stadium",
+    "latitude": 53.9878,
+    "longitude": -1.5200,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Wetherby Road, Harrogate",
+      "ar": "ويذربي رود، هاروغيت"
+    },
+    "clue": {
+      "en": "This stadium is located in an affluent North Yorkshire spa town, had to rapidly upgrade its stands and remove its synthetic pitch after a historic promotion in 2020, and is the yellow-and-black home of 'The Sulphurites'.",
+      "ar": "يقع هذا الملعب في مدينة منتجعات راقية بشمال يوركشاير، واضطر لتحديث مدرجاته بسرعة وإزالة ملعبه الصناعي بعد صعود تاريخي في 2020، وهو الموطن الأصفر والأسود لـ 'الكبريتيين'."
+    }
+  },
+  {
+    "id": 574,
+    "type": "stadium",
+    "latitude": 52.8222,
+    "longitude": -1.6267,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Pirelli Stadium, Burton upon Trent",
+      "ar": "ملعب بيريللي، بورتون أبون ترينت"
+    },
+    "clue": {
+      "en": "This stadium is sponsored by the massive Italian tire manufacturer that dominates the town's local industry, was built in 2005 to replace the historic Eton Park, and is the home of a yellow-and-black team famously nicknamed 'The Brewers'.",
+      "ar": "يحظى هذا الملعب برعاية شركة تصنيع الإطارات الإيطالية الضخمة التي تهيمن على الصناعة المحلية للبلدة، وبُني في 2005 ليحل محل 'إيتون بارك'، وهو موطن لفريق أصفر وأسود يُلقب بـ 'صُناع الجعة'."
+    }
+  },
+  {
+    "id": 575,
+    "type": "stadium",
+    "latitude": 51.6033,
+    "longitude": -0.2917,
+    "difficulty": "medium",
+    "answer": {
+      "en": "The Hive Stadium, London",
+      "ar": "ملعب ذا هايف، لندن"
+    },
+    "clue": {
+      "en": "This stadium is located in Edgware and replaced the historic Underhill Stadium, boasts world-class training facilities frequently used by visiting international teams, and is the black-and-amber fortress of a team nicknamed 'The Bees'.",
+      "ar": "يقع هذا الملعب في إدجوير وحل محل 'أندرهيل' التاريخي، ويفتخر بمرافق تدريب عالمية المستوى تستخدمها المنتخبات الزائرة، وهو حصن أسود وكهرماني لفريق يُلقب بـ 'النحل' (ليس برينتفورد)."
+    }
+  },
+  {
+    "id": 576,
+    "type": "stadium",
+    "latitude": 52.6886,
+    "longitude": -2.7483,
+    "difficulty": "medium",
+    "answer": {
+      "en": "New Meadow, Shrewsbury",
+      "ar": "نيو ميدو، شروزبري"
+    },
+    "clue": {
+      "en": "This stadium replaced a historic ground which was famous for a man retrieving lost footballs from the river in a coracle boat, is located near the Welsh border, and is the home of a blue-and-amber team known as 'The Shrews'.",
+      "ar": "حل هذا الملعب محل أرض تاريخية اشتهرت برجل يسترجع كرات القدم الضائعة من النهر في قارب جلدي، ويقع بالقرب من الحدود الويلزية، وهو موطن لفريق أزرق وكهرماني يُعرف بـ 'الزبابات'."
+    }
+  },
+  {
+    "id": 577,
+    "type": "stadium",
+    "latitude": 52.3800,
+    "longitude": -2.2472,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Aggborough, Kidderminster",
+      "ar": "أغبوروه، كيدرمينستر"
+    },
+    "clue": {
+      "en": "This stadium was the very first football ground in England to host a floodlit FA Cup match, is globally famous among away fans for serving arguably the best stadium soup in the country, and is the traditional red-and-white home of 'The Harriers'.",
+      "ar": "كان هذا أول ملعب كرة قدم في إنجلترا يستضيف مباراة بكأس الاتحاد تحت الأضواء الكاشفة، ويشتهر بتقديم أفضل حساء ملاعب في البلاد للضيوف، وهو المعقل الأحمر والأبيض التقليدي لـ 'الكلاب السلوقية'."
+    }
+  },
+  {
+    "id": 578,
+    "type": "stadium",
+    "latitude": 51.9056,
+    "longitude": -2.0603,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Whaddon Road, Cheltenham",
+      "ar": "وادون رود، شلتنهام"
+    },
+    "clue": {
+      "en": "This stadium is situated in a Gloucestershire town globally famous for its annual horse racing festival, briefly served as a shared home for Gloucester City, and is the fortress of a red-and-white striped team nicknamed 'The Robins'.",
+      "ar": "يقع هذا الملعب في بلدة بجلوسيسترشاير تشتهر عالمياً بمهرجان سباق الخيل السنوي، وكان موطناً مشتركاً لجلوسيستر سيتي لفترة، وهو حصن لفريق مخطط بالأحمر والأبيض يُلقب بـ 'روبينز'."
+    }
+  },
+  {
+    "id": 579,
+    "type": "stadium",
+    "latitude": 50.9500,
+    "longitude": -2.6667,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Huish Park, Yeovil",
+      "ar": "هويش بارك، يوفيل"
+    },
+    "clue": {
+      "en": "This stadium is located in a Somerset town famous for helicopter manufacturing, replaced a historic stadium famous for having a severely sloping pitch, and is the green-and-white home of 'The Glovers'.",
+      "ar": "يقع هذا الملعب في بلدة بسومرست تشتهر بصناعة طائرات الهليكوبتر، وحل محل ملعب تاريخي عُرف بأرضيته شديدة الانحدار، وهو الموطن الأخضر والأبيض لـ 'صُناع القفازات'."
+    }
+  },
+  {
+    "id": 580,
+    "type": "stadium",
+    "latitude": 51.6964,
+    "longitude": -2.2236,
+    "difficulty": "easy",
+    "answer": {
+      "en": "The New Lawn, Nailsworth",
+      "ar": "ذا نيو لون، نيلسوورث"
+    },
+    "clue": {
+      "en": "This stadium is completely powered by renewable energy and solar panels, serves only 100% vegan food to its supporters, and is the incredibly eco-friendly home of Forest Green Rovers.",
+      "ar": "يعمل هذا الملعب بالكامل بالطاقة المتجددة والألواح الشمسية، ويقدم طعاماً نباتياً بنسبة 100% فقط لمشجعيه، وهو الموطن الصديق للبيئة بشكل مذهل لنادي فورست غرين روفرز."
+    }
+  },
+  {
+    "id": 581,
+    "type": "stadium",
+    "latitude": 50.4783,
+    "longitude": -3.5186,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Plainmoor, Torquay",
+      "ar": "بلينمور، توركاي"
+    },
+    "clue": {
+      "en": "This stadium is located in a sunny Devon seaside resort town on the 'English Riviera', features a dedicated 'Popside' standing terrace for its most vocal fans, and is the yellow-and-blue home of 'The Gulls'.",
+      "ar": "يقع هذا الملعب في بلدة ساحلية مشمسة في ديفون على 'الريفيرا الإنجليزية'، ويضم مدرج وقوف مخصص 'Popside' لجماهيره الأكثر صخباً، وهو الموطن الأصفر والأزرق لـ 'النوارس'."
+    }
+  },
+  {
+    "id": 582,
+    "type": "stadium",
+    "latitude": 53.2422,
+    "longitude": -1.4283,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Saltergate, Chesterfield",
+      "ar": "سالترغيت، تشيسترفيلد"
+    },
+    "clue": {
+      "en": "This historic stadium was one of the oldest in England before being demolished in 2010, was famously used as a filming location for 'The Damned United' due to its untouched vintage look, and was the home of 'The Spireites'.",
+      "ar": "كان هذا الملعب التاريخي من أقدم الملاعب في إنجلترا قبل هدمه في 2010، واستُخدم كموقع تصوير لفيلم 'The Damned United' بسبب مظهره العتيق الأصلي، وكان موطناً لـ 'السبيريتس'."
+    }
+  },
+  {
+    "id": 583,
+    "type": "stadium",
+    "latitude": 51.8886,
+    "longitude": -0.1931,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Broadhall Way, Stevenage",
+      "ar": "برودهول واي، ستيفنيج"
+    },
+    "clue": {
+      "en": "This stadium is located in a post-war 'New Town' in Hertfordshire, witnessed an incredible FA Cup giant-killing against Newcastle United in 2011, and is the home of a team that dropped 'Borough' from its name in 2010.",
+      "ar": "يقع هذا الملعب في 'مدينة جديدة' بُنيت بعد الحرب في هيرتفوردشاير، وشهد مفاجأة مذهلة في كأس الاتحاد ضد نيوكاسل في 2011، وهو موطن فريق أسقط كلمة 'بورو' من اسمه عام 2010."
+    }
+  },
+  {
+    "id": 584,
+    "type": "stadium",
+    "latitude": 51.9167,
+    "longitude": 0.8986,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Colchester Community Stadium, Colchester",
+      "ar": "ملعب كولشيستر المجتمعي، كولشيستر"
+    },
+    "clue": {
+      "en": "This modern stadium was opened in 2008 to replace the aging Layer Road, is located in what claims to be Britain's oldest recorded town, and is the home of a blue-and-white team known as 'The U's'.",
+      "ar": "اُفتتح هذا الملعب الحديث في 2008 ليحل محل لاير رود القديم، ويقع في ما يُزعم أنها أقدم بلدة مسجلة في بريطانيا، وهو موطن لفريق أزرق وأبيض يُعرف بـ 'The U's'."
+    }
+  },
+  {
+    "id": 585,
+    "type": "stadium",
+    "latitude": 51.1044,
+    "longitude": -0.1947,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Broadfield Stadium, Crawley",
+      "ar": "ملعب برودفيلد، كرولي"
+    },
+    "clue": {
+      "en": "This stadium is located in a West Sussex town situated directly next to Gatwick Airport, saw its home team achieve a remarkable double promotion to League One in the early 2010s, and is the red-clad home of 'The Red Devils'.",
+      "ar": "يقع هذا الملعب في بلدة ويست ساسكس المجاورة مباشرة لمطار جاتويك، وشهد تحقيق فريقه لترقيتين متتاليتين في أوائل العقد الماضي، وهو الموطن المكسو بالأحمر لـ 'الشياطين الحمر' (ليس مانشستر)."
+    }
+  },
+  {
+    "id": 586,
+    "type": "city",
+    "latitude": 53.4300,
+    "longitude": -1.3570,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Rotherham",
+      "ar": "روثرهام"
+    },
+    "clue": {
+      "en": "This South Yorkshire town is steeped in deep coal mining and steelmaking history, is home to a team that frequently bounces between the Championship and League One, and lovingly nicknames its football club 'The Millers'.",
+      "ar": "تتمتع هذه البلدة في جنوب يوركشاير بتاريخ عميق في تعدين الفحم وصناعة الصلب، وهي موطن لفريق يتأرجح باستمرار بين دوري البطولة و'ليغ وان'، وتُلقب ناديها بحب بـ 'الطحانين'."
+    }
+  },
+  {
+    "id": 587,
+    "type": "city",
+    "latitude": 53.5850,
+    "longitude": -0.6550,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Scunthorpe",
+      "ar": "سكونثورب"
+    },
+    "clue": {
+      "en": "This industrial town is famously dominated by a massive British Steel plant, saw its claret-and-blue football team tragically drop out of the professional leagues in 2022, and proudly calls its football club 'The Iron'.",
+      "ar": "تهيمن على هذه البلدة الصناعية منشأة ضخمة للصلب البريطاني، وشهدت سقوط فريقها العنابي والأزرق بشكل مأساوي من الدوريات الاحترافية في 2022، وتُطلق بفخر على ناديها اسم 'الحديد'."
+    }
+  },
+  {
+    "id": 588,
+    "type": "city",
+    "latitude": 53.5680,
+    "longitude": -0.0760,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Grimsby",
+      "ar": "غريمسبي"
+    },
+    "clue": {
+      "en": "This town is historically one of the largest fishing ports in Europe, has a football club that famously parades inflatable haddocks during cup runs, and affectionately calls its black-and-white striped team 'The Mariners'.",
+      "ar": "تُعد هذه البلدة تاريخياً من أكبر موانئ الصيد في أوروبا، ويمتلك ناديها عادة شهيرة بالتلويح بأسماك حدوق قابلة للنفخ في الكؤوس، وتُطلق على فريقها المخطط بالأبيض والأسود اسم 'البحارة'."
+    }
+  },
+  {
+    "id": 589,
+    "type": "city",
+    "latitude": 54.6860,
+    "longitude": -1.2120,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Hartlepool",
+      "ar": "هارتلبول"
+    },
+    "clue": {
+      "en": "This North East coastal town has a local legend claiming they once put a monkey on trial, saw its beloved former mayor dress up in a monkey mascot suit to win an election, and is home to a blue-and-white team known as 'The Pool'.",
+      "ar": "تمتلك هذه البلدة الساحلية أسطورة محلية تدعي أنهم حاكموا قرداً يوماً ما، وشهدت ارتداء عمدتها السابق المحبوب لزي تميمة قرد ليفوز بالانتخابات، وهي موطن لفريق يُعرف بـ 'ذا بول'."
+    }
+  },
+  {
+    "id": 590,
+    "type": "city",
+    "latitude": 54.5240,
+    "longitude": -1.5540,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Darlington",
+      "ar": "دارلينغتون"
+    },
+    "clue": {
+      "en": "This town is globally famous for its historic role in creating the world's first passenger railway, saw its football club disastrously build a massive 25,000-seat arena that nearly bankrupted them, and is home to a team nicknamed 'The Quakers'.",
+      "ar": "تشتهر هذه البلدة عالمياً بدورها التاريخي في إنشاء أول سكة حديد للركاب، وشهدت بناء ناديها بشكل كارثي لملعب ضخم بـ 25 ألف مقعد كاد يفلسهم، وهي موطن لفريق يُلقب بـ 'الكويكرز'."
+    }
+  },
+  {
+    "id": 591,
+    "type": "city",
+    "latitude": 53.2350,
+    "longitude": -1.4280,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Chesterfield",
+      "ar": "تشيسترفيلد"
+    },
+    "clue": {
+      "en": "This town is instantly recognizable for its unique 'Crooked Spire' church, reached an incredible FA Cup semi-final in 1997 as a third-tier team, and represents its blue-and-white football club under the nickname 'The Spireites'.",
+      "ar": "تُعرف هذه البلدة فوراً بكنيستها ذات 'البرج الملتوي' الفريد، ووصلت لنصف نهائي مذهل في كأس الاتحاد 1997 كفريق درجة ثالثة، وتُمثل ناديها الأزرق والأبيض تحت لقب 'السبيريتس'."
+    }
+  },
+  {
+    "id": 592,
+    "type": "city",
+    "latitude": 52.0560,
+    "longitude": -2.7160,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Hereford",
+      "ar": "هيرفورد"
+    },
+    "clue": {
+      "en": "This historic cathedral city is famous for its local breed of red-and-white cattle, provided the stage for Ronnie Radford's legendary mud-splattered FA Cup goal in 1972, and saw its original football club liquidated and reborn in 2014.",
+      "ar": "تشتهر هذه المدينة التاريخية بسلالتها المحلية من الماشية الحمراء والبيضاء، وكانت مسرحاً لهدف روني رادفورد الأسطوري الملطخ بالوحل في كأس الاتحاد 1972، وشهدت تصفية ناديها وولادته من جديد في 2014."
+    }
+  },
+  {
+    "id": 593,
+    "type": "city",
+    "latitude": 51.2480,
+    "longitude": -0.7600,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Aldershot",
+      "ar": "ألدرشوت"
+    },
+    "clue": {
+      "en": "This town is universally known as the traditional 'Home of the British Army', saw its original football club become the first Football League team to fold mid-season since 1962, and proudly supports a red-and-blue team nicknamed 'The Shots'.",
+      "ar": "تُعرف هذه البلدة عالمياً بأنها 'موطن الجيش البريطاني' التقليدي، وشهدت انهيار ناديها الأصلي في منتصف الموسم كأول فريق يفعل ذلك منذ 1962، وتدعم بفخر فريقاً أحمر وأزرق يُلقب بـ 'الطلقات'."
+    }
+  },
+  {
+    "id": 594,
+    "type": "city",
+    "latitude": 51.6280,
+    "longitude": -0.7480,
+    "difficulty": "easy",
+    "answer": {
+      "en": "High Wycombe",
+      "ar": "هاي ويكومب"
+    },
+    "clue": {
+      "en": "This Buckinghamshire town is historically famous for its chair-making industry, hosts a football club that remarkably reached the Championship in 2020 under Gareth Ainsworth, and proudly nicknames its football team 'The Chairboys'.",
+      "ar": "تشتهر هذه البلدة تاريخياً بصناعة الكراسي، وتستضيف نادياً وصل بشكل ملحوظ لدوري البطولة في 2020 تحت قيادة غاريث أينسوورث، وتُطلق بفخر على فريقها اسم 'صُناع الكراسي'."
+    }
+  },
+  {
+    "id": 595,
+    "type": "city",
+    "latitude": 51.5370,
+    "longitude": 0.7130,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Southend-on-Sea",
+      "ar": "ساوثيند أون سي"
+    },
+    "clue": {
+      "en": "This Essex resort town boasts the longest pleasure pier in the entire world, saw its football club suffer severe financial distress in the 2020s, and affectionately nicknames its blue-clad football team 'The Shrimpers'.",
+      "ar": "يتميز هذا المنتجع الساحلي بأطول رصيف ترفيهي في العالم، وشهد معاناة ناديه من ضائقة مالية شديدة في العشرينيات، ويُطلق بحب على فريقه الذي يرتدي الأزرق اسم 'صيادي الجمبري'."
+    }
+  },
+  {
+    "id": 596,
+    "type": "city",
+    "latitude": 51.3850,
+    "longitude": 0.5480,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Gillingham",
+      "ar": "جيلينغهام"
+    },
+    "clue": {
+      "en": "This is the only town in the entire county of Kent to host a professional Football League club, saw its team notoriously miss out on promotion in a playoff final against Manchester City in 1999, and is home to a blue-clad team.",
+      "ar": "هذه هي البلدة الوحيدة في مقاطعة كنت التي تستضيف نادياً محترفاً في دوري كرة القدم، وشهدت فشل فريقها الشهير في الصعود بنهائي ملحق ضد مانشستر سيتي عام 1999، وهي موطن لفريق يرتدي الأزرق."
+    }
+  },
+  {
+    "id": 597,
+    "type": "city",
+    "latitude": 51.3750,
+    "longitude": -2.3590,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Bath",
+      "ar": "باث"
+    },
+    "clue": {
+      "en": "This breathtaking Somerset city is famous for its ancient Roman spas and Georgian architecture, hosted Bristol Rovers' home matches for a decade at Twerton Park, and is home to a black-and-white non-league team named 'The Romans'.",
+      "ar": "هذه المدينة المذهلة تشتهر بحماماتها الرومانية القديمة وعمارتها الجورجية، واستضافت مباريات بريستول روفرز لعقد في تورتون بارك، وهي موطن لفريق للهواة يُدعى 'الرومان'."
+    }
+  },
+  {
+    "id": 598,
+    "type": "city",
+    "latitude": 53.6480,
+    "longitude": -3.0060,
+    "difficulty": "hard",
+    "answer": {
+      "en": "Southport",
+      "ar": "ساوثبورت"
+    },
+    "clue": {
+      "en": "This classic Merseyside seaside resort is famous for its elegant Lord Street, was famously voted out of the Football League in 1978 and replaced by Wigan Athletic, and is home to a yellow-and-black team nicknamed 'The Sandgrounders'.",
+      "ar": "هذا المنتجع الساحلي الكلاسيكي يشتهر بشارع 'لورد ستريت' الأنيق، وتم التصويت على خروجه من دوري كرة القدم في 1978 واستبداله بويغان أثلتيك، وهو موطن لفريق أصفر وأسود."
+    }
+  },
+  {
+    "id": 599,
+    "type": "city",
+    "latitude": 54.9620,
+    "longitude": -1.6010,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Gateshead",
+      "ar": "غيتسهيد"
+    },
+    "clue": {
+      "en": "This North East town is located directly across the River Tyne from Newcastle, is famous for the 'Angel of the North' statue, and plays its football at the International Stadium which features a running track.",
+      "ar": "تقع هذه البلدة في الشمال الشرقي مباشرة عبر نهر تاين من نيوكاسل، وتشتهر بتمثال 'ملاك الشمال'، وتلعب كرة القدم في الاستاد الدولي الذي يتميز بمضمار ركض."
+    }
+  },
+  {
+    "id": 600,
+    "type": "city",
+    "latitude": 51.3160,
+    "longitude": -0.5600,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Woking",
+      "ar": "ووكينغ"
+    },
+    "clue": {
+      "en": "This Surrey town is famous as the setting for H.G. Wells' 'War of the Worlds', is home to a red-and-white halved football club that dominates non-league football, and proudly nicknames its football team 'The Cardinals'.",
+      "ar": "تشتهر هذه البلدة في سري كمسرح لأحداث رواية 'حرب العوالم' لـ هـ. ج. ويلز، وهي موطن لنادٍ مقسم للأحمر والأبيض يهيمن على دوريات الهواة، وتُلقب فريقها بفخر بـ 'الكاردينالات'."
+    }
+  },
+  {
+    "id": 601,
+    "type": "city",
+    "latitude": 51.2720,
+    "longitude": 0.5220,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Maidstone",
+      "ar": "ميدستون"
+    },
+    "clue": {
+      "en": "This county town of Kent saw its football club historically forced to play on a synthetic pitch in the 1980s before going bankrupt, and recently achieved a miraculous FA Cup giant-killing against Ipswich Town in 2024.",
+      "ar": "شهدت هذه البلدة الرئيسية في كنت إجبار ناديها تاريخياً على اللعب في ملعب صناعي بالثمانينيات قبل إفلاسه، وحققت مؤخراً مفاجأة إعجازية في كأس الاتحاد ضد إيبسويتش تاون في 2024."
+    }
+  },
+  {
+    "id": 602,
+    "type": "city",
+    "latitude": 54.0730,
+    "longitude": -2.8680,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Morecambe",
+      "ar": "موركامب"
+    },
+    "clue": {
+      "en": "This Lancashire coastal town is famous for its vast sweeping bay and a statue of a legendary British comedian, miraculously reached League One for the first time in 2021, and affectionately calls its football team 'The Shrimps'.",
+      "ar": "هذه البلدة الساحلية تشتهر بخليجها الواسع وتمثال لممثل كوميدي بريطاني أسطوري، ووصلت بمعجزة لـ 'ليغ وان' لأول مرة في 2021، وتُطلق بحب على فريقها اسم 'الجمبري'."
+    }
+  },
+  {
+    "id": 603,
+    "type": "city",
+    "latitude": 54.1100,
+    "longitude": -3.2260,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Barrow-in-Furness",
+      "ar": "بارو إن فورنيس"
+    },
+    "clue": {
+      "en": "This heavily industrialized Cumbrian town is globally renowned for building nuclear submarines, won the National League in 2020 to end a 48-year exile from professional football, and proudly nicknames its team 'The Bluebirds'.",
+      "ar": "هذه البلدة الصناعية تشتهر عالمياً ببناء الغواصات النووية، وفازت بالدوري الوطني في 2020 لإنهاء منفى دام 48 عاماً عن كرة القدم الاحترافية، وتُلقب فريقها بفخر بـ 'الطيور الزرقاء'."
+    }
+  },
+  {
+    "id": 604,
+    "type": "city",
+    "latitude": 53.9920,
+    "longitude": -1.5380,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Harrogate",
+      "ar": "هاروغيت"
+    },
+    "clue": {
+      "en": "This affluent North Yorkshire spa town is famous for its historic tea rooms, achieved its first-ever promotion to the Football League in 2020 during the pandemic, and is home to a yellow-and-black team nicknamed 'The Sulphurites'.",
+      "ar": "هذه البلدة الراقية تشتهر بغرف الشاي التاريخية، وحققت أول صعود لها على الإطلاق لدوري كرة القدم في 2020 أثناء الجائحة، وهي موطن لفريق أصفر وأسود يُلقب بـ 'الكبريتيين'."
+    }
+  },
+  {
+    "id": 605,
+    "type": "city",
+    "latitude": 52.8010,
+    "longitude": -1.6360,
+    "difficulty": "easy",
+    "answer": {
+      "en": "Burton upon Trent",
+      "ar": "بورتون أبون ترينت"
+    },
+    "clue": {
+      "en": "This town is globally famous as the historic brewing capital of England, serves as the location for the English FA's elite national training center, and proudly nicknames its local football team 'The Brewers'.",
+      "ar": "تشتهر هذه البلدة عالمياً بأنها عاصمة التخمير التاريخية لإنجلترا، وتُعد مقراً لمركز التدريب الوطني النخبوي التابع للاتحاد الإنجليزي، وتُلقب فريقها المحلي بفخر بـ 'صُناع الجعة'."
+    }
+  },
+  {
+    "id": 606,
+    "type": "city",
+    "latitude": 52.7070,
+    "longitude": -2.7530,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Shrewsbury",
+      "ar": "شروزبري"
+    },
+    "clue": {
+      "en": "This picturesque Shropshire town is situated within a loop of the River Severn, historically had a man in a coracle boat retrieve stray footballs from the river, and is home to a blue-and-amber team known as 'The Shrews'.",
+      "ar": "تقع هذه البلدة الخلابة داخل حلقة من نهر سيفيرن، واشتهرت تاريخياً برجل في قارب جلدي يسترجع كرات القدم الضالة من النهر، وهي موطن لفريق أزرق وكهرماني يُعرف بـ 'الزبابات'."
+    }
+  },
+  {
+    "id": 607,
+    "type": "city",
+    "latitude": 51.9000,
+    "longitude": -2.0780,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Cheltenham",
+      "ar": "شلتنهام"
+    },
+    "clue": {
+      "en": "This Gloucestershire spa town is internationally famous for its massive annual horse racing festival, saw its football club achieve a historic promotion to the Football League in 1999, and lovingly calls its red-and-white team 'The Robins'.",
+      "ar": "تشتهر هذه البلدة عالمياً بمهرجانها السنوي الضخم لسباق الخيل، وشهدت تحقيق ناديها لصعود تاريخي لدوري كرة القدم في 1999، وتُطلق بحب على فريقها الأحمر والأبيض اسم 'الروبينز'."
+    }
+  },
+  {
+    "id": 608,
+    "type": "city",
+    "latitude": 50.9410,
+    "longitude": -2.6320,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Yeovil",
+      "ar": "يوفيل"
+    },
+    "clue": {
+      "en": "This Somerset town is heavily tied to the manufacturing of military helicopters, holds the record for the most FA Cup giant-killings by a non-league club before turning professional, and is home to a green-clad team.",
+      "ar": "ترتبط هذه البلدة في سومرست بشدة بصناعة المروحيات العسكرية، وتحمل الرقم القياسي لأكبر عدد من مفاجآت كأس الاتحاد كفريق هواة قبل تحوله للاحتراف، وهي موطن لفريق يرتدي الأخضر."
+    }
+  },
+  {
+    "id": 609,
+    "type": "city",
+    "latitude": 50.4610,
+    "longitude": -3.5250,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Torquay",
+      "ar": "توركاي"
+    },
+    "clue": {
+      "en": "This town is the central hub of the sunny 'English Riviera' in Devon, suffered the heartbreak of losing the 2021 National League playoff final to a goalkeeper's 95th-minute equalizer, and affectionately nicknames its yellow-and-blue team 'The Gulls'.",
+      "ar": "هذه البلدة هي المركز الرئيسي لـ 'الريفيرا الإنجليزية' المشمسة، وعانت من حسرة خسارة نهائي ملحق الدوري الوطني 2021 بهدف تعادل من حارس مرمى في الدقيقة 95، وتُلقب فريقها بـ 'النوارس'."
+    }
+  },
+  {
+    "id": 610,
+    "type": "city",
+    "latitude": 51.8890,
+    "longitude": 0.9020,
+    "difficulty": "medium",
+    "answer": {
+      "en": "Colchester",
+      "ar": "كولشيستر"
+    },
+    "clue": {
+      "en": "This town claims the title of being the oldest recorded Roman town in Britain, famously relegated Leeds United to the third tier of English football for the first time ever in 2007, and represents its blue-and-white team under the nickname 'The U's'.",
+      "ar": "تزعم هذه البلدة أنها أقدم بلدة رومانية مسجلة في بريطانيا، وأسقطت ليدز يونايتد بشكل شهير إلى الدرجة الثالثة لأول مرة في تاريخه عام 2007، وتُمثل فريقها الأزرق والأبيض تحت لقب 'The U's'."
+    }
+  }
 
 ]

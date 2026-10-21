@@ -592,6 +592,141 @@ body {
   box-shadow: 0 0 25px rgba(239, 68, 68, 0.6);
 }
 
+/* --- LEAGUE SELECTOR (GLASSMORPHISM) --- */
+.league-slider-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-arrow {
+  position: absolute;
+  z-index: 10;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+  font-weight: bold;
+}
+
+.scroll-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.scroll-arrow.left { left: -10px; }
+.scroll-arrow.right { right: -10px; }
+
+.league-selector-container {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 15px 30px; /* Padding ensures cards don't hit the absolute arrows */
+  width: 100%;
+  
+  /* Smooth scrolling & snapping so it doesn't get cut halfway */
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  
+  /* Fades out the left and right edges smoothly */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.league-selector-container::-webkit-scrollbar {
+  display: none;
+}
+
+.league-card {
+  flex: 0 0 100px;
+  scroll-snap-align: center; /* Forces the card to snap cleanly to the center */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #94a3b8;
+  text-align: center;
+}
+
+/* NO NEON: Clean, premium frosted glass for selected item */
+.league-card.selected {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: white;
+  transform: scale(1.05);
+}
+
+.league-logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.league-title {
+  font-size: 11px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* --- GLASSMORPHIC MAIN MENU BUTTONS --- */
+.btn-glass {
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+.btn-glass.glow {
+  border-color: rgba(0, 255, 204, 0.5);
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.25);
+  background: linear-gradient(135deg, rgba(0, 255, 204, 0.1), rgba(59, 130, 246, 0.1));
+}
+
+.btn-glass.glow:hover {
+  box-shadow: 0 0 35px rgba(0, 255, 204, 0.4);
+  background: linear-gradient(135deg, rgba(0, 255, 204, 0.15), rgba(59, 130, 246, 0.15));
+}
+
 /* =========================================
    GEOSPORTS-INSPIRED DASHBOARD UI
 ========================================= */

@@ -5,13 +5,25 @@ import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import html2canvas from 'html2canvas'; 
 import 'maplibre-gl/dist/maplibre-gl.css';
 import './App.css'; 
-import { DESTINATIONS } from './data/destinations';
+
+import premierLogo from './assets/premier-league-logo.png';
+import laligaLogo from './assets/LaLiga-Logo.png';
+import serieaLogo from './assets/Italian-Serie-A-Logo.png';
+import franceLogo from './assets/Ligue-1-Logo.png';
+import germanLogo from './assets/Bundesliga-Logo.png';
+
+// LEAGUE DATA IMPORTS
+import { DESTINATIONS as ALL_DESTS } from './data/destinations';
+import { DESTINATIONS as PL_DESTS } from './data/Prmier_League';
+import { DESTINATIONS as LALIGA_DESTS } from './data/La_Liga';
+import { DESTINATIONS as FR_DESTS } from './data/FR_League';
+import { DESTINATIONS as DU_DESTS } from './data/Du_League';
+import { DESTINATIONS as SA_DESTS } from './data/Serie_A'; 
 
 // MULTIPLAYER IMPORTS
 import { ref, set, get, onValue, update, query, orderByChild, endAt } from "firebase/database";
 import { db } from './firebase'; 
 
-// Force MapLibre to use the correct worker for Vercel/Vite production
 if (maplibregl.setWorkerUrl) {
   maplibregl.setWorkerUrl(workerUrl);
 }
@@ -22,7 +34,25 @@ const GAME_MODES = {
   endless: { id: 'endless', matches: Infinity, budget: 25000 }
 };
 
-// Optimized Production Map Style with lightweight CDNs & fixed Font Stack
+const LEAGUES_DATA = {
+  all: ALL_DESTS,
+  premier: PL_DESTS,
+  laliga: LALIGA_DESTS,
+  seriea: SA_DESTS,
+  france: FR_DESTS,
+  german: DU_DESTS
+};
+
+// 👇 USING THE IMPORTED VARIABLES
+const LEAGUE_OPTIONS = [
+  { id: 'all', titleEn: 'Global', titleAr: 'عالمي', logoUrl: '🌍', isEmoji: true },
+  { id: 'premier', titleEn: 'Premier League', titleAr: 'الدوري الإنجليزي', logoUrl: premierLogo },
+  { id: 'laliga', titleEn: 'La Liga', titleAr: 'الدوري الإسباني', logoUrl: laligaLogo },
+  { id: 'seriea', titleEn: 'Serie A', titleAr: 'الدوري الإيطالي', logoUrl: serieaLogo },
+  { id: 'france', titleEn: 'Ligue 1', titleAr: 'الدوري الفرنسي', logoUrl: franceLogo },
+  { id: 'german', titleEn: 'Bundesliga', titleAr: 'الدوري الألماني', logoUrl: germanLogo }
+];
+
 const mapStyle = {
   version: 8,
   projection: { type: 'globe' },
@@ -36,7 +66,8 @@ const mapStyle = {
     },
     'countries-boundaries': {
       type: 'geojson',
-      data: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson'
+      data: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson',
+      tolerance: 1.5 
     },
     'countries-labels': {
       type: 'geojson',
@@ -44,7 +75,8 @@ const mapStyle = {
     },
     'major-cities': {
       type: 'geojson',
-      data: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_10m_populated_places_simple.geojson'
+      data: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_10m_populated_places_simple.geojson',
+      tolerance: 2 
     }
   },
   layers: [
@@ -91,14 +123,10 @@ const mapStyle = {
 
 const flightPathStyle = { id: 'flight-path-layer', type: 'line', paint: { 'line-color': '#00ffcc', 'line-width': 3, 'line-dasharray': [2, 2] } };
 
-// --- AUDIO ---
 const playFlightSound = () => { try { const ctx = new (window.AudioContext || window.webkitAudioContext)(); const now = ctx.currentTime; const osc = ctx.createOscillator(); const filter = ctx.createBiquadFilter(); const gain = ctx.createGain(); osc.type = 'sawtooth'; osc.frequency.setValueAtTime(150, now); osc.frequency.exponentialRampToValueAtTime(1200, now + 1.2); filter.type = 'lowpass'; filter.frequency.setValueAtTime(400, now); filter.frequency.exponentialRampToValueAtTime(2500, now + 1.2); gain.gain.setValueAtTime(0.05, now); gain.gain.linearRampToValueAtTime(0.1, now + 0.6); gain.gain.linearRampToValueAtTime(0.001, now + 1.2); osc.connect(filter); filter.connect(gain); gain.connect(ctx.destination); osc.start(now); osc.stop(now + 1.2); } catch(e) {} };
 const playSuccessSound = () => { try { const ctx = new (window.AudioContext || window.webkitAudioContext)(); const now = ctx.currentTime; [659.25, 830.61, 987.77, 1318.51, 1661.22].forEach((freq, index) => { const osc = ctx.createOscillator(); const gain = ctx.createGain(); osc.type = 'sine'; osc.frequency.setValueAtTime(freq, now + index * 0.06); gain.gain.setValueAtTime(0.1, now + index * 0.06); gain.gain.exponentialRampToValueAtTime(0.0001, now + index * 0.06 + 0.4); osc.connect(gain); gain.connect(ctx.destination); osc.start(now + index * 0.06); osc.stop(now + index * 0.06 + 0.4); }); } catch(e) {} };
 const playErrorSound = () => { try { const ctx = new (window.AudioContext || window.webkitAudioContext)(); const now = ctx.currentTime; const osc = ctx.createOscillator(); const gain = ctx.createGain(); osc.type = 'square'; osc.frequency.setValueAtTime(110, now); osc.frequency.setValueAtTime(80, now + 0.1); gain.gain.setValueAtTime(0.1, now); gain.gain.exponentialRampToValueAtTime(0.001, now + 0.25); osc.connect(gain); gain.connect(ctx.destination); osc.start(now); osc.stop(now + 0.25); } catch(e) {} };
 
-// ==========================================
-// SEPARATED COMPONENT: Quit Confirmation Modal
-// ==========================================
 const QuitConfirmModal = ({ lang, onConfirm, onCancel }) => {
   return (
     <div className="ad-modal-overlay" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
@@ -127,15 +155,14 @@ const QuitConfirmModal = ({ lang, onConfirm, onCancel }) => {
   );
 };
 
-// ==========================================
-// MAIN APP COMPONENT
-// ==========================================
 export default function App() {
   const [gameState, setGameState] = useState('start');
   const [startMenu, setStartMenu] = useState('main'); 
   const [lang, setLang] = useState('en');
   const [playerName, setPlayerName] = useState('');
   const [isNameInvalid, setIsNameInvalid] = useState(false);
+  
+  const [selectedLeague, setSelectedLeague] = useState('all');
 
   const [gameMode, setGameMode] = useState(null);
   const [sessionData, setSessionData] = useState([]);
@@ -151,9 +178,10 @@ export default function App() {
   const [moneyCost, setMoneyCost] = useState(null);
   const [animationProgress, setAnimationProgress] = useState(0);
   const [isSharing, setIsSharing] = useState(false);
+  
   const shareCardRef = useRef(null);
-
-  // --- MULTIPLAYER & MONETIZATION STATES ---
+  const mapRef = useRef(null);
+  
   const [roomCode, setRoomCode] = useState('');
   const [joinCodeInput, setJoinCodeInput] = useState('');
   const [livePlayers, setLivePlayers] = useState({});
@@ -166,37 +194,35 @@ export default function App() {
   const [showQuitModal, setShowQuitModal] = useState(false);
   const [isClueExpanded, setIsClueExpanded] = useState(true);
 
-  // Helper for Input Name
+  const isMapVisible = ['playing', 'animating', 'locked'].includes(gameState);
+
+  useEffect(() => {
+    if (gameState === 'playing' && currentIndex === 0 && mapRef.current) {
+      mapRef.current.jumpTo({ center: [0, 20], zoom: 1.5, pitch: 0, bearing: 0 });
+    }
+  }, [gameState, currentIndex]);
+
   const handleNameChange = (e) => {
     const value = e.target.value;
     const regex = /^[a-zA-Z0-9\u0600-\u06FF\s]*$/;
     if (regex.test(value)) {
-      setPlayerName(value);
-      setIsNameInvalid(false);
+      setPlayerName(value); setIsNameInvalid(false);
     } else {
-      setIsNameInvalid(true);
-      setTimeout(() => setIsNameInvalid(false), 400);
+      setIsNameInvalid(true); setTimeout(() => setIsNameInvalid(false), 400);
     }
   };
 
-  // --- SILENT FIREBASE JANITOR ---
   const cleanExpiredRooms = async () => {
     try {
       const now = Date.now();
       const oldRoomsQuery = query(ref(db, 'rooms'), orderByChild('expiresAt'), endAt(now));
       const snapshot = await get(oldRoomsQuery);
-      
       if (snapshot.exists()) {
         const updates = {};
-        snapshot.forEach((child) => {
-          updates[child.key] = null;
-        });
+        snapshot.forEach((child) => { updates[child.key] = null; });
         await update(ref(db, 'rooms'), updates);
-        console.log(`🧹 Janitor: Cleaned up ${Object.keys(updates).length} expired rooms.`);
       }
-    } catch (error) {
-      console.error("Cleanup failed, but game continues:", error);
-    }
+    } catch (error) {}
   };
 
   const handleMenuClick = (menuTarget) => {
@@ -205,20 +231,14 @@ export default function App() {
       setTimeout(() => setIsNameInvalid(false), 400);
       return alert(lang === 'en' ? "Please enter your name first" : "الرجاء إدخال اسمك أولاً");
     }
-    if (menuTarget === 'multi') {
-      cleanExpiredRooms();
-    }
+    if (menuTarget === 'multi') cleanExpiredRooms();
     setStartMenu(menuTarget);
   };
 
-  // --- MONETIZATION: Check 3-Match Daily Limit ---
   const checkDailyLimit = () => {
     const today = new Date().toISOString().split('T')[0];
     const plays = parseInt(localStorage.getItem(`livePlays_${today}`) || '0');
-    if (plays >= 3) {
-      setShowAdModal(true);
-      return false;
-    }
+    if (plays >= 3) { setShowAdModal(true); return false; }
     return true;
   };
 
@@ -239,76 +259,58 @@ export default function App() {
     }, 2000);
   };
 
-  // --- MULTIPLAYER CORE FUNCTIONS ---
   const createLiveRoom = async () => {
     if (!checkDailyLimit()) return;
-
-    const shuffled = [...DESTINATIONS].sort(() => 0.5 - Math.random());
-    const matchIndices = shuffled.slice(0, 5).map(dest => DESTINATIONS.indexOf(dest));
+    const currentLeagueData = LEAGUES_DATA[selectedLeague];
+    const shuffled = [...currentLeagueData].sort(() => 0.5 - Math.random());
+    const matchIndices = shuffled.slice(0, 5).map(dest => currentLeagueData.indexOf(dest));
 
     const code = Math.random().toString(36).substring(2, 6).toUpperCase();
-    const roomRef = ref(db, `rooms/${code}`);
-    
     const expiry = Date.now() + 120000;
-    await set(roomRef, {
-      status: 'waiting',
-      expiresAt: expiry,
+    
+    await set(ref(db, `rooms/${code}`), {
+      status: 'waiting', 
+      expiresAt: expiry, 
+      league: selectedLeague, 
       locations: matchIndices,
       players: { [playerId]: { name: playerName, score: 10000, finished: false } }
     });
 
-    setRoomCode(code);
-    setIsHost(true);
-    setExpiresAt(expiry);
-    setGameState('lobby');
-    listenToRoom(code);
+    setRoomCode(code); setIsHost(true); setExpiresAt(expiry);
+    setGameState('lobby'); listenToRoom(code);
   };
 
   const joinLiveRoom = async () => {
-    if (!joinCodeInput.trim()) return;
-    if (!checkDailyLimit()) return;
-
+    if (!joinCodeInput.trim() || !checkDailyLimit()) return;
     const code = joinCodeInput.toUpperCase();
-    const roomRef = ref(db, `rooms/${code}`);
-    const snapshot = await get(roomRef);
+    const snapshot = await get(ref(db, `rooms/${code}`));
 
     if (snapshot.exists()) {
       const data = snapshot.val();
       if (data.status !== 'waiting') return alert(lang === 'en' ? "Match already started!" : "المباراة بدأت بالفعل!");
       if (Object.keys(data.players || {}).length >= 4) return alert(lang === 'en' ? "Room is full! (Max 4)" : "الغرفة ممتلئة! (الحد الأقصى 4)");
 
-      await update(ref(db, `rooms/${code}/players`), {
-        [playerId]: { name: playerName, score: 10000, finished: false }
-      });
-
-      setRoomCode(code);
-      setIsHost(false);
-      setExpiresAt(data.expiresAt);
-      setGameState('lobby');
-      listenToRoom(code);
+      await update(ref(db, `rooms/${code}/players`), { [playerId]: { name: playerName, score: 10000, finished: false } });
+      setRoomCode(code); setIsHost(false); setExpiresAt(data.expiresAt);
+      setGameState('lobby'); listenToRoom(code);
     } else {
       alert(lang === 'en' ? "Room not found or expired." : "الغرفة غير موجودة أو انتهت صلاحيتها.");
     }
   };
 
   const listenToRoom = (code) => {
-    const roomRef = ref(db, `rooms/${code}`);
-    onValue(roomRef, (snapshot) => {
+    onValue(ref(db, `rooms/${code}`), (snapshot) => {
       const data = snapshot.val();
       if (!data) return; 
-
       setLivePlayers(data.players || {});
-      
       setGameState((prev) => {
         if (data.status === 'playing' && prev === 'lobby') {
-          const dests = data.locations.map(idx => DESTINATIONS[idx]);
-          setSessionData(dests);
-          setBudget(10000); 
-          setGameMode(GAME_MODES.short);
-          setCurrentIndex(0);
-          setMatchHistory([]);
-          setTotalBonuses(0);
-          setTotalExpenses(0);
+          const roomLeagueData = LEAGUES_DATA[data.league || 'all'];
+          const dests = data.locations.map(idx => roomLeagueData[idx]);
+          
+          setSessionData(dests); setBudget(10000); setGameMode(GAME_MODES.short);
+          setCurrentIndex(0); setMatchHistory([]); setTotalBonuses(0); setTotalExpenses(0);
+          setGuessCoords(null); setDistanceError(null); setMoneyCost(null);
           incrementDailyPlays(); 
           return 'playing';
         }
@@ -327,26 +329,24 @@ export default function App() {
     if (gameState === 'lobby' && expiresAt) {
       interval = setInterval(() => {
         const remaining = Math.floor((expiresAt - Date.now()) / 1000);
-        if (remaining <= 0) {
-          setTimeLeft(0);
-          clearInterval(interval);
-        } else {
-          setTimeLeft(remaining);
-        }
+        if (remaining <= 0) { setTimeLeft(0); clearInterval(interval); } 
+        else { setTimeLeft(remaining); }
       }, 1000);
     }
     return () => clearInterval(interval);
   }, [gameState, expiresAt]);
 
-
-  // --- SOLO CORE FUNCTIONS ---
   const startGame = (modeKey) => {
     setIsClueExpanded(true);
     const selectedMode = GAME_MODES[modeKey];
     setGameMode(selectedMode);
     
-    const shuffled = [...DESTINATIONS].sort(() => 0.5 - Math.random());
-    const matchCount = selectedMode.matches === Infinity ? shuffled.length : selectedMode.matches;
+    const currentLeagueData = LEAGUES_DATA[selectedLeague];
+    const shuffled = [...currentLeagueData].sort(() => 0.5 - Math.random());
+    
+    const matchCount = selectedMode.matches === Infinity 
+      ? shuffled.length 
+      : Math.min(selectedMode.matches, shuffled.length);
     
     setSessionData(shuffled.slice(0, matchCount));
     setBudget(selectedMode.budget);
@@ -354,6 +354,9 @@ export default function App() {
     setTotalBonuses(0);
     setTotalExpenses(0);
     setCurrentIndex(0);
+    setGuessCoords(null);
+    setDistanceError(null);
+    setMoneyCost(null);
     setGameState('playing');
   };
 
@@ -423,13 +426,21 @@ export default function App() {
         
         setBudget(prev => {
           const newBudget = prev - cost;
-          if (roomCode) {
-            update(ref(db, `rooms/${roomCode}/players/${playerId}`), { score: Math.max(0, newBudget) });
-          }
+          if (roomCode) { update(ref(db, `rooms/${roomCode}/players/${playerId}`), { score: Math.max(0, newBudget) }); }
           return newBudget;
         });
         
         setGameState('locked');
+
+        if (mapRef.current) {
+          mapRef.current.flyTo({
+            center: [currentDestination.longitude, currentDestination.latitude],
+            zoom: 5,         
+            pitch: 45,       
+            duration: 2500,  
+            essential: true
+          });
+        }
       }
     };
     requestAnimationFrame(stepAnimation);
@@ -437,37 +448,21 @@ export default function App() {
 
   const handleNextDestination = () => {
     if (budget <= 0 || currentIndex + 1 >= sessionData.length) {
-      if (roomCode) {
-        update(ref(db, `rooms/${roomCode}/players/${playerId}`), { finished: true });
-      }
+      if (roomCode) { update(ref(db, `rooms/${roomCode}/players/${playerId}`), { finished: true }); }
       setGameState('gameover');
     } else {
       setCurrentIndex(curr => curr + 1);
       setGuessCoords(null);
       setDistanceError(null);
       setMoneyCost(null);
-      
-      // 👇 ADD THIS LINE: Automatically expands the clue for the new question
       setIsClueExpanded(true); 
-      
       setGameState('playing');
+
+      if (mapRef.current) {
+        mapRef.current.flyTo({ center: [0, 20], zoom: 1.5, pitch: 0, bearing: 0, duration: 1500, essential: true });
+      }
     }
   };
-
-  // const handleNextDestination = () => {
-  //   if (budget <= 0 || currentIndex + 1 >= sessionData.length) {
-  //     if (roomCode) {
-  //       update(ref(db, `rooms/${roomCode}/players/${playerId}`), { finished: true });
-  //     }
-  //     setGameState('gameover');
-  //   } else {
-  //     setCurrentIndex(curr => curr + 1);
-  //     setGuessCoords(null);
-  //     setDistanceError(null);
-  //     setMoneyCost(null);
-  //     setGameState('playing');
-  //   }
-  // };
 
   const getFormattedDate = () => {
     const date = new Date();
@@ -482,126 +477,49 @@ export default function App() {
     return `${month} ${day}${suffix}, ${year}`;
   };
 
-const shareAsImage = async () => {
+  const shareAsImage = async () => {
     if (!shareCardRef.current) return;
     setIsSharing(true);
-
     try {
-      // 1. Generate the image
-      const canvas = await html2canvas(shareCardRef.current, { 
-        backgroundColor: '#03050c', 
-        scale: window.devicePixelRatio || 2, // Better quality on mobile screens
-        useCORS: true 
-      });
-
+      const canvas = await html2canvas(shareCardRef.current, { backgroundColor: '#03050c', scale: window.devicePixelRatio || 2, useCORS: true });
       canvas.toBlob(async (blob) => {
-        if (!blob) {
-          setIsSharing(false);
-          return;
-        }
-
+        if (!blob) return setIsSharing(false);
         const file = new File([blob], `GeoPitch-Score.png`, { type: 'image/png' });
 
-        // 2. Try Mobile Native Share First
         if (navigator.share) {
-          try {
-            await navigator.share({
-              files: [file]
-            });
-            setIsSharing(false);
-            return; // Success! Stop here.
-          } catch (err) {
-            console.log("Native share blocked or canceled:", err);
-            // If user just closed the share menu, stop.
-            if (err.name === 'AbortError') {
-              setIsSharing(false);
-              return;
-            }
-            // If it failed for technical reasons, fall through to the download code below!
-          }
+          try { await navigator.share({ files: [file] }); setIsSharing(false); return; } 
+          catch (err) { if (err.name === 'AbortError') return setIsSharing(false); }
         }
 
-        // 3. Fallback: Direct Download (For Laptops & Strict Mobile Browsers)
         const link = document.createElement('a');
         link.download = `GeoPitch-Score-${playerName}.png`;
         link.href = URL.createObjectURL(blob);
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        
+        document.body.appendChild(link); link.click(); document.body.removeChild(link);
         setTimeout(() => URL.revokeObjectURL(link.href), 100);
         
-        // Let the user know it saved to their phone/computer
         alert(lang === 'en' ? "Image saved to your device! Share it with your friends." : "تم حفظ الصورة في جهازك! شاركها مع أصدقائك.");
-        
         setIsSharing(false);
       }, 'image/png');
-      
-    } catch (error) {
-      console.error("Error generating image:", error);
-      setIsSharing(false);
-    }
+    } catch (error) { setIsSharing(false); }
   };
-  // const shareAsImage = async () => {
-  //   if (!shareCardRef.current) return;
-  //   setIsSharing(true);
 
-  //   try {
-  //     const canvas = await html2canvas(shareCardRef.current, { backgroundColor: '#03050c', scale: 2, useCORS: true });
-  //     canvas.toBlob(async (blob) => {
-  //       if (!blob) return setIsSharing(false);
-  //       const file = new File([blob], `GeoPitch-Result-${playerName}.png`, { type: 'image/png' });
-
-  //       if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
-  //         await navigator.share({
-  //           title: 'My GeoPitch Season',
-  //           text: lang === 'en' ? 'Think you know football geography? Prove it: geopitch.gg' : 'هل أنت خبير في جغرافيا كرة القدم؟ أثبت ذلك: geopitch.gg',
-  //           files: [file],
-  //         });
-  //       } else {
-  //         const link = document.createElement('a');
-  //         link.download = `GeoPitch-Result-${playerName}.png`;
-  //         link.href = URL.createObjectURL(blob);
-  //         link.click();
-  //         alert(lang === 'en' ? "Image downloaded! Share it with your friends." : "تم تحميل الصورة! شاركها مع أصدقائك.");
-  //       }
-  //       setIsSharing(false);
-  //     }, 'image/png');
-  //   } catch (error) {
-  //     console.error("Error generating image:", error);
-  //     setIsSharing(false);
-  //   }
-  // };
-
-  const resetToHome = () => {
-    setGameState('start');
-    setStartMenu('main');
-    setRoomCode('');
-  };
+  const resetToHome = () => { setGameState('start'); setStartMenu('main'); setRoomCode(''); };
 
   const confirmQuit = () => {
     if (roomCode) {
       update(ref(db, `rooms/${roomCode}/players/${playerId}`), { finished: true });
-      setRoomCode('');
-      setGameState('start');
-      setStartMenu('main'); 
+      setRoomCode(''); setGameState('start'); setStartMenu('main'); 
     } else {
-      setGameState('start');
-      setStartMenu('solo'); 
+      setGameState('start'); setStartMenu('solo'); 
     }
     setShowQuitModal(false);
   };
 
-  const handleCashOut = () => {
-    // Instantly end the game and send them to the Share screen
-    setGameState('gameover');
-  };
+  const handleCashOut = () => { setGameState('gameover'); };
 
   const paddedHistory = [...matchHistory];
   if (gameMode && gameMode.matches !== Infinity) {
-    while (paddedHistory.length < gameMode.matches) {
-      paddedHistory.push("🟥");
-    }
+    while (paddedHistory.length < gameMode.matches) { paddedHistory.push("🟥"); }
   }
 
   const flightPathData = guessCoords ? { type: 'Feature', geometry: { type: 'LineString', coordinates: generateFullArc(guessCoords.lng, guessCoords.lat, currentDestination?.longitude || 0, currentDestination?.latitude || 0).slice(0, Math.max(2, animationProgress)) } } : null;
@@ -609,419 +527,313 @@ const shareAsImage = async () => {
   return (
     <div className="game-container shiny-globe-wrapper">
       
-      {/* MONETIZATION AD MODAL OVERLAY */}
       {showAdModal && (
-        <div className="ad-modal-overlay" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
+        <div className="ad-modal-overlay" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr', zIndex: 60 }}>
           <div className="glass-panel ad-modal">
             <h2 style={{ color: 'white', marginTop: 0 }}>🛑 {lang === 'en' ? 'Daily Limit Reached' : 'تم بلوغ الحد اليومي'}</h2>
             <p style={{ color: '#cbd5e1', fontSize: '14px', marginBottom: '25px' }}>
-              {lang === 'en' 
-                ? 'You have played your 3 free live matches for today. Servers cost money, but you can keep playing for free!' 
-                : 'لقد لعبت 3 مباريات مجانية اليوم. الخوادم تكلف مالاً، لكن يمكنك الاستمرار في اللعب مجاناً!'}
+              {lang === 'en' ? 'You have played your 3 free live matches for today. Servers cost money, but you can keep playing for free!' : 'لقد لعبت 3 مباريات مجانية اليوم. الخوادم تكلف مالاً، لكن يمكنك الاستمرار في اللعب مجاناً!'}
             </p>
             <button className="btn-ad" onClick={watchAdMock}>
               📺 {lang === 'en' ? 'Watch Ad (15s) to Play 1 More' : 'شاهد إعلان (15ث) للعب مباراة إضافية'}
             </button>
-            <button 
-              className="btn-secondary" 
-              style={{ marginTop: '15px' }} 
-              onClick={() => {
-                setShowAdModal(false);
-                setGameState('start');
-                setStartMenu('solo');
-              }}
-            >
+            <button className="btn-secondary" style={{ marginTop: '15px' }} onClick={() => { setShowAdModal(false); setGameState('start'); setStartMenu('solo'); }}>
               {lang === 'en' ? 'Back to Solo Mode' : 'العودة إلى وضع اللاعب الفردي'}
             </button>
           </div>
         </div>
       )}
 
-      {/* IMPLEMENTED SEPARATED QUIT CONFIRMATION MODAL */}
-      {showQuitModal && (
-        <QuitConfirmModal 
-          lang={lang} 
-          onConfirm={confirmQuit} 
-          onCancel={() => setShowQuitModal(false)} 
-        />
-      )}
+      {showQuitModal && <QuitConfirmModal lang={lang} onConfirm={confirmQuit} onCancel={() => setShowQuitModal(false)} />}
 
-      {/* START SCREEN */}
-      {gameState === 'start' && (
-        <div className="start-screen" style={{ overflowY: 'auto' }}>
-          <div style={{ position: 'absolute', top: 20, right: 20, display: 'flex', gap: '10px', zIndex: 20 }}>
-            <button className="lang-toggle-btn" style={{ background: lang === 'en' ? '#00ffcc' : 'rgba(255,255,255,0.1)', color: lang === 'en' ? 'black' : 'white' }} onClick={() => setLang('en')}>EN</button>
-            <button className="lang-toggle-btn" style={{ background: lang === 'ar' ? '#00ffcc' : 'rgba(255,255,255,0.1)', color: lang === 'ar' ? 'black' : 'white' }} onClick={() => setLang('ar')}>عربي</button>
-          </div>
-          
-          <div className="glass-panel start-modal" style={{ margin: '40px 0', direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
-            <h1 className="neon-text" style={{ fontSize: '46px', letterSpacing: '-1px', marginBottom: '5px', textAlign: 'center' }}>GeoPitch</h1>
-            <p style={{ color: '#94a3b8', marginBottom: '15px', fontSize: '15px', textAlign: 'center' }}>
-              {lang === 'en' ? 'The Ultimate Football Geography Challenge.' : 'التحدي الجغرافي الأكبر لكرة القدم.'}
-            </p>
-            
-            <div className="fun-disclaimer">
-              {lang === 'en' ? '💸 Virtual budget, 100% real fun!' : '💸 ميزانية افتراضية، متعة حقيقية 100%!'}
+      <div 
+        style={{
+          position: 'absolute', inset: 0, zIndex: 1,
+          opacity: isMapVisible ? 1 : 0, 
+          pointerEvents: gameState === 'playing' ? 'auto' : 'none',
+          transition: 'opacity 0.6s ease-in-out'
+        }}
+      >
+        <Map 
+          ref={mapRef} 
+          mapLib={maplibregl}
+          initialViewState={{ longitude: 0, latitude: 20, zoom: 1.5 }} 
+          style={{ width: '100%', height: '100%' }} 
+          mapStyle={mapStyle} 
+          onClick={handleMapClick} 
+          interactiveLayerIds={['satellite']} 
+          maxZoom={16}
+          attributionControl={false}
+          reuseMaps={true} 
+        >
+          {guessCoords && <Marker longitude={guessCoords.lng} latitude={guessCoords.lat} anchor="bottom"><div style={{ fontSize: '30px', opacity: gameState === 'locked' ? 0.5 : 1, filter: 'drop-shadow(0 0 10px #00ffcc)' }}>🔵</div></Marker>}
+          {gameState === 'locked' && currentDestination && <Marker longitude={currentDestination.longitude} latitude={currentDestination.latitude} anchor="bottom"><div style={{ fontSize: '35px', filter: 'drop-shadow(0 0 15px #ef4444)' }}>🔴</div></Marker>}
+          {(gameState === 'animating' || gameState === 'locked') && flightPathData && <Source id="flight-path-source" type="geojson" data={flightPathData}><Layer {...flightPathStyle} /></Source>}
+        </Map>
+      </div>
+
+      <div style={{ position: 'absolute', inset: 0, zIndex: 10, pointerEvents: 'none', display: 'flex', flexDirection: 'column' }}>
+
+        {gameState === 'start' && (
+          <div className="start-screen" style={{ overflowY: 'auto', pointerEvents: 'auto', position: 'relative', width: '100%', height: '100%' }}>
+            <div style={{ position: 'absolute', top: 20, right: 20, display: 'flex', gap: '10px', zIndex: 20 }}>
+              <button className="lang-toggle-btn" style={{ background: lang === 'en' ? '#00ffcc' : 'rgba(255,255,255,0.1)', color: lang === 'en' ? 'black' : 'white' }} onClick={() => setLang('en')}>EN</button>
+              <button className="lang-toggle-btn" style={{ background: lang === 'ar' ? '#00ffcc' : 'rgba(255,255,255,0.1)', color: lang === 'ar' ? 'black' : 'white' }} onClick={() => setLang('ar')}>عربي</button>
             </div>
             
-            <input 
-              type="text" 
-              className="start-input" 
-              placeholder={lang === 'en' ? "Your Username" : "اسم المستخدم"} 
-              value={playerName} 
-              onChange={handleNameChange}
-              style={{ borderColor: isNameInvalid ? '#ef4444' : '', transition: 'border-color 0.2s ease-in-out', marginBottom: '25px' }}
-            />
-
-            {/* Main Menu Choices */}
-            {startMenu === 'main' && (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', width: '100%' }}>
-                <button className="btn-primary" style={{ padding: '16px', fontSize: '18px' }} onClick={() => handleMenuClick('solo')}>
-                  👤 {lang === 'en' ? 'PLAY SOLO' : 'لعب فردي'}
-                </button>
-                <button className="btn-primary" style={{ background: 'linear-gradient(90deg, #f59e0b, #d97706)', padding: '16px', fontSize: '18px' }} onClick={() => handleMenuClick('multi')}>
-                  🌍 {lang === 'en' ? 'PLAY WITH FRIENDS' : 'العب مع الأصدقاء'}
-                </button>
-              </div>
-            )}
-
-            {/* Solo Menu */}
-            {startMenu === 'solo' && (
-              <div className="modes-container">
-                <div style={{ textAlign: 'center', marginBottom: '10px' }}>
-                  <h3 style={{ color: '#cbd5e1', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px', margin: '0' }}>
-                    {lang === 'en' ? 'Solo Career' : 'مسيرة فردية'}
-                  </h3>
-                </div>
-                <button className="mode-card" onClick={() => startGame('short')}>
-                  <span className="mode-icon">⚡</span>
-                  <div className="mode-text">
-                    <h4>{lang === 'en' ? '5 Matches • $10k' : <><bdi>5</bdi> مباريات • <bdi>$10k</bdi></>}</h4>
-                    <p>{lang === 'en' ? 'A quick, high-stakes session. One bad guess could end it all.' : 'تحدي سريع ومثير. خطأ واحد قد ينهي كل شيء.'}</p>
-                  </div>
-                </button>
-                <button className="mode-card" onClick={() => startGame('standard')}>
-                  <span className="mode-icon">🌍</span>
-                  <div className="mode-text">
-                    <h4>{lang === 'en' ? '7 Matches • $15k' : <><bdi>7</bdi> مباريات • <bdi>$15k</bdi></>}</h4>
-                    <p>{lang === 'en' ? 'The standard tour. Balance your budget and scout carefully.' : 'الجولة القياسية. وازن ميزانيتك وابحث بحذر.'}</p>
-                  </div>
-                </button>
-                <button className="mode-card" onClick={() => startGame('endless')}>
-                  <span className="mode-icon">♾️</span>
-                  <div className="mode-text">
-                    <h4>{lang === 'en' ? 'Endless Survival • $25k' : <>بقاء لا نهائي • <bdi>$25k</bdi></>}</h4>
-                    <p>{lang === 'en' ? 'No safety net. Play until you go bankrupt. Build your legacy.' : 'لا توجد شبكة أمان. العب حتى تفلس. اصنع أسطورتك.'}</p>
-                  </div>
-                </button>
-                <button className="btn-secondary" onClick={() => setStartMenu('main')} style={{ marginTop: '10px' }}>
-                  {lang === 'en' ? 'Back' : 'رجوع'}
-                </button>
-              </div>
-            )}
-
-            {/* Multiplayer Menu */}
-            {startMenu === 'multi' && (
-              <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '15px' }}>
-                <div style={{ textAlign: 'center', marginBottom: '5px' }}>
-                  <h3 style={{ color: '#00ffcc', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px', margin: '0' }}>
-                    {lang === 'en' ? 'Live Multiplayer (Max 4)' : 'لعب جماعي مباشر (الحد الأقصى 4)'}
-                  </h3>
-                </div>
-                
-                <button className="mode-card" onClick={createLiveRoom} style={{ background: 'rgba(0, 255, 204, 0.05)', borderColor: 'rgba(0, 255, 204, 0.2)' }}>
-                  <span className="mode-icon">🏟️</span>
-                  <div className="mode-text">
-                    <h4 style={{ color: '#00ffcc' }}>{lang === 'en' ? 'Create Live Room' : 'إنشاء غرفة مباشرة'}</h4>
-                    <p>{lang === 'en' ? '2-min countdown. Invite up to 3 friends.' : 'عد تنازلي دقيقتين. ادع حتى 3 أصدقاء.'}</p>
-                  </div>
-                </button>
-                
-                <div style={{ display: 'flex', gap: '10px', marginTop: '5px', direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
-                  <input 
-                    type="text" 
-                    placeholder={lang === 'en' ? "ENTER CODE" : "أدخل الرمز"} 
-                    value={joinCodeInput} 
-                    onChange={(e) => setJoinCodeInput(e.target.value)}
-                    style={{ flex: 1, padding: '12px', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.2)', background: 'rgba(0,0,0,0.5)', color: 'white', textAlign: 'center', fontWeight: 'bold', textTransform: 'uppercase', outline: 'none' }}
-                  />
-                  <button className="btn-primary" style={{ padding: '10px 20px', borderRadius: '8px' }} onClick={joinLiveRoom}>
-                    {lang === 'en' ? 'JOIN' : 'انضمام'}
-                  </button>
-                </div>
-                
-                <button className="btn-secondary" onClick={() => setStartMenu('main')} style={{ marginTop: '10px' }}>
-                  {lang === 'en' ? 'Back' : 'رجوع'}
-                </button>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-
-      {/* MULTIPLAYER LOBBY SCREEN */}
-      {gameState === 'lobby' && (
-        <div className="lobby-screen" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
-          <h2 style={{ margin: 0, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '2px' }}>
-            {lang === 'en' ? 'Live Match Lobby' : 'غرفة المباراة المباشرة'}
-          </h2>
-          <div className="room-code-box">{roomCode}</div>
-          <div className="timer-text" style={{ color: timeLeft <= 10 ? '#ef4444' : '#00ffcc' }}>
-            ⏳ {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')}
-          </div>
-          
-          <div className="player-list">
-            {Object.values(livePlayers).map((p, i) => (
-              <div className="player-row" key={i}>
-                <span style={{ fontWeight: 'bold' }}>{p.name}</span>
-                <span>✅ {lang === 'en' ? 'Ready' : 'جاهز'}</span>
-              </div>
-            ))}
-          </div>
-
-          <div style={{ marginTop: '20px', textAlign: 'center' }}>
-            {isHost ? (
-              <button className="btn-primary" onClick={startLiveMatch} style={{ width: '300px' }}>
-                {lang === 'en' ? 'START MATCH NOW' : 'ابدأ المباراة الآن'}
-              </button>
-            ) : (
-              <p style={{ color: '#cbd5e1', fontStyle: 'italic' }}>
-                {lang === 'en' ? 'Waiting for host to start...' : 'في انتظار المضيف لبدء المباراة...'}
-              </p>
-            )}
-            <br />
-            <button className="btn-secondary" style={{ marginTop: '15px', width: '300px' }} onClick={resetToHome}>
-              {lang === 'en' ? 'LEAVE ROOM' : 'مغادرة الغرفة'}
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* ACTIVE GAME MAP & HUD */}
-      {['playing', 'animating', 'locked'].includes(gameState) && (
-        <>
-{/* BRAND NEW GEOSPORTS-INSPIRED DASHBOARD */}
-          <div className="geosports-dashboard" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
-            
-            {/* 1. Top Status Bar (Logo, Budget, Quit) */}
-            <div className="dash-top-bar">
-              <span className="dash-brand">GeoPitch</span>
+            <div className="glass-panel start-modal" style={{ margin: 'auto', marginTop: '10vh', direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
+              <h1 className="neon-text" style={{ fontSize: '46px', letterSpacing: '-1px', marginBottom: '5px', textAlign: 'center' }}>GeoPitch</h1>
+              <p style={{ color: '#94a3b8', marginBottom: '15px', fontSize: '15px', textAlign: 'center' }}>{lang === 'en' ? 'The Ultimate Football Geography Challenge.' : 'التحدي الجغرافي الأكبر لكرة القدم.'}</p>
               
-              <div className="dash-budget-inline">
-                <span className="dash-label-inline">{lang === 'en' ? 'BUDGET:' : 'الميزانية:'}</span>
-                <span className="dash-value-inline" style={{ color: budget > 0 ? '#00ffcc' : '#ef4444' }}>
-                  ${budget.toLocaleString()}
-                </span>
-              </div>
+              <div className="fun-disclaimer">{lang === 'en' ? '💸 Virtual budget, 100% real fun!' : '💸 ميزانية افتراضية، متعة حقيقية 100%!'}</div>
+              
+              <input 
+                type="text" className="start-input" 
+                placeholder={lang === 'en' ? "Your Username" : "اسم المستخدم"} 
+                value={playerName} onChange={handleNameChange}
+                style={{ borderColor: isNameInvalid ? '#ef4444' : '', transition: 'border-color 0.2s ease-in-out', marginBottom: '15px' }}
+              />
 
-              {/* DYNAMIC BUTTON: If playing Endless and have at least 1 answer, show Cash Out. Otherwise show Quit. */}
-              {gameMode.id === 'endless' && matchHistory.length > 0 ? (
-                <button className="dash-cashout" onClick={handleCashOut}>
-                  {lang === 'en' ? '💰 CASH OUT' : '💰 إنهاء'}
-                </button>
-              ) : (
-                <button className="dash-quit" onClick={() => setShowQuitModal(true)}>
-                  {lang === 'en' ? 'QUIT' : 'خروج'}
-                </button>
+{/* 👇 NEW HORIZONTAL SLIDER WITH NO ARROWS AND NO TITLES */}
+              {startMenu === 'main' && (
+                <div className="league-slider-wrapper">
+                  <div className="league-selector-container" style={{ padding: '15px 5px', gap: '15px' }}>
+                    {LEAGUE_OPTIONS.map(league => (
+                      <div 
+                        key={league.id}
+                        className={`league-card ${selectedLeague === league.id ? 'selected' : ''}`}
+                        onClick={() => setSelectedLeague(league.id)}
+                        style={{ 
+                          height: '100px', 
+                          padding: '10px', 
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center'
+                        }}
+                      >
+                        {league.isEmoji ? (
+                          <div style={{ 
+                            fontSize: '50px', 
+                            lineHeight: 1,
+                            opacity: selectedLeague === league.id ? 1 : 0.4,
+                            transform: selectedLeague === league.id ? 'scale(1.15)' : 'scale(1)',
+                            transition: 'all 0.3s ease'
+                          }}>
+                            {league.logoUrl}
+                          </div>
+                        ) : (
+                          <img 
+                            src={league.logoUrl} 
+                            alt={league.titleEn} 
+                            style={{ 
+                              width: '100%', 
+                              height: '100%', 
+                              objectFit: 'contain', 
+                              margin: 0,
+                              // 🪄 THE FIX: Gives every logo a crisp, uniform white canvas so dark colors pop!
+                              backgroundColor: '#f8fafc', 
+                              padding: '8px', 
+                              borderRadius: '10px',
+                              
+                              // Fades out unselected logos
+                              opacity: selectedLeague === league.id ? 1 : 0.4,
+                              // Makes the logo bounce up when selected
+                              transform: selectedLeague === league.id ? 'scale(1.15)' : 'scale(1)',
+                              transition: 'all 0.3s ease'
+                            }} 
+                          />
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
               )}
 
-              {/* <button className="dash-quit" onClick={() => setShowQuitModal(true)}>
-                {lang === 'en' ? 'QUIT' : 'خروج'}
-              </button> */}
-            </div>
-            
-            {/* 2. Clue Dropdown Container */}
-            {currentDestination && (
-              <div className="dash-clue-wrapper">
-                <div 
-                  className="dash-clue-header" 
-                  onClick={() => setIsClueExpanded(!isClueExpanded)}
-                >
-                  <span>
-                    {lang === 'en' ? 'Clue' : 'دليل'} {currentIndex + 1}
-                    {gameMode.matches !== Infinity ? ` / ${gameMode.matches}` : ''}
-                  </span>
-                  <span className={`dropdown-icon ${isClueExpanded ? 'open' : ''}`}>
-                    ▼
-                  </span>
-                </div>
-                
-                {isClueExpanded && (
-                  <div className="dash-clue-content fade-in">
-                    <p className="dash-clue-text">"{currentDestination.clue[lang]}"</p>
+              {/* 👇 NEW HORIZONTAL SLIDER WITH NO ARROWS AND NO TITLES */}
+              {/* {startMenu === 'main' && (
+                <div className="league-slider-wrapper">
+                  <div className="league-selector-container" style={{ padding: '15px 5px' }}>
+                    {LEAGUE_OPTIONS.map(league => (
+                      <div 
+                        key={league.id}
+                        className={`league-card ${selectedLeague === league.id ? 'selected' : ''}`}
+                        onClick={() => setSelectedLeague(league.id)}
+                        style={{ height: '100px', padding: '5%' }}
+                      >
+                        {league.isEmoji ? (
+                          <div style={{ fontSize: '50px', lineHeight: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%' }}>{league.logoUrl}</div>
+                        ) : (
+                          <img src={league.logoUrl} alt={league.titleEn} style={{ width: '90%', height: '90%', objectFit: 'contain', margin: 0 }} />
+                        )}
+                      </div>
+                    ))}
                   </div>
+                </div>
+              )} */}
+
+{/* 👇 NEW GLASSMORPHIC ACTION BUTTONS */}
+              {startMenu === 'main' && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', width: '100%' }}>
+                  <button 
+                    className="btn-glass glow" 
+                    onClick={() => handleMenuClick('solo')}
+                    style={{ 
+                      fontFamily: 'inherit', 
+                      textTransform: 'none', 
+                      letterSpacing: '0.5px',
+                      fontSize: '16px' 
+                    }}
+                  >
+                    👤 {lang === 'en' ? 'Play Solo' : 'لعب فردي'}
+                  </button>
+                  <button 
+                    className="btn-glass" 
+                    onClick={() => handleMenuClick('multi')}
+                    style={{ 
+                      fontFamily: 'inherit', 
+                      textTransform: 'none', 
+                      letterSpacing: '0.5px',
+                      fontSize: '16px' 
+                    }}
+                  >
+                    👥 {lang === 'en' ? 'Play with Friends' : 'العب مع الأصدقاء'}
+                  </button>
+                </div>
+              )}
+
+              {startMenu === 'solo' && (
+                <div className="modes-container">
+                  <div style={{ textAlign: 'center', marginBottom: '10px' }}><h3 style={{ color: '#cbd5e1', fontSize: '12px', textTransform: 'uppercase', margin: '0' }}>{lang === 'en' ? 'Solo Career' : 'مسيرة فردية'}</h3></div>
+                  <button className="mode-card" onClick={() => startGame('short')}><span className="mode-icon">⚡</span><div className="mode-text"><h4>{lang === 'en' ? '5 Matches • $10k' : <><bdi>5</bdi> مباريات • <bdi>$10k</bdi></>}</h4><p>{lang === 'en' ? 'A quick, high-stakes session. One bad guess could end it all.' : 'تحدي سريع ومثير. خطأ واحد قد ينهي كل شيء.'}</p></div></button>
+                  <button className="mode-card" onClick={() => startGame('standard')}><span className="mode-icon">🌍</span><div className="mode-text"><h4>{lang === 'en' ? '7 Matches • $15k' : <><bdi>7</bdi> مباريات • <bdi>$15k</bdi></>}</h4><p>{lang === 'en' ? 'The standard tour. Balance your budget and scout carefully.' : 'الجولة القياسية. وازن ميزانيتك وابحث بحذر.'}</p></div></button>
+                  <button className="mode-card" onClick={() => startGame('endless')}><span className="mode-icon">♾️</span><div className="mode-text"><h4>{lang === 'en' ? 'Endless Survival • $25k' : <>بقاء لا نهائي • <bdi>$25k</bdi></>}</h4><p>{lang === 'en' ? 'No safety net. Play until you go bankrupt. Build your legacy.' : 'لا توجد شبكة أمان. العب حتى تفلس. اصنع أسطورتك.'}</p></div></button>
+                  <button className="btn-secondary" onClick={() => setStartMenu('main')} style={{ marginTop: '10px' }}>{lang === 'en' ? 'Back' : 'رجوع'}</button>
+                </div>
+              )}
+
+              {startMenu === 'multi' && (
+                <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                  <div style={{ textAlign: 'center', marginBottom: '5px' }}><h3 style={{ color: '#00ffcc', fontSize: '12px', textTransform: 'uppercase', margin: '0' }}>{lang === 'en' ? 'Live Multiplayer (Max 4)' : 'لعب جماعي مباشر'}</h3></div>
+                  <button className="mode-card" onClick={createLiveRoom} style={{ background: 'rgba(0, 255, 204, 0.05)', borderColor: 'rgba(0, 255, 204, 0.2)' }}><span className="mode-icon">🏟️</span><div className="mode-text"><h4 style={{ color: '#00ffcc' }}>{lang === 'en' ? 'Create Live Room' : 'إنشاء غرفة مباشرة'}</h4><p>{lang === 'en' ? '2-min countdown. Invite up to 3 friends.' : 'عد تنازلي دقيقتين. ادع حتى 3 أصدقاء.'}</p></div></button>
+                  <div style={{ display: 'flex', gap: '10px', marginTop: '5px', direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
+                    <input type="text" placeholder={lang === 'en' ? "ENTER CODE" : "أدخل الرمز"} value={joinCodeInput} onChange={(e) => setJoinCodeInput(e.target.value)} style={{ flex: 1, padding: '12px', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.2)', background: 'rgba(0,0,0,0.5)', color: 'white', textAlign: 'center', fontWeight: 'bold', textTransform: 'uppercase', outline: 'none' }}/>
+                    <button className="btn-primary" style={{ padding: '10px 20px', borderRadius: '8px' }} onClick={joinLiveRoom}>{lang === 'en' ? 'JOIN' : 'انضمام'}</button>
+                  </div>
+                  <button className="btn-secondary" onClick={() => setStartMenu('main')} style={{ marginTop: '10px' }}>{lang === 'en' ? 'Back' : 'رجوع'}</button>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {gameState === 'lobby' && (
+          <div className="lobby-screen" style={{ pointerEvents: 'auto', direction: lang === 'ar' ? 'rtl' : 'ltr', width: '100%', height: '100%' }}>
+            <h2 style={{ margin: 0, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '2px' }}>{lang === 'en' ? 'Live Match Lobby' : 'غرفة المباراة المباشرة'}</h2>
+            <div className="room-code-box">{roomCode}</div>
+            <div className="timer-text" style={{ color: timeLeft <= 10 ? '#ef4444' : '#00ffcc' }}>⏳ {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')}</div>
+            <div className="player-list">
+              {Object.values(livePlayers).map((p, i) => (<div className="player-row" key={i}><span style={{ fontWeight: 'bold' }}>{p.name}</span><span>✅ {lang === 'en' ? 'Ready' : 'جاهز'}</span></div>))}
+            </div>
+            <div style={{ marginTop: '20px', textAlign: 'center' }}>
+              {isHost ? (<button className="btn-primary" onClick={startLiveMatch} style={{ width: '300px' }}>{lang === 'en' ? 'START MATCH NOW' : 'ابدأ المباراة الآن'}</button>) : (<p style={{ color: '#cbd5e1', fontStyle: 'italic' }}>{lang === 'en' ? 'Waiting for host to start...' : 'في انتظار المضيف لبدء المباراة...'}</p>)}
+              <br /><button className="btn-secondary" style={{ marginTop: '15px', width: '300px' }} onClick={resetToHome}>{lang === 'en' ? 'LEAVE ROOM' : 'مغادرة الغرفة'}</button>
+            </div>
+          </div>
+        )}
+
+        {isMapVisible && (
+          <div style={{ pointerEvents: 'none', position: 'absolute', inset: 0 }}>
+            <div className="geosports-dashboard" style={{ pointerEvents: 'auto', direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
+              <div className="dash-top-bar">
+                <span className="dash-brand">GeoPitch</span>
+                <div className="dash-budget-inline">
+                  <span className="dash-label-inline">{lang === 'en' ? 'BUDGET:' : 'الميزانية:'}</span>
+                  <span className="dash-value-inline" style={{ color: budget > 0 ? '#00ffcc' : '#ef4444' }}>${budget.toLocaleString()}</span>
+                </div>
+                {gameMode.id === 'endless' && matchHistory.length > 0 ? (
+                  <button className="dash-cashout" onClick={handleCashOut}>{lang === 'en' ? '💰 CASH OUT' : '💰 إنهاء'}</button>
+                ) : (
+                  <button className="dash-quit" onClick={() => setShowQuitModal(true)}>{lang === 'en' ? 'QUIT' : 'خروج'}</button>
                 )}
               </div>
-            )}
-          </div>
-          
-          <Map 
-            mapLib={maplibregl}
-            initialViewState={{ longitude: 0, latitude: 20, zoom: 1.5 }} 
-            style={{ width: '100vw', height: '100vh' }} 
-            mapStyle={mapStyle} 
-            onClick={handleMapClick} 
-            interactiveLayerIds={['satellite']} 
-            maxZoom={16}
-            attributionControl={false} 
-          >
-            {guessCoords && <Marker longitude={guessCoords.lng} latitude={guessCoords.lat} anchor="bottom"><div style={{ fontSize: '30px', opacity: gameState === 'locked' ? 0.5 : 1, filter: 'drop-shadow(0 0 10px #00ffcc)' }}>🔵</div></Marker>}
-            {gameState === 'locked' && currentDestination && <Marker longitude={currentDestination.longitude} latitude={currentDestination.latitude} anchor="bottom"><div style={{ fontSize: '35px', filter: 'drop-shadow(0 0 15px #ef4444)' }}>🔴</div></Marker>}
-            {(gameState === 'animating' || gameState === 'locked') && flightPathData && <Source id="flight-path-source" type="geojson" data={flightPathData}><Layer {...flightPathStyle} /></Source>}
-          </Map>
-          
-          <div className="bottom-container">
-            {guessCoords && gameState === 'playing' && <button className="btn-primary" onClick={handleLockIn}>{lang === 'en' ? 'CONFIRM' : 'تأكيد'}</button>}
-            {gameState === 'locked' && distanceError !== null && (
-              <div className="glass-panel results-modal" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
-                <div className="results-header">
-                  <span style={{ fontSize: '18px', color: 'white' }}>📏 <b>{distanceError.toLocaleString()} {lang === 'en' ? 'km away' : 'كم بعيد'}</b></span>
-                  <span style={{ fontSize: '18px', color: moneyCost < 0 ? '#00ffcc' : '#ef4444', fontWeight: 'bold' }}>{moneyCost < 0 ? (lang === 'en' ? '🎯 + $500 BULLSEYE!' : '🎯 + $500 هدف دقيق!') : (lang === 'en' ? `- $${moneyCost.toLocaleString()} Flight` : `- $${moneyCost.toLocaleString()} رحلة`)}</span>
+              
+              {currentDestination && (
+                <div className="dash-clue-wrapper">
+                  <div className="dash-clue-header" onClick={() => setIsClueExpanded(!isClueExpanded)}>
+                    <span>{lang === 'en' ? 'Clue' : 'دليل'} {currentIndex + 1}{gameMode.matches !== Infinity ? ` / ${gameMode.matches}` : ''}</span>
+                    <span className={`dropdown-icon ${isClueExpanded ? 'open' : ''}`}>▼</span>
+                  </div>
+                  {isClueExpanded && (<div className="dash-clue-content fade-in"><p className="dash-clue-text">"{currentDestination.clue[lang]}"</p></div>)}
                 </div>
-                <h3 className="neon-text" style={{ fontSize: '22px', marginBottom: '20px' }}>{currentDestination.answer[lang]}</h3>
-                <button className="btn-secondary" onClick={handleNextDestination}>{currentIndex + 1 >= gameMode.matches || budget <= 0 || currentIndex + 1 >= sessionData.length ? (lang === 'en' ? 'VIEW MATCH RESULTS' : 'عرض نتائج المباراة') : (lang === 'en' ? 'NEXT FIXTURE ➔' : '➔ المباراة القادمة')}</button>
-              </div>
-            )}
-          </div>
-        </>
-      )}
-
-      {/* GAME OVER SCREEN (SOLO OR MULTIPLAYER) */}
-      {gameState === 'gameover' && (
-        <div className="game-over-screen" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
-          
-          {roomCode ? (
-            /* --- MULTIPLAYER PODIUM --- */
-            <div className="glass-panel podium-container">
-              <h2 style={{ color: 'white', marginBottom: '25px', fontSize: '28px' }}>
-                🏆 {lang === 'en' ? 'Final Standings' : 'الترتيب النهائي'}
-              </h2>
-              
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '30px' }}>
-                {Object.entries(livePlayers)
-                  .sort((a, b) => b[1].score - a[1].score)
-                  .map(([id, player], index) => (
-                    <div key={id} className={`podium-row place-${index + 1}`}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                        <span className="rank">#{index + 1}</span>
-                        <span className="name">{player.name} {id === playerId ? (lang === 'en' ? '(You)' : '(أنت)') : ''}</span>
-                      </div>
-                      <div className="score" style={{ color: player.score <= 0 ? '#ef4444' : 'inherit' }}>
-                        ${Math.max(0, player.score).toLocaleString()} {player.finished ? '' : '⏳'}
-                      </div>
-                    </div>
-                ))}
-              </div>
-              
-              <button className="btn-secondary" onClick={resetToHome}>
-                {lang === 'en' ? 'RETURN TO MAIN MENU' : 'العودة للقائمة الرئيسية'}
-              </button>
+              )}
             </div>
-
-          ) : (
-            /* --- SOLO SHARE CARD --- */
-            <>
-              <div ref={shareCardRef} className="share-card-container">
-                <div className="share-card-left">
-                  {/* Top Row */}
-                  <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', marginBottom: '15px', alignItems: 'center' }}>
-                    <span className="badge-glass">🗓️ <bdi>{getFormattedDate()}</bdi></span>
-                    
-                    {/* Desktop Streak (Hidden on Mobile) */}
-                    <span className="streak-text-only hide-on-mobile">🔥 {lang === 'en' ? '1 Day Streak' : 'يوم واحد'}</span>
-                    
-                    {/* Mobile Final Balance (Hidden on Desktop) */}
-                    <span className="hide-on-desktop" style={{ color: budget > 0 ? '#00ffcc' : '#ef4444', fontWeight: 'bold', fontSize: '15px', letterSpacing: '1px' }}>
-                      💰 <bdi>${Math.max(0, budget).toLocaleString()}</bdi>
-                    </span>
+            
+            <div className="bottom-container" style={{ pointerEvents: 'auto' }}>
+              {guessCoords && gameState === 'playing' && <button className="btn-primary" onClick={handleLockIn}>{lang === 'en' ? 'CONFIRM' : 'تأكيد'}</button>}
+              {gameState === 'locked' && distanceError !== null && (
+                <div className="glass-panel results-modal" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
+                  <div className="results-header">
+                    <span style={{ fontSize: '18px', color: 'white' }}>📏 <b>{distanceError.toLocaleString()} {lang === 'en' ? 'km away' : 'كم بعيد'}</b></span>
+                    <span style={{ fontSize: '18px', color: moneyCost < 0 ? '#00ffcc' : '#ef4444', fontWeight: 'bold' }}>{moneyCost < 0 ? (lang === 'en' ? '🎯 + $500 BULLSEYE!' : '🎯 + $500 هدف دقيق!') : (lang === 'en' ? `- $${moneyCost.toLocaleString()} Flight` : `- $${moneyCost.toLocaleString()} رحلة`)}</span>
                   </div>
-
-                  {/* Desktop Label (Hidden on Mobile) */}
-                  <h3 className="hide-on-mobile" style={{ margin: '0 0 10px 0', fontWeight: 400, color: '#e2e8f0', fontSize: '15px' }}>
-                    {lang === 'en' ? 'Final Balance' : 'الرصيد النهائي'}
-                  </h3>
-                  
-                  {/* Desktop Large Circle (Hidden on Mobile) */}
-                  <div className="hero-circle hide-on-mobile">
-                    <h2 style={{ fontSize: '38px', margin: 0, color: '#00ffcc', textShadow: '0 0 15px rgba(0,255,204,0.4)' }}>
-                      <bdi>${Math.max(0, budget).toLocaleString()}</bdi>
-                    </h2>
-                  </div>
-
-                  <h2 style={{ margin: '10px 0 5px 0', fontSize: '22px', color: budget > 0 ? '#00ffcc' : '#ef4444' }}>
-                    {budget > 0 ? (lang === 'en' ? 'Season Survived!' : 'موسم ناجح!') : (lang === 'en' ? 'Bankrupt!' : 'إفلاس!')}
-                  </h2>
-                  
-                  <p style={{ margin: 0, fontSize: '13px', color: '#cbd5e1', lineHeight: '1.5' }}>
-                    {lang === 'en' 
-                      ? <><bdi>{playerName}</bdi>, what a journey across the globe.</> 
-                      : <><bdi>{playerName}</bdi>، يا لها من رحلة عبر العالم.</>}
-                  </p>
+                  <h3 className="neon-text" style={{ fontSize: '22px', marginBottom: '20px' }}>{currentDestination.answer[lang]}</h3>
+                  <button className="btn-secondary" onClick={handleNextDestination}>{currentIndex + 1 >= gameMode.matches || budget <= 0 || currentIndex + 1 >= sessionData.length ? (lang === 'en' ? 'VIEW MATCH RESULTS' : 'عرض نتائج المباراة') : (lang === 'en' ? 'NEXT FIXTURE ➔' : '➔ المباراة القادمة')}</button>
                 </div>
-                {/* <div className="share-card-left">
-                  <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', marginBottom: '15px', alignItems: 'center' }}>
-                    <span className="badge-glass">🗓️ <bdi>{getFormattedDate()}</bdi></span>
-                    <span className="streak-text-only">🔥 {lang === 'en' ? '1 Day Streak' : 'يوم واحد'}</span>
-                  </div>
+              )}
+            </div>
+          </div>
+        )}
 
-                  <h3 style={{ margin: '0 0 10px 0', fontWeight: 400, color: '#e2e8f0', fontSize: '15px' }}>
-                    {lang === 'en' ? 'Final Balance' : 'الرصيد النهائي'}
-                  </h3>
-                  
-                  <div className="hero-circle">
-                    <h2 style={{ fontSize: '38px', margin: 0, color: '#00ffcc', textShadow: '0 0 15px rgba(0,255,204,0.4)' }}>
-                      <bdi>${Math.max(0, budget).toLocaleString()}</bdi>
-                    </h2>
-                  </div>
-
-                  <h2 style={{ margin: '10px 0 5px 0', fontSize: '22px', color: budget > 0 ? '#00ffcc' : '#ef4444' }}>
-                    {budget > 0 ? (lang === 'en' ? 'Season Survived!' : 'موسم ناجح!') : (lang === 'en' ? 'Bankrupt!' : 'إفلاس!')}
-                  </h2>
-                  
-                  <p style={{ margin: 0, fontSize: '13px', color: '#cbd5e1', lineHeight: '1.5' }}>
-                    {lang === 'en' 
-                      ? <><bdi>{playerName}</bdi>, what a journey across the globe.</> 
-                      : <><bdi>{playerName}</bdi>، يا لها من رحلة عبر العالم.</>}
-                  </p>
-                </div> */}
-
-                <div className="share-card-right">
-                  <h3 style={{ margin: '0 0 15px 0', color: 'white', fontSize: '16px', textAlign: 'center' }}>
-                    {lang === 'en' ? 'Season Summary' : 'ملخص الموسم'}
-                  </h3>
-                  
-                  <div className="ledger-item starting-budget">
-                    <span>🏦 {lang === 'en' ? 'Starting Budget' : 'الميزانية الأولية'}</span>
-                    <strong><bdi>${gameMode.budget.toLocaleString()}</bdi></strong>
-                  </div>
-                  <div className="ledger-item bonuses">
-                    <span>🎯 {lang === 'en' ? 'Bullseye Bonuses' : 'مكافآت الهدف الدقيق'}</span>
-                    <strong><bdi>+ ${totalBonuses.toLocaleString()}</bdi></strong>
-                  </div>
-                  <div className="ledger-item expenses">
-                    <span>✈️ {lang === 'en' ? 'Travel Expenses' : 'مصاريف السفر'}</span>
-                    <strong><bdi>- ${totalExpenses.toLocaleString()}</bdi></strong>
-                  </div>
-                  
-                  <div className="emoji-display-box" style={{ flexWrap: 'wrap', display: 'flex', justifyContent: 'center', gap: '4px' }}>
-                    {paddedHistory.map((emoji, i) => <span key={i}>{emoji}</span>)}
-                  </div>
-
-                  <div className="watermark">🌍 Play at <strong>geopitch.vercel.app</strong></div>
+        {gameState === 'gameover' && (
+          <div className="game-over-screen" style={{ pointerEvents: 'auto', direction: lang === 'ar' ? 'rtl' : 'ltr', width: '100%', height: '100%' }}>
+            {roomCode ? (
+              <div className="glass-panel podium-container">
+                <h2 style={{ color: 'white', marginBottom: '25px', fontSize: '28px' }}>🏆 {lang === 'en' ? 'Final Standings' : 'الترتيب النهائي'}</h2>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '30px' }}>
+                  {Object.entries(livePlayers).sort((a, b) => b[1].score - a[1].score).map(([id, player], index) => (
+                      <div key={id} className={`podium-row place-${index + 1}`}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}><span className="rank">#{index + 1}</span><span className="name">{player.name} {id === playerId ? (lang === 'en' ? '(You)' : '(أنت)') : ''}</span></div>
+                        <div className="score" style={{ color: player.score <= 0 ? '#ef4444' : 'inherit' }}>${Math.max(0, player.score).toLocaleString()} {player.finished ? '' : '⏳'}</div>
+                      </div>
+                  ))}
                 </div>
+                <button className="btn-secondary" onClick={resetToHome}>{lang === 'en' ? 'RETURN TO MAIN MENU' : 'العودة للقائمة الرئيسية'}</button>
               </div>
+            ) : (
+              <>
+                <div ref={shareCardRef} className="share-card-container">
+                  <div className="share-card-left">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', marginBottom: '15px', alignItems: 'center' }}>
+                      <span className="badge-glass">🗓️ <bdi>{getFormattedDate()}</bdi></span>
+                      <span className="streak-text-only hide-on-mobile">🔥 {lang === 'en' ? '1 Day Streak' : 'يوم واحد'}</span>
+                      <span className="hide-on-desktop" style={{ color: budget > 0 ? '#00ffcc' : '#ef4444', fontWeight: 'bold', fontSize: '15px', letterSpacing: '1px' }}>💰 <bdi>${Math.max(0, budget).toLocaleString()}</bdi></span>
+                    </div>
+                    <h3 className="hide-on-mobile" style={{ margin: '0 0 10px 0', fontWeight: 400, color: '#e2e8f0', fontSize: '15px' }}>{lang === 'en' ? 'Final Balance' : 'الرصيد النهائي'}</h3>
+                    <div className="hero-circle hide-on-mobile"><h2 style={{ fontSize: '38px', margin: 0, color: '#00ffcc', textShadow: '0 0 15px rgba(0,255,204,0.4)' }}><bdi>${Math.max(0, budget).toLocaleString()}</bdi></h2></div>
+                    <h2 style={{ margin: '10px 0 5px 0', fontSize: '22px', color: budget > 0 ? '#00ffcc' : '#ef4444' }}>{budget > 0 ? (lang === 'en' ? 'Season Survived!' : 'موسم ناجح!') : (lang === 'en' ? 'Bankrupt!' : 'إفلاس!')}</h2>
+                    <p style={{ margin: 0, fontSize: '13px', color: '#cbd5e1', lineHeight: '1.5' }}>{lang === 'en' ? <><bdi>{playerName}</bdi>, what a journey across the globe.</> : <><bdi>{playerName}</bdi>، يا لها من رحلة عبر العالم.</>}</p>
+                  </div>
 
-              <div className="action-buttons-wrapper">
-                <button className="btn-secondary" style={{ flex: 1 }} onClick={resetToHome}>{lang === 'en' ? 'MAIN MENU' : 'القائمة الرئيسية'}</button>
-                <button className="btn-primary" style={{ flex: 2, display: 'flex', gap: '8px', justifyContent: 'center' }} onClick={shareAsImage} disabled={isSharing}>
-                  {isSharing ? '...' : (lang === 'en' ? 'SHARE YOUR SCORE' : 'شارك نتيجتك')}
-                </button>
-              </div>
-            </>
-          )}
+                  <div className="share-card-right">
+                    <h3 style={{ margin: '0 0 15px 0', color: 'white', fontSize: '16px', textAlign: 'center' }}>{lang === 'en' ? 'Season Summary' : 'ملخص الموسم'}</h3>
+                    <div className="ledger-item starting-budget"><span>🏦 {lang === 'en' ? 'Starting Budget' : 'الميزانية الأولية'}</span><strong><bdi>${gameMode.budget.toLocaleString()}</bdi></strong></div>
+                    <div className="ledger-item bonuses"><span>🎯 {lang === 'en' ? 'Bullseye Bonuses' : 'مكافآت الهدف الدقيق'}</span><strong><bdi>+ ${totalBonuses.toLocaleString()}</bdi></strong></div>
+                    <div className="ledger-item expenses"><span>✈️ {lang === 'en' ? 'Travel Expenses' : 'مصاريف السفر'}</span><strong><bdi>- ${totalExpenses.toLocaleString()}</bdi></strong></div>
+                    <div className="emoji-display-box" style={{ flexWrap: 'wrap', display: 'flex', justifyContent: 'center', gap: '4px' }}>{paddedHistory.map((emoji, i) => <span key={i}>{emoji}</span>)}</div>
+                    <div className="watermark">🌍 Play at <strong>geopitch.gg</strong></div>
+                  </div>
+                </div>
 
-        </div>
-      )}
+                <div className="action-buttons-wrapper">
+                  <button className="btn-secondary" style={{ flex: 1 }} onClick={resetToHome}>{lang === 'en' ? 'MAIN MENU' : 'القائمة الرئيسية'}</button>
+                  <button className="btn-primary" style={{ flex: 2, display: 'flex', gap: '8px', justifyContent: 'center' }} onClick={shareAsImage} disabled={isSharing}>{isSharing ? '...' : (lang === 'en' ? 'SHARE YOUR SCORE' : 'شارك نتيجتك')}</button>
+                </div>
+              </>
+            )}
+          </div>
+        )}
+
+      </div>
     </div>
   );
 }
