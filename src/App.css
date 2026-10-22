@@ -1,15 +1,35 @@
 /* src/App.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
-body {
+/* body {
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, sans-serif;
   background-color: #03050c;
   overflow: hidden;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'JetBrains Mono', monospace; /* Default English Font */
+  background-color: #03050c;
+  overflow: hidden;
+}
+
+/* Force buttons and inputs to inherit our custom fonts */
+button, input {
+  font-family: inherit;
+}
+
+/* The magic class that switches everything to Cairo for Arabic */
+.lang-ar {
+  font-family: 'Cairo', sans-serif !important;
 }
 
 /* --- Shiny Globe Atmospheric Look --- */
@@ -113,7 +133,7 @@ body {
 /* --- Buttons --- */
 .btn-primary {
   padding: 15px 40px;
-  border-radius: 30px;
+  border-radius: 8px;
   background: linear-gradient(90deg, #00ffcc, #3b82f6);
   color: #050814;
   font-size: 16px;
@@ -153,6 +173,49 @@ body {
   cursor: pointer;
   font-weight: bold;
   transition: all 0.2s;
+}
+
+/* --- Premium Skip Button --- */
+.btn-skip {
+  padding: 15px 25px;
+  border-radius: 8px; /* Matches the roundness of the Confirm button */
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fcd34d; /* Soft premium gold/yellow */
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(245, 158, 11, 0.08);
+  letter-spacing: 0.5px;
+}
+
+.btn-skip:hover:not(:disabled) {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.8);
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.3), inset 0 0 15px rgba(245, 158, 11, 0.2);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.btn-skip:disabled {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: rgba(255, 255, 255, 0.05);
+  color: #64748b;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.8;
+}
+
+.btn-skip .emoji {
+  font-size: 18px;
+  filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.5));
 }
 
 /* --- Main Game Layout --- */
@@ -601,32 +664,39 @@ body {
   align-items: center;
 }
 
+/* --- PREMIUM GLASSMORPHIC SCROLL ARROWS --- */
 .scroll-arrow {
   position: absolute;
-  z-index: 10;
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
+  z-index: 20; /* Ensures it pops over the fade mask */
+  background: rgba(15, 23, 42, 0.4); /* Highly transparent glass */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 204, 0.3); /* Subtle neon cyan border */
+  color: #00ffcc; /* Matches the theme's neon accent */
   border-radius: 50%;
-  width: 34px;
-  height: 34px;
+  width: 42px; /* Slightly larger for a better click target */
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
-  transition: all 0.2s ease;
-  font-weight: bold;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), inset 0 0 10px rgba(0, 255, 204, 0.05);
 }
 
 .scroll-arrow:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateY(-50%) scale(1.1);
+  background: rgba(0, 255, 204, 0.15);
+  border-color: rgba(0, 255, 204, 0.8);
+  color: #ffffff; /* Icon turns white on hover */
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.4), inset 0 0 15px rgba(0, 255, 204, 0.2);
+  transform: translateY(-50%) scale(1.15);
 }
 
-.scroll-arrow.left { left: -10px; }
-.scroll-arrow.right { right: -10px; }
+/* Pushed them a bit further OUT so they don't sit directly inside the visual fade */
+.scroll-arrow.left { left: -18px; }
+.scroll-arrow.right { right: -18px; }
 
 .league-selector-container {
   display: flex;
@@ -775,7 +845,7 @@ body {
 }
 
 .dash-label-inline { color: #94a3b8; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
-.dash-value-inline { font-size: 16px; font-weight: bold; font-family: 'Courier New', Courier, monospace; }
+.dash-value-inline { font-size: 16px; font-weight: bold;}
 
 .dash-quit {
   background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.4);
@@ -826,7 +896,6 @@ body {
 
 .dash-clue-text {
   color: #e2e8f0; font-size: 15px; line-height: 1.5; margin: 0;
-  font-family: 'Courier New', Courier, monospace;
   text-align: center;
 }
 
@@ -838,6 +907,94 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* --- DUAL ACTION BUTTONS (SOLO / FRIENDS) --- */
+.mode-toggle-wrapper {
+  display: flex;
+  background: rgba(5, 8, 20, 0.8); /* Deep dark inner track */
+  border: 1px solid rgba(0, 255, 204, 0.4); /* The visible neon border you wanted */
+  border-radius: 12px; /* Standard soft rectangle, NOT a rounded pill */
+  padding: 6px;
+  width: 100%;
+  gap: 6px;
+  box-shadow: inset 0 0 15px rgba(0, 255, 204, 0.05), 0 4px 15px rgba(0, 0, 0, 0.4);
+  margin-top: 5px;
+}
+
+.btn-toggle {
+  flex: 1;
+  padding: 14px 10px;
+  border-radius: 8px; /* Fits neatly inside the 12px outer box */
+  background: transparent;
+  color: #94a3b8;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Solo Button Hover - Lights up Cyan */
+.btn-toggle.solo:hover {
+  background: rgba(0, 255, 204, 0.15);
+  border-color: rgba(0, 255, 204, 0.6);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.2), inset 0 0 10px rgba(0, 255, 204, 0.1);
+}
+
+/* Friends Button Hover - Lights up Blue */
+.btn-toggle.multi:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.6);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.25), inset 0 0 10px rgba(59, 130, 246, 0.15);
+}
+
+/* Active State for Solo (Pre-selected) */
+.btn-toggle.solo.active {
+  background: rgba(0, 255, 204, 0.15);
+  border-color: rgba(0, 255, 204, 0.6);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.2), inset 0 0 10px rgba(0, 255, 204, 0.1);
+}
+.btn-toggle.solo.active .emoji { opacity: 1; }
+
+/* Active State for Friends */
+.btn-toggle.multi.active {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.6);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.25), inset 0 0 10px rgba(59, 130, 246, 0.15);
+}
+.btn-toggle.multi.active .emoji { opacity: 1; }
+
+/* Make emojis a bit dimmer until hovered */
+.btn-toggle .emoji {
+  font-size: 18px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.btn-toggle:hover .emoji {
+  opacity: 1;
+}
+
+
+/* --- PREMIUM GLASS DIVIDER --- */
+.glass-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  margin: 10px 0 20px 0;
+  box-shadow: 0 1px 5px rgba(0, 255, 204, 0.1);
 }
 
 /* =========================================
