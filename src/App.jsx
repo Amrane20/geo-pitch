@@ -29,7 +29,7 @@ if (maplibregl.setWorkerUrl) {
 }
 
 // ----------------------------------------------------
-// TRANSLATION DICTIONARY
+// TRANSLATION DICTIONARY (WITH DYNAMIC VARIABLES)
 // ----------------------------------------------------
 const translations = {
   en: {
@@ -40,11 +40,11 @@ const translations = {
     solo: "Solo",
     friends: "Friends",
     soloCareer: "Solo Career",
-    matches: "Matches",
-    shortDesc: "A quick, high-stakes session. One bad guess could end it all.",
-    standardDesc: "The standard tour. Balance your budget and scout carefully.",
+    matches: "Clues",
+    shortDesc: "Crack {matches} clues on a tight budget. Every km you miss costs ${cost}, so wild guesses get expensive fast.",
+    standardDesc: "Solve {matches} clues with ${budget} to spend. Each km off costs ${cost}, but land inside the radius for a +$500 Bullseye.",
     endless: "Endless Survival",
-    endlessDesc: "No safety net. Play until you go bankrupt. Build your legacy.",
+    endlessDesc: "Play until your ${budget} runs out, or cash out while you're ahead. Misses cost ${cost}/km, Bullseyes pay +$500.",
     back: "Back",
     liveMulti: "Live Multiplayer (Max 4)",
     createRoom: "Create Live Room",
@@ -89,7 +89,8 @@ const translations = {
     imageSaved: "Image saved! Share it with your friends.",
     quitGameQ: "Quit Game?",
     quitWarning: "Are you sure you want to quit the current game? Your progress will be lost.",
-    cancel: "Cancel"
+    cancel: "Cancel",
+    contactUs: "Contact Us"
   },
   ar: {
     subtitle: "التحدي الجغرافي الأكبر لكرة القدم.",
@@ -99,11 +100,11 @@ const translations = {
     solo: "فردي",
     friends: "أصدقاء",
     soloCareer: "مسيرة فردية",
-    matches: "مباريات",
-    shortDesc: "تحدي سريع ومثير. خطأ واحد قد ينهي كل شيء.",
-    standardDesc: "الجولة القياسية. وازن ميزانيتك وابحث بحذر.",
+    matches: "أدلة",
+    shortDesc: "حل {matches} أدلة بميزانية محدودة. كل كم تخطئه يكلفك {cost}$، لذا التخمينات العشوائية ستكلفك غالياً.",
+    standardDesc: "حل {matches} أدلة ولديك {budget}$ لإنفاقها. كل كم بعيد يكلف {cost}$، ولكن الوصول لنطاق الهدف يمنحك +500$.",
     endless: "بقاء لا نهائي",
-    endlessDesc: "لا توجد شبكة أمان. العب حتى تفلس. اصنع أسطورتك.",
+    endlessDesc: "العب حتى تنفد ميزانيتك ({budget}$) أو قم بسحب أرباحك. الأخطاء تكلف {cost}$/كم، والهدف الدقيق يمنحك +500$.",
     back: "رجوع",
     liveMulti: "لعب جماعي مباشر",
     createRoom: "إنشاء غرفة مباشرة",
@@ -148,7 +149,8 @@ const translations = {
     imageSaved: "تم حفظ الصورة في جهازك! شاركها.",
     quitGameQ: "الخروج من اللعبة؟",
     quitWarning: "هل أنت متأكد أنك تريد إنهاء اللعبة الحالية؟ سيتم فقدان تقدمك.",
-    cancel: "إلغاء"
+    cancel: "إلغاء",
+    contactUs: "تواصل معنا"
   },
   es: {
     subtitle: "El Reto Geográfico Definitivo de Fútbol.",
@@ -158,11 +160,11 @@ const translations = {
     solo: "Solo",
     friends: "Amigos",
     soloCareer: "Carrera en Solitario",
-    matches: "Partidos",
-    shortDesc: "Una sesión rápida de alto riesgo. Un error podría acabar con todo.",
-    standardDesc: "La gira estándar. Equilibra tu presupuesto y explora con cuidado.",
+    matches: "Pistas",
+    shortDesc: "Resuelve {matches} pistas con un presupuesto ajustado. Cada km que falles cuesta ${cost}, así que adivinar a lo loco sale caro.",
+    standardDesc: "Resuelve {matches} pistas con ${budget} para gastar. Cada km de desvío cuesta ${cost}, pero si aciertas en el radio ganas +$500.",
     endless: "Supervivencia",
-    endlessDesc: "Sin red de seguridad. Juega hasta quebrar. Construye tu legado.",
+    endlessDesc: "Juega hasta que se agoten tus ${budget} o retírate a tiempo. Los fallos cuestan ${cost}/km, dar en el blanco paga +$500.",
     back: "Atrás",
     liveMulti: "Multijugador en Vivo",
     createRoom: "Crear Sala en Vivo",
@@ -207,7 +209,8 @@ const translations = {
     imageSaved: "¡Imagen guardada! Compártela con tus amigos.",
     quitGameQ: "¿Salir del Juego?",
     quitWarning: "¿Seguro que deseas salir? Perderás tu progreso.",
-    cancel: "Cancelar"
+    cancel: "Cancelar",
+    contactUs: "Contáctanos"
   },
   fr: {
     subtitle: "L'Ultime Défi Géographique de Football.",
@@ -217,11 +220,11 @@ const translations = {
     solo: "Solo",
     friends: "Amis",
     soloCareer: "Carrière Solo",
-    matches: "Matchs",
-    shortDesc: "Une session rapide à enjeux. Une erreur peut tout ruiner.",
-    standardDesc: "La tournée standard. Équilibrez votre budget avec soin.",
+    matches: "Indices",
+    shortDesc: "Résolvez {matches} indices avec un budget serré. Chaque km manqué coûte {cost} $, les suppositions au hasard coûtent cher.",
+    standardDesc: "Résolvez {matches} indices avec {budget} $ à dépenser. Chaque km d'écart coûte {cost} $, mais tomber dans le rayon rapporte + 500 $.",
     endless: "Survie Sans Fin",
-    endlessDesc: "Pas de filet de sécurité. Jouez jusqu'à la faillite.",
+    endlessDesc: "Jouez jusqu'à ce que vos {budget} $ soient épuisés, ou encaissez avant. Les erreurs coûtent {cost} $/km, dans le mille rapporte + 500 $.",
     back: "Retour",
     liveMulti: "Multijugador en Direct",
     createRoom: "Créer un Salon",
@@ -266,7 +269,8 @@ const translations = {
     imageSaved: "Image enregistrée ! Partagez-la avec vos amis.",
     quitGameQ: "Quitter le Jeu ?",
     quitWarning: "Êtes-vous sûr de vouloir quitter la partie ? Votre progression sera perdue.",
-    cancel: "Annuler"
+    cancel: "Annuler",
+    contactUs: "Contactez-nous"
   },
   de: {
     subtitle: "Die ultimative Fußball-Geographie-Herausforderung.",
@@ -276,11 +280,11 @@ const translations = {
     solo: "Solo",
     friends: "Freunde",
     soloCareer: "Solo-Karriere",
-    matches: "Spiele",
-    shortDesc: "Schnell und riskant. Ein Fehler kann alles beenden.",
-    standardDesc: "Die Standardtour. Balanciere dein Budget sorgfältig.",
+    matches: "Hinweise",
+    shortDesc: "Löse {matches} Hinweise mit knappem Budget. Jeder verfehlte km kostet {cost} $, wilde Schätzungen werden also schnell teuer.",
+    standardDesc: "Löse {matches} Hinweise mit {budget} $ Budget. Jeder km daneben kostet {cost} $, aber ein Volltreffer im Radius bringt +500 $.",
     endless: "Endloses Überleben",
-    endlessDesc: "Kein Sicherheitsnetz. Spiele, bis du bankrott gehst.",
+    endlessDesc: "Spiele, bis deine {budget} $ aufgebraucht sind, oder zahle vorher aus. Fehler kosten {cost} $/km, Volltreffer bringen +500 $.",
     back: "Zurück",
     liveMulti: "Live-Multiplayer",
     createRoom: "Raum erstellen",
@@ -325,7 +329,8 @@ const translations = {
     imageSaved: "Bild gespeichert! Teile es mit deinen Freunden.",
     quitGameQ: "Spiel beenden?",
     quitWarning: "Bist du sicher, dass du das Spiel beenden möchtest? Dein Fortschritt geht verloren.",
-    cancel: "Abbrechen"
+    cancel: "Abbrechen",
+    contactUs: "Kontakt"
   }
 };
 
@@ -485,7 +490,17 @@ export default function App() {
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
   
   const currentLangObj = LANGUAGES.find(l => l.code === lang) || LANGUAGES[0];
-  const t = (key) => translations[lang][key] || translations['en'][key] || key;
+  
+  // Upgraded translation engine to support dynamic variables natively
+  const t = (key, params = {}) => {
+    let text = translations[lang][key] || translations['en'][key] || key;
+    if (params && Object.keys(params).length > 0) {
+      Object.keys(params).forEach(p => {
+        text = text.replace(new RegExp(`{${p}}`, 'g'), params[p]);
+      });
+    }
+    return text;
+  };
 
   const [playerName, setPlayerName] = useState('');
   const [isNameInvalid, setIsNameInvalid] = useState(false);
@@ -548,8 +563,11 @@ export default function App() {
 
   const isMapVisible = ['playing', 'animating', 'locked'].includes(gameState);
 
+  const isGlobalMap = selectedLeague === 'all';
   const activeModes = getGameModes(selectedLeague);
-  const dynamicSkipCost = selectedLeague === 'all' ? 1000 : 300;
+  const currentPenaltyCost = isGlobalMap ? 1 : 10;
+  const dynamicSkipCost = isGlobalMap ? 1000 : 300;
+  
   const formatB = (val) => val >= 1000 ? `${val / 1000}k` : val;
 
   useEffect(() => {
@@ -773,10 +791,7 @@ export default function App() {
         const actualDist = calculateDistance(guessCoords.lat, guessCoords.lng, currentDestination.latitude, currentDestination.longitude);
         setDistanceError(actualDist);
         
-        const isGlobal = selectedLeague === 'all';
-        const penaltyMultiplier = isGlobal ? 1 : 10; 
-        
-        let cost = actualDist * penaltyMultiplier;
+        let cost = actualDist * currentPenaltyCost;
         
         const allowedRadius = currentDestination.type === 'city' ? 80 : 7;
         let scoreEmoji = "🟥";
@@ -951,56 +966,79 @@ export default function App() {
         {gameState === 'start' && (
           <div className="start-screen" style={{ overflowY: 'auto', pointerEvents: 'auto', position: 'relative', width: '100%', height: '100%' }}>
             
-            {/* ROBUST LANGUAGE DROPDOWN */}
-            <div style={{ position: 'absolute', top: 20, right: 20, zIndex: 50 }}>
-              <button 
+            {/* TOP RIGHT UTILITIES: CONTACT & LANGUAGE */}
+            <div style={{ position: 'absolute', top: 20, right: 20, zIndex: 50, display: 'flex', gap: '10px' }}>
+              
+              {/* CONTACT BUTTON */}
+              <a 
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=geopitch.app@gmail.com&su=GeoPitch%20Feedback"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="lang-toggle-btn"
                 style={{ 
-                  display: 'flex', alignItems: 'center', gap: '8px', 
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px',
                   background: 'rgba(15, 23, 42, 0.75)', border: '1px solid rgba(255,255,255,0.2)', 
                   color: 'white', padding: '8px 12px', backdropFilter: 'blur(10px)', 
-                  borderRadius: '8px', cursor: 'pointer'
+                  borderRadius: '8px', cursor: 'pointer', textDecoration: 'none'
                 }}
-                onClick={(e) => { e.stopPropagation(); setIsLangDropdownOpen(prev => !prev); }}
               >
-                <img src={currentLangObj.flag} alt={currentLangObj.code} style={{ width: '20px', borderRadius: '2px', pointerEvents: 'none' }} />
-                <span style={{ fontWeight: 'bold', pointerEvents: 'none' }}>{currentLangObj.label}</span>
-                <span style={{ fontSize: '10px', pointerEvents: 'none' }}>▼</span>
-              </button>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span style={{ fontWeight: 'bold', fontSize: '13px' }}>{t('contactUs')}</span>
+              </a>
 
-              {isLangDropdownOpen && (
-                <>
-                  {/* Invisible overlay captures clicks outside to close the menu instantly */}
-                  <div 
-                    style={{ position: 'fixed', inset: 0, zIndex: 40 }} 
-                    onClick={() => setIsLangDropdownOpen(false)} 
-                  />
-                  <div style={{ 
-                    position: 'absolute', top: '100%', right: 0, marginTop: '8px', 
-                    background: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(255,255,255,0.1)', 
-                    borderRadius: '8px', overflow: 'hidden', display: 'flex', flexDirection: 'column', 
-                    width: '100%', boxShadow: '0 4px 15px rgba(0,0,0,0.5)', zIndex: 50
-                  }}>
-                    {LANGUAGES.map(l => (
-                      <button
-                        key={l.code}
-                        onClick={() => { setLang(l.code); setIsLangDropdownOpen(false); }}
-                        style={{ 
-                          display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 12px', 
-                          background: lang === l.code ? 'rgba(0, 255, 204, 0.15)' : 'transparent', 
-                          border: 'none', color: lang === l.code ? '#00ffcc' : 'white', 
-                          cursor: 'pointer', textAlign: 'left', width: '100%', transition: 'background 0.2s'
-                        }}
-                        onMouseOver={(e) => { if(lang !== l.code) e.currentTarget.style.background = 'rgba(255,255,255,0.1)' }}
-                        onMouseOut={(e) => { if(lang !== l.code) e.currentTarget.style.background = 'transparent' }}
-                      >
-                        <img src={l.flag} alt={l.code} style={{ width: '20px', borderRadius: '2px', pointerEvents: 'none' }} />
-                        <span style={{ fontWeight: 'bold', pointerEvents: 'none' }}>{l.label}</span>
-                      </button>
-                    ))}
-                  </div>
-                </>
-              )}
+              {/* ROBUST LANGUAGE DROPDOWN */}
+              <div style={{ position: 'relative' }}>
+                <button 
+                  className="lang-toggle-btn"
+                  style={{ 
+                    display: 'flex', alignItems: 'center', gap: '8px', 
+                    background: 'rgba(15, 23, 42, 0.75)', border: '1px solid rgba(255,255,255,0.2)', 
+                    color: 'white', padding: '8px 12px', backdropFilter: 'blur(10px)', 
+                    borderRadius: '8px', cursor: 'pointer'
+                  }}
+                  onClick={(e) => { e.stopPropagation(); setIsLangDropdownOpen(prev => !prev); }}
+                >
+                  <img src={currentLangObj.flag} alt={currentLangObj.code} style={{ width: '20px', borderRadius: '2px', pointerEvents: 'none' }} />
+                  <span style={{ fontWeight: 'bold', pointerEvents: 'none', fontSize: '13px' }}>{currentLangObj.label}</span>
+                  <span style={{ fontSize: '10px', pointerEvents: 'none' }}>▼</span>
+                </button>
+
+                {isLangDropdownOpen && (
+                  <>
+                    <div 
+                      style={{ position: 'fixed', inset: 0, zIndex: 40 }} 
+                      onClick={() => setIsLangDropdownOpen(false)} 
+                    />
+                    <div style={{ 
+                      position: 'absolute', top: '100%', right: 0, marginTop: '8px', 
+                      background: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(255,255,255,0.1)', 
+                      borderRadius: '8px', overflow: 'hidden', display: 'flex', flexDirection: 'column', 
+                      width: '100%', minWidth: '100px', boxShadow: '0 4px 15px rgba(0,0,0,0.5)', zIndex: 50
+                    }}>
+                      {LANGUAGES.map(l => (
+                        <button
+                          key={l.code}
+                          onClick={() => { setLang(l.code); setIsLangDropdownOpen(false); }}
+                          style={{ 
+                            display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 12px', 
+                            background: lang === l.code ? 'rgba(0, 255, 204, 0.15)' : 'transparent', 
+                            border: 'none', color: lang === l.code ? '#00ffcc' : 'white', 
+                            cursor: 'pointer', textAlign: 'left', width: '100%', transition: 'background 0.2s'
+                          }}
+                          onMouseOver={(e) => { if(lang !== l.code) e.currentTarget.style.background = 'rgba(255,255,255,0.1)' }}
+                          onMouseOut={(e) => { if(lang !== l.code) e.currentTarget.style.background = 'transparent' }}
+                        >
+                          <img src={l.flag} alt={l.code} style={{ width: '20px', borderRadius: '2px', pointerEvents: 'none' }} />
+                          <span style={{ fontWeight: 'bold', pointerEvents: 'none', fontSize: '13px' }}>{l.label}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
             </div>
             
             <div className="glass-panel start-modal" style={{ margin: 'auto', marginTop: '10vh', direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
@@ -1087,9 +1125,30 @@ export default function App() {
               {startMenu === 'solo' && (
                 <div className="modes-container">
                   <div style={{ textAlign: 'center', marginBottom: '10px' }}><h3 style={{ color: '#cbd5e1', fontSize: '12px', textTransform: 'uppercase', margin: '0' }}>{t('soloCareer')}</h3></div>
-                  <button className="mode-card" onClick={() => startGame('short')}><span className="mode-icon">⚡</span><div className="mode-text"><h4><bdi>{activeModes.short.matches}</bdi> {t('matches')} • <bdi>${formatB(activeModes.short.budget)}</bdi></h4><p>{t('shortDesc')}</p></div></button>
-                  <button className="mode-card" onClick={() => startGame('standard')}><span className="mode-icon">🌍</span><div className="mode-text"><h4><bdi>{activeModes.standard.matches}</bdi> {t('matches')} • <bdi>${formatB(activeModes.standard.budget)}</bdi></h4><p>{t('standardDesc')}</p></div></button>
-                  <button className="mode-card" onClick={() => startGame('endless')}><span className="mode-icon">♾️</span><div className="mode-text"><h4>{t('endless')} • <bdi>${formatB(activeModes.endless.budget)}</bdi></h4><p>{t('endlessDesc')}</p></div></button>
+                  
+                  <button className="mode-card" onClick={() => startGame('short')}>
+                    <span className="mode-icon">⚡</span>
+                    <div className="mode-text">
+                      <h4><bdi>{activeModes.short.matches}</bdi> {t('matches')} • <bdi>${formatB(activeModes.short.budget)}</bdi></h4>
+                      <p>{t('shortDesc', { matches: activeModes.short.matches, cost: currentPenaltyCost })}</p>
+                    </div>
+                  </button>
+                  
+                  <button className="mode-card" onClick={() => startGame('standard')}>
+                    <span className="mode-icon">🌍</span>
+                    <div className="mode-text">
+                      <h4><bdi>{activeModes.standard.matches}</bdi> {t('matches')} • <bdi>${formatB(activeModes.standard.budget)}</bdi></h4>
+                      <p>{t('standardDesc', { matches: activeModes.standard.matches, budget: formatB(activeModes.standard.budget), cost: currentPenaltyCost })}</p>
+                    </div>
+                  </button>
+                  
+                  <button className="mode-card" onClick={() => startGame('endless')}>
+                    <span className="mode-icon">♾️</span>
+                    <div className="mode-text">
+                      <h4>{t('endless')} • <bdi>${formatB(activeModes.endless.budget)}</bdi></h4>
+                      <p>{t('endlessDesc', { budget: formatB(activeModes.endless.budget), cost: currentPenaltyCost })}</p>
+                    </div>
+                  </button>
                   
                   <button className="btn-secondary" onClick={() => setStartMenu('main')} style={{ marginTop: '10px' }}>{t('back')}</button>
                 </div>
